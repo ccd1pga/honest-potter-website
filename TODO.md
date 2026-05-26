@@ -8,11 +8,13 @@
 - [x] Note that `/Users/paulallen/Documents/website` was a mistaken scaffold path.
 - [x] Decide gallery/shop split: gallery is approved for next iteration; shop stays local/testing for now.
 - [x] Create a safe gallery-only upload/deploy checklist.
+- [x] Review current site structure before larger changes.
+- [x] Fix broken paths, navigation states, and footer inconsistencies.
+- [x] Remove accidental duplicate `pages/Untitled-11.html`.
+- [x] Hide `pages/glaze.html` from navigation until the glaze testing page is ready.
 
 ## Next
 
-- [x] Review current site structure before larger changes.
-- [ ] Fix broken paths, navigation states, and footer inconsistencies.
 - [ ] Review the 27 gallery pieces when convenient; not blocking the next gallery iteration.
 - [ ] Review the 12 shop-marked pieces before any shop goes live.
 - [ ] Decide whether to replace, retire, or ignore the old `ccd1pga/website` GitHub repository.

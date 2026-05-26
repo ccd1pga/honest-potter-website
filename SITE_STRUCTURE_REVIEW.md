@@ -13,20 +13,20 @@ The main issue is consistency: pages have been built across different passes, so
 - The contact form has a clear PHP endpoint and keeps secrets outside the web root.
 - The old Dreamweaver `_notes` files and `.DS_Store` files are ignored by Git and not tracked.
 
-## Main Structure Issues
+## Main Structure Issues Reviewed
 
 ### 1. Navigation is copied across pages
 
 Each page has its own hand-written header. The link set and current-page state have drifted.
 
-Examples:
+Cleanup completed:
 
-- `pages/myKiln.html` marks both My Kiln and Contact as current.
-- `pages/glaze.html` marks Gallery, Contact, and Glazes as current.
-- `index.html` omits Glazes from the nav, while gallery/shop include it.
-- `pages/privacy.html` and `pages/Untitled-11.html` use root links such as `/shop.html` and `/contact.html`, which do not match the current folder structure.
+- `pages/myKiln.html` now marks only My Kiln as current.
+- `pages/glaze.html` is hidden from visible navigation until the future glaze testing/blog page is ready.
+- Gallery and shop navigation no longer link to Glazes.
+- `pages/privacy.html` now uses the current navigation stylesheet and correct page links.
 
-Recommended fix: create one canonical navigation block and copy it carefully into all current pages, or move to a small static build step later so shared header/footer markup lives in one place.
+Remaining recommendation: create one canonical navigation block before major future edits, or move to a small static build step later so shared header/footer markup lives in one place.
 
 ### 2. Footer and contact details are inconsistent
 
@@ -36,9 +36,12 @@ There are at least three footer patterns:
 - Current `site-footer` used by the older pages.
 - An extra inner footer inside `pages/myKiln.html`.
 
-There are also repeated typos such as `Privacy statment`.
+Cleanup completed:
 
-Recommended fix: standardise one footer across live pages before broader design work.
+- Repeated `Privacy statment` footer text has been corrected to `Privacy statement`.
+- The extra inner footer in `pages/myKiln.html` has been removed.
+
+Remaining recommendation: standardise one exact footer pattern across all live pages before broader design work.
 
 ### 3. CSS is split by era rather than purpose
 
@@ -60,34 +63,34 @@ Recommended fix: keep the current files for now, but avoid adding new page-speci
 
 ### 4. Several broken or stale references exist
 
-Detected examples:
+Cleanup completed:
 
-- `index.html` uses `images\logo_main.png`; browser paths should use `/`, so this should become `images/logo_main.png`.
-- `pages/privacy.html` and `pages/Untitled-11.html` reference missing `../css/navigation_css.css`.
-- `pages/privacy.html`, `pages/Untitled-11.html`, and `pages/glaze.html` reference missing `../script.js`.
-- `pages/about.html` has `scipt.js`, which looks like a typo and is not a valid script include.
+- `index.html` now uses `images/logo_main.png`.
+- `pages/privacy.html` no longer references missing `navigation_css.css` or `../script.js`.
+- `pages/glaze.html` no longer references missing `../script.js`.
+- `pages/about.html` no longer includes the typo `scipt.js`.
 
-Recommended fix: do a small link/reference cleanup pass before or after the gallery-only upload. The gallery-only upload itself does not depend on these fixes.
+An automated local reference scan found no missing local page/style/script/image references after this pass.
 
 ### 5. Some pages are unfinished or duplicate
 
-- `pages/glaze.html` has almost no main content and multiple current nav states.
-- `pages/Untitled-11.html` appears to be an older duplicate of privacy content.
+- `pages/glaze.html` has almost no main content and is now hidden from navigation until the glaze testing/blog page is ready.
+- `pages/Untitled-11.html` was an older duplicate privacy page and has been removed.
 - The local `pages/shop.html` is a useful prototype but is intentionally not live-ready.
 
-Recommended fix: classify pages as live, prototype, duplicate, or archive before structural edits.
+Cleanup completed:
+
+- `pages/Untitled-11.html` has been deleted as an accidental duplicate.
+- `pages/glaze.html` remains in the repo but is hidden from navigation until the glaze testing/blog page is ready.
+
+Remaining recommendation: keep classifying pages as live, prototype, duplicate, or archive before larger structural edits.
 
 ## Recommended Path
 
 1. Do not rebuild yet.
 2. Proceed with the gallery-only upload using `DEPLOY_CHECKLIST.md` when ready.
-3. Then make a small structure cleanup pass:
-   - fix broken paths and script/style references
-   - standardise navigation current states
-   - standardise footer text and privacy link spelling
-   - remove or archive `pages/Untitled-11.html` if it is confirmed duplicate
-   - decide whether `pages/glaze.html` is a real future page or should be hidden for now
-4. After that, decide whether to introduce a tiny build/include system to avoid hand-copying header/footer into every page.
+3. Structure cleanup pass completed for broken paths, current navigation states, duplicate privacy page, hidden Glazes link, and repeated footer typo.
+4. Next, decide whether to introduce a tiny build/include system to avoid hand-copying header/footer into every page.
 
 ## Not Recommended Yet
 
