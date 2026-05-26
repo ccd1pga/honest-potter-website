@@ -2,15 +2,27 @@
 
 ## Current Priority
 
-Pause before further feature work and set up proper Git/version control. The gallery improvement is good enough to publish, but the shop work is not ready to go live.
+Git/version control is now set up locally for the real Honest Potter site in `/Users/paulallen/Pottery/website_2.0`.
+
+The current priority is to separate publish-ready gallery work from unfinished shop work, then create a safe upload/deploy checklist. The gallery improvement is good enough to consider publishing after review, but the shop work is not ready to go live.
+
+The separate folder `/Users/paulallen/Documents/website` was a mistaken scaffold path and is not the active source of truth for this project.
+
+## Current Git State - 2026-05-26
+
+- Local Git repository created in `/Users/paulallen/Pottery/website_2.0`.
+- Baseline snapshot commit: `c33eba2 Initial Honest Potter site snapshot`.
+- TODO update commit: `a466986 Update project TODO after Git setup`.
+- No GitHub remote has been chosen for this folder yet.
+- The existing GitHub repository `ccd1pga/website` currently points to the old mistaken setup and should not be treated as the active website source until it is deliberately replaced or retired.
 
 ## Stopping Point - 2026-05-24
 
 - The main site files in `/Users/paulallen/Pottery/website_2.0` have been edited directly.
-- There is not currently a Git repository in that folder.
+- A Git repository has since been created in that folder.
 - The improved gallery should be considered the first candidate for publishing.
 - The new shop page and shop links are useful local work, but they should not be uploaded to the live site yet.
-- Tomorrow's first task should be creating a Git repository and separating "safe to publish now" work from "future shop work".
+- The next task is separating "safe to publish now" work from "future shop work".
 
 ## Publish-Safe Gallery Files
 
@@ -40,22 +52,26 @@ Do not upload the new local `pages/shop.html` yet if the live shop should remain
 
 ## Recommended Next Steps
 
-1. Create a Git repository in `/Users/paulallen/Pottery/website_2.0`.
-2. Make an initial local commit/snapshot of the current folder state.
-3. Decide on branches, probably:
+1. Decide on branches, probably:
    - `main` or `live` for currently safe-to-upload files.
    - `gallery-live` for the improved gallery.
    - `shop-work` for the unfinished shop page and shop-item experiments.
-4. Make a clear upload/deploy checklist so only intended files are sent live.
-5. Review the selected 27 gallery pieces and decide whether any images should be removed, renamed, or recaptioned.
-6. Later, review the 12 pieces marked `shop: true`, then remove or add shop flags as needed.
-7. Later, add real prices and dimensions to shop items when ready.
+2. Make a clear upload/deploy checklist so only intended files are sent live.
+3. Review the selected 27 gallery pieces and decide whether any images should be removed, renamed, or recaptioned.
+4. Review the current site structure before larger changes:
+   - shared navigation/header/footer patterns
+   - page naming and folder layout
+   - CSS files and duplicated styles
+   - JavaScript split between gallery, shop, and general site behavior
+   - contact form and deployment requirements
+5. Later, review the 12 pieces marked `shop: true`, then remove or add shop flags as needed.
+6. Later, add real prices and dimensions to shop items when ready.
 
 ## Recommended Order
 
 0. Git and deployment safety
-   - Set up local Git before further website changes.
-   - Capture the current state so work can be reverted or compared safely.
+   - Local Git is now set up.
+   - Current state has been captured so work can be reverted or compared safely.
    - Separate publish-ready gallery work from unfinished shop work.
 
 1. Gallery
