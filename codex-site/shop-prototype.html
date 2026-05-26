@@ -5,28 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shop | The Honest Potter</title>
   <link rel="stylesheet" href="../css/gallery.css">
-  <style>
-    .coming-soon {
-      min-height: 55vh;
-      display: grid;
-      place-items: center;
-      padding: clamp(3rem, 8vw, 7rem) 1.25rem;
-      text-align: center;
-    }
-
-    .coming-soon-card {
-      max-width: 44rem;
-      margin: 0 auto;
-    }
-
-    .coming-soon-actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.75rem;
-      margin-top: 1.75rem;
-    }
-  </style>
+  <script src="../js/gallery-data.js" defer></script>
+  <script src="../js/shop.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -47,21 +27,20 @@
   </header>
 
   <main>
-    <section class="coming-soon" aria-labelledby="shop-title">
-      <div class="coming-soon-card">
-        <p class="eyebrow">Shop</p>
-        <h1 id="shop-title">Coming soon</h1>
-        <p class="intro-copy">
-          The online shop is being prepared. In the meantime, the gallery shows
-          recent pieces and the contact page is open for pottery, commission,
-          and kiln-hire enquiries.
-        </p>
-        <div class="coming-soon-actions">
-          <a class="shop-action" href="../pages/gallery.html">View gallery</a>
-          <a class="shop-action secondary" href="../pages/contact.html">Contact me</a>
-        </div>
+    <section class="shop-intro" aria-labelledby="shop-title">
+      <div>
+        <p class="eyebrow">Available and made-to-order pieces</p>
+        <h1 id="shop-title">Shop</h1>
+        <p class="intro-copy">A small selection from the gallery. Use the enquiry button to ask about a piece, reserve it, or discuss a similar made-to-order item.</p>
+      </div>
+
+      <div class="shop-summary" aria-label="Shop summary">
+        <strong id="shop-count">0</strong>
+        shop items
       </div>
     </section>
+
+    <section class="shop-grid" id="shop-grid" aria-live="polite"></section>
   </main>
 
   <footer class="site-footer">

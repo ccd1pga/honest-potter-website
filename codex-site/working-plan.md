@@ -4,7 +4,7 @@
 
 Git/version control is now set up locally for the real Honest Potter site in `/Users/paulallen/Pottery/website_2.0`.
 
-The current priority is to prepare a safe gallery-only upload/deploy checklist and then review the site structure before larger changes. The gallery improvement is approved as the next iteration. The shop prototype can stay local for testing with placeholder items, but the shop should still behave as coming soon on the live site until deliberately switched on.
+The current priority is to publish the cleaned site with the improved gallery and a live-safe coming-soon shop page. The full shop prototype is preserved locally for later testing, but the public `pages/shop.html` should remain a simple coming-soon page until the shop is deliberately switched on.
 
 The separate folder `/Users/paulallen/Documents/website` was a mistaken scaffold path and is not the active source of truth for this project.
 
@@ -21,20 +21,22 @@ The separate folder `/Users/paulallen/Documents/website` was a mistaken scaffold
 - The main site files in `/Users/paulallen/Pottery/website_2.0` have been edited directly.
 - A Git repository has since been created in that folder.
 - The improved gallery is approved as the next iteration to publish.
-- Gallery shop icons are acceptable. For the gallery-only upload, they should continue to point to the existing live shop/coming-soon page because the new local shop page will not be uploaded yet.
-- The new shop page and shop links are useful local testing work, but the prototype shop page should not be uploaded to the live site yet.
-- The next task is creating and following a safe gallery-only upload checklist.
+- Gallery shop icons are acceptable. They now point to the public `pages/shop.html` coming-soon page.
+- The prototype shop page is useful local testing work and is preserved at `codex-site/shop-prototype.html`.
+- The public `pages/shop.html` is now a simple coming-soon page so all public navigation can be uploaded safely.
+- The next task is following the cleaned-site upload checklist.
 
-## Publish-Safe Gallery Files
+## Publish-Safe Site Files
 
-For the gallery-only next iteration, upload these files together:
+For the cleaned-site next iteration, use `DEPLOY_CHECKLIST.md` and upload the public site files together, including:
 
 - `pages/gallery.html`
 - `css/gallery.css`
 - `js/gallery-data.js`
 - `js/gallery.js`
+- `pages/shop.html`
 
-Do not upload the new local `pages/shop.html` yet. Leaving the live `pages/shop.html` unchanged keeps the shop as coming soon while gallery shop icons can still point there.
+The public `pages/shop.html` is now a coming-soon page. Do not upload `codex-site/shop-prototype.html` or `js/shop.js` until the shop phase is deliberately switched on.
 
 ## Gallery Prototype Progress
 
@@ -47,13 +49,13 @@ Do not upload the new local `pages/shop.html` yet. Leaving the live `pages/shop.
 - Integrated the gallery into the main site at `pages/gallery.html`, with shared files in `css/gallery.css`, `js/gallery-data.js`, and `js/gallery.js`.
 - Browser checked the integrated page from `/pages/gallery.html`: desktop, mobile-width, category filters, and image viewer all work.
 - Added stable item IDs and `shop: true` flags to the main `js/gallery-data.js`.
-- Added gallery shop links for marked items. These link to `pages/shop.html`; during the gallery-only upload, the live shop page should remain the existing coming-soon page.
+- Added gallery shop links for marked items. These link to the public `pages/shop.html` coming-soon page until the shop phase is ready.
 - Replaced the old shop placeholder with a first real shop page built from the shared gallery data.
-- Current main-site shop selection has 12 items. Prices are set to `Enquire` until real prices are provided.
+- The local prototype shop selection has 12 items. Prices are set to `Enquire` until real prices are provided. The prototype is preserved at `codex-site/shop-prototype.html`.
 
 ## Recommended Next Steps
 
-1. Use the gallery-only upload checklist in `DEPLOY_CHECKLIST.md`.
+1. Use the cleaned-site upload checklist in `DEPLOY_CHECKLIST.md`.
 2. Review the current site structure before larger changes:
    - shared navigation/header/footer patterns
    - page naming and folder layout
@@ -93,7 +95,7 @@ Do not upload the new local `pages/shop.html` yet. Leaving the live `pages/shop.
    - Use Git branches or commits to decide exactly what is safe to upload.
    - Upload the improved gallery as a small, deliberate file set.
    - Keep the prototype shop page local until the shop direction is ready.
-   - For the gallery-only upload, leave the live shop page as coming soon.
+   - Upload the public coming-soon `pages/shop.html`, but keep the prototype shop files local.
    - Sort the domain/provider redirect separately.
 
 ## Notes From First Inspection
