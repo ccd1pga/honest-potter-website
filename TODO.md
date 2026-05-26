@@ -6,13 +6,13 @@
 - [x] Create a local Git repository for the current site folder.
 - [x] Make an initial baseline commit of the existing website.
 - [x] Note that `/Users/paulallen/Documents/website` was a mistaken scaffold path.
+- [x] Decide gallery/shop split: gallery is approved for next iteration; shop stays local/testing for now.
+- [x] Create a safe gallery-only upload/deploy checklist.
 
 ## Next
 
-- [ ] Decide how to separate publish-ready gallery work from unfinished shop work.
-- [ ] Create a safe upload/deploy checklist.
 - [ ] Review current site structure before larger changes.
-- [ ] Review the 27 gallery pieces.
+- [ ] Review the 27 gallery pieces when convenient; not blocking the next gallery iteration.
 - [ ] Review the 12 shop-marked pieces before any shop goes live.
 - [ ] Decide whether to replace, retire, or ignore the old `ccd1pga/website` GitHub repository.
 
@@ -20,6 +20,6 @@
 
 - Which branch should represent the current live-safe site.
 - Which GitHub repository should hold the real Honest Potter site.
-- Whether the first shop should use enquiries/reservations or full checkout.
+- Whether the first live shop should use enquiries/reservations or full checkout.
 - Future shop payments are expected to use Stripe.
-- Which exact files are safe to upload first.
+- Whether to do the gallery-only upload manually by SFTP/SSH or through a script.

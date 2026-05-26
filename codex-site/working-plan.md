@@ -4,7 +4,7 @@
 
 Git/version control is now set up locally for the real Honest Potter site in `/Users/paulallen/Pottery/website_2.0`.
 
-The current priority is to separate publish-ready gallery work from unfinished shop work, then create a safe upload/deploy checklist. The gallery improvement is good enough to consider publishing after review, but the shop work is not ready to go live.
+The current priority is to prepare a safe gallery-only upload/deploy checklist and then review the site structure before larger changes. The gallery improvement is approved as the next iteration. The shop prototype can stay local for testing with placeholder items, but the shop should still behave as coming soon on the live site until deliberately switched on.
 
 The separate folder `/Users/paulallen/Documents/website` was a mistaken scaffold path and is not the active source of truth for this project.
 
@@ -20,20 +20,21 @@ The separate folder `/Users/paulallen/Documents/website` was a mistaken scaffold
 
 - The main site files in `/Users/paulallen/Pottery/website_2.0` have been edited directly.
 - A Git repository has since been created in that folder.
-- The improved gallery should be considered the first candidate for publishing.
-- The new shop page and shop links are useful local work, but they should not be uploaded to the live site yet.
-- The next task is separating "safe to publish now" work from "future shop work".
+- The improved gallery is approved as the next iteration to publish.
+- Gallery shop icons are acceptable. For the gallery-only upload, they should continue to point to the existing live shop/coming-soon page because the new local shop page will not be uploaded yet.
+- The new shop page and shop links are useful local testing work, but the prototype shop page should not be uploaded to the live site yet.
+- The next task is creating and following a safe gallery-only upload checklist.
 
 ## Publish-Safe Gallery Files
 
-If publishing only the improved gallery before Git is set up, upload these files together:
+For the gallery-only next iteration, upload these files together:
 
 - `pages/gallery.html`
 - `css/gallery.css`
 - `js/gallery-data.js`
 - `js/gallery.js`
 
-Do not upload the new local `pages/shop.html` yet if the live shop should remain the existing coming-soon page.
+Do not upload the new local `pages/shop.html` yet. Leaving the live `pages/shop.html` unchanged keeps the shop as coming soon while gallery shop icons can still point there.
 
 ## Gallery Prototype Progress
 
@@ -46,33 +47,30 @@ Do not upload the new local `pages/shop.html` yet if the live shop should remain
 - Integrated the gallery into the main site at `pages/gallery.html`, with shared files in `css/gallery.css`, `js/gallery-data.js`, and `js/gallery.js`.
 - Browser checked the integrated page from `/pages/gallery.html`: desktop, mobile-width, category filters, and image viewer all work.
 - Added stable item IDs and `shop: true` flags to the main `js/gallery-data.js`.
-- Added gallery shop links for marked items. These link directly to matching anchors on `pages/shop.html`.
+- Added gallery shop links for marked items. These link to `pages/shop.html`; during the gallery-only upload, the live shop page should remain the existing coming-soon page.
 - Replaced the old shop placeholder with a first real shop page built from the shared gallery data.
 - Current main-site shop selection has 12 items. Prices are set to `Enquire` until real prices are provided.
 
 ## Recommended Next Steps
 
-1. Decide on branches, probably:
-   - `main` or `live` for currently safe-to-upload files.
-   - `gallery-live` for the improved gallery.
-   - `shop-work` for the unfinished shop page and shop-item experiments.
-2. Make a clear upload/deploy checklist so only intended files are sent live.
-3. Review the selected 27 gallery pieces and decide whether any images should be removed, renamed, or recaptioned.
-4. Review the current site structure before larger changes:
+1. Use the gallery-only upload checklist in `DEPLOY_CHECKLIST.md`.
+2. Review the current site structure before larger changes:
    - shared navigation/header/footer patterns
    - page naming and folder layout
    - CSS files and duplicated styles
    - JavaScript split between gallery, shop, and general site behavior
    - contact form and deployment requirements
-5. Later, review the 12 pieces marked `shop: true`, then remove or add shop flags as needed.
-6. Later, add real prices and dimensions to shop items when ready.
+3. Review the selected 27 gallery pieces when there is time, but this is not blocking the next gallery iteration.
+4. Later, review the 12 pieces marked `shop: true`, then remove or add shop flags as needed. Placeholder shop items are acceptable while testing.
+5. Later, add real prices, dimensions, stock states, and Stripe checkout details when the shop phase begins.
 
 ## Recommended Order
 
 0. Git and deployment safety
    - Local Git is now set up.
    - Current state has been captured so work can be reverted or compared safely.
-   - Separate publish-ready gallery work from unfinished shop work.
+   - Gallery is approved as publish-ready for the next iteration.
+   - Shop prototype remains local/testing work.
 
 1. Gallery
    - Organise pieces into clear groups such as bowls, mugs, vases, kitchen/tableware, garden, studio/process, and experiments. First prototype done.
@@ -94,7 +92,8 @@ Do not upload the new local `pages/shop.html` yet if the live shop should remain
 4. Going live
    - Use Git branches or commits to decide exactly what is safe to upload.
    - Upload the improved gallery as a small, deliberate file set.
-   - Keep shop changes local until the shop direction is ready.
+   - Keep the prototype shop page local until the shop direction is ready.
+   - For the gallery-only upload, leave the live shop page as coming soon.
    - Sort the domain/provider redirect separately.
 
 ## Notes From First Inspection
