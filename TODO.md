@@ -3,11 +3,11 @@
 ## Done
 
 - [x] Preserve the Honest Potter working plan in `codex-site/working-plan.md`.
+- [x] Create a local Git repository for the current site folder.
+- [x] Make an initial baseline commit of the existing website.
 
 ## Next
 
-- [ ] Create a local Git repository for the current site folder.
-- [ ] Make an initial baseline commit of the existing website.
 - [ ] Decide how to separate publish-ready gallery work from unfinished shop work.
 - [ ] Create a safe upload/deploy checklist.
 - [ ] Review the 27 gallery pieces.
