@@ -11,7 +11,8 @@
 
 ## Next
 
-- [ ] Review current site structure before larger changes.
+- [x] Review current site structure before larger changes.
+- [ ] Fix broken paths, navigation states, and footer inconsistencies.
 - [ ] Review the 27 gallery pieces when convenient; not blocking the next gallery iteration.
 - [ ] Review the 12 shop-marked pieces before any shop goes live.
 - [ ] Decide whether to replace, retire, or ignore the old `ccd1pga/website` GitHub repository.
