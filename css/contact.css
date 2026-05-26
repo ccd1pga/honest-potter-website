@@ -1,0 +1,77 @@
+
+/* Contact form component styles (kept minimal; inherits global theme) */
+
+.container_contact {
+  border-radius: var(--radius);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  padding: clamp(16px, 3vw, 24px);
+}
+
+/* Ensure all form controls use the site font & sizing */
+.container_contact input,
+.container_contact select,
+.container_contact textarea,
+.container_contact button {
+  font: inherit;
+  color: var(--text);
+}
+
+/* Inputs / selects / textareas */
+.container_contact input[type=text],
+.container_contact input[type=email],
+.container_contact input[type=tel],
+.container_contact select,
+.container_contact textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  background: #fff;
+}
+
+/* Make <select> render more consistently across browsers */
+.container_contact select{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, rgba(0,0,0,0.4) 50%),
+                    linear-gradient(135deg, rgba(0,0,0,0.4) 50%, transparent 50%);
+  background-position: calc(100% - 18px) calc(50% - 3px), calc(100% - 12px) calc(50% - 3px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+/* Labels */
+.container_contact label {
+  display:block;
+  font-weight: 600;
+}
+
+/* Submit button */
+.container_contact .btn-submit {
+  background-color: var(--brand);
+  color: var(--brand-ink);
+  padding: 12px 16px;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.container_contact .btn-submit:hover {
+  filter: brightness(0.95);
+}
+
+/* Helper: muted small text */
+.container_contact .muted { color: var(--muted); font-size: 0.92rem; }
+
+/* Success / error banners */
+.form-banner{
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+.form-banner.success{ background: #e9f7ef; border:1px solid #b7e0c3; }
+.form-banner.error{ background: #fdecea; border:1px solid #f5c2c0; }

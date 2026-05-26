@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/navigation_new.css">
+  <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body class="page">
+
+  <header>
+    <nav class="site-nav" role="navigation" aria-label="Main">
+      <div class="nav-inner">
+        <a class="nav-brand" href="/index.html">
+          <img src="../images/logo.png" alt="Site logo" />
+          <span>The Honest Potter</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="../pages/about.html">About</a></li>
+          <li><a href="../pages/shop.html">Shop</a></li>
+          <li><a href="../pages/gallery.html">Gallery</a></li>
+          <li><a href="../pages/myKiln.html">My Kiln</a></li>
+          <li><a href="../pages/contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="section-one">
+        <h1 style="margin-top:0;">Contact</h1>
+        <p class="muted">Questions about pottery, commissions, or kiln time? Send a message below.</p>
+
+        <!-- Simple success/error messages via query string -->
+        <div id="banner-slot"></div>
+
+        <div class="container_contact">
+          <form action="/contact.php" method="post" novalidate>
+            <input type="hidden" name="form_name" value="contact_v1">
+
+            <!-- Honeypot (should remain empty) -->
+            <div style="position:absolute; left:-5000px;" aria-hidden="true">
+              <label>Leave this field empty</label>
+              <input type="text" name="website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name" maxlength="60" required>
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name" maxlength="60" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+
+            <label for="phone">Phone number <span class="muted">(optional)</span></label>
+            <input type="tel" id="phone" name="phonenumber" placeholder="Your contact number" maxlength="30">
+
+            <label for="country">Country</label>
+            <select class="form-select" autocomplete="country" id="country" name="country" required>
+              <option value="">Select your country</option>
+              <option value="GB">United Kingdom</option>
+              <option value="IE">Ireland</option>
+              <option value="US">United States</option>
+              <option value="CA">Canada</option>
+              <option value="EU">European Union</option>
+              <option value="AU">Australia</option>
+              <option value="NZ">New Zealand</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" placeholder="What's the topic?" maxlength="100" required />
+
+            <label for="content">Your message</label>
+            <textarea id="content" name="content" placeholder="What would you like to tell me?" style="height:200px" required></textarea>
+
+            <label>
+              <input type="checkbox" name="consent" required> I consent to you storing my details to respond to my enquiry.
+            </label>
+
+            <div style="margin-top: 10px;">
+              <button class="btn-submit" type="submit">Send message</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 The Honest Potter</p>
+		<p><a href="privacy.html" style="color:inherit;">Privacy statment</a></p>
+      <p><a href="mailto:info@kelvinkilns.com" style="color:inherit;">info@kelvinkilns.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Show simple success/error banner based on query params (?sent=1 or ?error=1)
+    (function(){
+      const p = new URLSearchParams(window.location.search);
+      const slot = document.getElementById('banner-slot');
+      if (!slot) return;
+      if (p.get('sent') === '1'){
+        slot.innerHTML = '<div class="form-banner success">Thanks — your message has been sent.</div>';
+      } else if (p.get('error') === '1'){
+        slot.innerHTML = '<div class="form-banner error">Sorry, something went wrong. Please try again.</div>';
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/* CSS Document */
+/* ========== LAYOUT SHELLS ========== */
+
+/* Sticky header + sticky footer layout */
+.page{
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header (navbar is imported from navigation.css) */
+.page > header{ position: relative; z-index: 10; }
+
+/* Main grows to fill available space */
+.page > main{
+  flex: 1 0 auto;
+  display: block;
+}
+
+/* Footer pinned to bottom via flex layout */
+.page > footer{
+  background: var(--brand);
+  color: var(--brand-ink);
+}
+
+/* Shared container */
+.container{
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: clamp(16px, 3vw, var(--pad));
+}
+
+/* One-column page (index / gallery) */
+.section-one{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: clamp(16px, 3vw, var(--pad));
+}
+
+/* Two-column page (e.g., myKiln/about variant) */
+.two-col{
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* text / side */
+  gap: var(--gap);
+  align-items: start;
+}
+
+@media (max-width: 900px){
+  .two-col{ grid-template-columns: 1fr; }
+}
+
+/* Footer small print */
+.site-footer{
+  padding: 16px 0;
+}
+.site-footer .container{
+  display:flex; gap: 12px; align-items:center; justify-content: space-between;
+  padding-top: 12px; padding-bottom: 12px;
+}
+.site-footer p{ margin:0; font-size: 0.95rem; }

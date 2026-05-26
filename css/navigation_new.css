@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* ========== NAVIGATION ========== */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--brand);
+  color: var(--brand-ink);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.nav-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 64px;
+}
+
+.nav-brand{
+  display:inline-flex;
+  align-items:center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--brand-ink);
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+.nav-brand img{ height: 40px; width:auto; display:block; }
+
+.nav-links{
+  margin-left: auto;
+  display:flex;
+  gap: 4px;
+  list-style:none;
+  padding:0;
+}
+
+.nav-links a{
+  display:block;
+  padding: 10px 12px;
+  color: var(--brand-ink);
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+.nav-links a:hover,
+.nav-links a:focus-visible{
+  text-decoration:none;
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.15);
+}
+
+/* Current page */
+.nav-links a[aria-current="page"]{ font-weight: 600; }

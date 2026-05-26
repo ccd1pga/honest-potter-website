@@ -1,0 +1,19 @@
+<!-- GA4 loader (consent-gated). Paste this once in your <head> include when ready. -->
+<script>
+window.onConsentGranted = window.onConsentGranted || [];
+window.onConsentGranted.push(function loadGA4() {
+  const GA_ID = "G-XXXXXXX"; // <-- Replace with your GA4 Measurement ID
+  if (window.cookieConsent?.get() !== "accepted") return;
+  const s = document.createElement("script");
+  s.async = true;
+  s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+  document.head.appendChild(s);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  window.gtag = gtag;
+
+  gtag('js', new Date());
+  gtag('config', GA_ID, { anonymize_ip: true });
+});
+</script>

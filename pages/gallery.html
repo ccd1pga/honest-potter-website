@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | The Honest Potter</title>
+  <link rel="stylesheet" href="../css/gallery.css">
+  <script src="../js/gallery-data.js" defer></script>
+  <script src="../js/gallery.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main">
+      <a class="brand" href="../index.html">
+        <img src="../images/logo.png" alt="The Honest Potter logo">
+        <span>The Honest Potter</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="../pages/about.html">About</a></li>
+        <li><a href="../pages/shop.html">Shop</a></li>
+        <li><a href="../pages/gallery.html" aria-current="page">Gallery</a></li>
+        <li><a href="../pages/myKiln.html">My Kiln</a></li>
+        <li><a href="../pages/glaze.html">Glazes</a></li>
+        <li><a href="../pages/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="gallery-intro" aria-labelledby="gallery-title">
+      <div>
+        <p class="eyebrow">Thrown, hand-built, carved, tested</p>
+        <h1 id="gallery-title">Gallery</h1>
+        <p class="intro-copy">A working archive of pieces from The Honest Potter studio, grouped so bowls, mugs, tableware, garden pieces, and experiments are easier to browse.</p>
+      </div>
+      <div class="gallery-stats" aria-label="Gallery summary">
+        <span><strong id="piece-count">0</strong> pieces</span>
+        <span><strong>7</strong> groups</span>
+      </div>
+    </section>
+
+    <section class="gallery-tools" aria-label="Gallery filters">
+      <div class="filter-strip" id="gallery-filters"></div>
+    </section>
+
+    <section class="gallery-grid" id="gallery-grid" aria-live="polite"></section>
+  </main>
+
+  <dialog class="lightbox" id="gallery-lightbox" aria-label="Gallery image viewer">
+    <form method="dialog">
+      <button class="icon-button close-button" value="close" aria-label="Close viewer">x</button>
+    </form>
+
+    <div class="lightbox-shell">
+      <button class="icon-button nav-button previous-button" type="button" id="previous-image" aria-label="Previous image">&lsaquo;</button>
+      <figure>
+        <img id="lightbox-image" alt="">
+        <figcaption>
+          <strong id="lightbox-title"></strong>
+          <span id="lightbox-meta"></span>
+        </figcaption>
+      </figure>
+      <button class="icon-button nav-button next-button" type="button" id="next-image" aria-label="Next image">&rsaquo;</button>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 The Honest Potter</p>
+    <a href="../pages/privacy.html">Privacy statement</a>
+    <a href="mailto:info@kelvinkilns.com">info@kelvinkilns.com</a>
+  </footer>
+</body>
+</html>
