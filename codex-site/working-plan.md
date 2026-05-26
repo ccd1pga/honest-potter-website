@@ -4,7 +4,7 @@
 
 Git/version control is now set up locally for the real Honest Potter site in `/Users/paulallen/Pottery/website_2.0`.
 
-The current priority is to publish the cleaned site with the improved gallery and a live-safe coming-soon shop page. The full shop prototype is preserved locally for later testing, but the public `pages/shop.html` should remain a simple coming-soon page until the shop is deliberately switched on.
+The cleaned site has now been published to Fasthosts with the improved gallery and a live-safe coming-soon shop page. The full shop prototype is preserved locally for later testing, but the public `pages/shop.html` should remain a simple coming-soon page until the shop is deliberately switched on.
 
 The separate folder `/Users/paulallen/Documents/website` was a mistaken scaffold path and is not the active source of truth for this project.
 
@@ -24,7 +24,8 @@ The separate folder `/Users/paulallen/Documents/website` was a mistaken scaffold
 - Gallery shop icons are acceptable. They now point to the public `pages/shop.html` coming-soon page.
 - The prototype shop page is useful local testing work and is preserved at `codex-site/shop-prototype.html`.
 - The public `pages/shop.html` is now a simple coming-soon page so all public navigation can be uploaded safely.
-- The next task is following the cleaned-site upload checklist.
+- The cleaned-site upload has been completed and the live folder structure has been corrected.
+- The next task is to spot-check the live contact form once the private mail settings on Fasthosts are confirmed.
 
 ## Publish-Safe Site Files
 
@@ -37,6 +38,14 @@ For the cleaned-site next iteration, use `DEPLOY_CHECKLIST.md` and upload the pu
 - `pages/shop.html`
 
 The public `pages/shop.html` is now a coming-soon page. Do not upload `codex-site/shop-prototype.html` or `js/shop.js` until the shop phase is deliberately switched on.
+
+## Live Publish - 2026-05-26
+
+- Published the cleaned public site to Fasthosts.
+- Confirmed these live paths return successfully: `/`, `/css/gallery.css`, `/js/gallery.js`, `/images/logo.png`, `/pages/gallery.html`, and `/pages/shop.html`.
+- Confirmed the live gallery renders 27 pieces from `js/gallery-data.js` and `js/gallery.js`.
+- Removed duplicate loose files left at the server root by the first transfer attempt, while keeping the working `css`, `js`, `images`, `pages`, and `vendor` folders.
+- Current live shop page is a coming-soon page. Stripe remains a later shop-phase decision.
 
 ## Gallery Prototype Progress
 
@@ -55,7 +64,7 @@ The public `pages/shop.html` is now a coming-soon page. Do not upload `codex-sit
 
 ## Recommended Next Steps
 
-1. Use the cleaned-site upload checklist in `DEPLOY_CHECKLIST.md`.
+1. Spot-check the live contact form once the private mail settings on Fasthosts are confirmed.
 2. Review the current site structure before larger changes:
    - shared navigation/header/footer patterns
    - page naming and folder layout

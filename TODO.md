@@ -13,9 +13,12 @@
 - [x] Remove accidental duplicate `pages/Untitled-11.html`.
 - [x] Hide `pages/glaze.html` from navigation until the glaze testing page is ready.
 - [x] Replace public shop page with a simple coming-soon page and preserve the prototype shop locally.
+- [x] Publish the cleaned site to Fasthosts with homepage, gallery, contact pages, kiln page, privacy page, assets, and the coming-soon shop page.
+- [x] Tidy mistaken loose upload files from the live server root after correcting the folder structure.
 
 ## Next
 
+- [ ] Spot-check the live contact form once the private mail settings on Fasthosts are confirmed.
 - [ ] Review the 27 gallery pieces when convenient; not blocking the next gallery iteration.
 - [ ] Review the 12 shop-marked pieces before any shop goes live.
 - [ ] Decide whether to replace, retire, or ignore the old `ccd1pga/website` GitHub repository.
@@ -26,4 +29,4 @@
 - Which GitHub repository should hold the real Honest Potter site.
 - Whether the first live shop should use enquiries/reservations or full checkout.
 - Future shop payments are expected to use Stripe.
-- Whether to do the cleaned-site upload manually by SFTP/SSH or through a script.
+- Whether to turn the manual Fasthosts upload steps into a repeatable script.
