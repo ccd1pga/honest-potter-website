@@ -16,6 +16,8 @@ $TO_EMAIL   = 'info@kelvinkilns.com';
 $TO_NAME    = 'The Honest Potter';
 $FROM_EMAIL = 'info@kelvinkilns.com';
 $FROM_NAME  = 'Website Contact Form';
+$MAX_MESSAGE_WORDS = 300;
+$MAX_MESSAGE_CHARS = 2000;
 
 /* 3) Pull SMTP settings from secrets */
 $SMTP_HOST   = $secrets['SMTP_HOST'];   // e.g. smtp.livemail.co.uk
@@ -42,6 +44,32 @@ function email_row($label, $value) {
     . '</tr>';
 }
 
+function message_word_count($value) {
+  $words = preg_split('/\s+/', trim($value), -1, PREG_SPLIT_NO_EMPTY);
+  return $words === false ? 0 : count($words);
+}
+
+function email_domain_is_allowed($email) {
+  $domain = substr(strrchr($email, '@') ?: '', 1);
+  if ($domain === '') return false;
+
+  $domain = strtolower($domain);
+  $commonTypos = [
+    'gamil.com',
+    'gmial.com',
+    'gmai.com',
+    'gmail.co',
+    'hotmial.com',
+    'hotmal.com',
+    'outlok.com',
+    'outloo.com',
+    'yaho.com',
+    'yhoo.com',
+  ];
+
+  return !in_array($domain, $commonTypos, true);
+}
+
 /* Basic validation */
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') redirect_with(['error' => 1]);
 
@@ -57,8 +85,10 @@ $subject   = trim($_POST['subject'] ?? '');
 $content   = trim($_POST['content'] ?? '');
 $consent   = isset($_POST['consent']);
 
-if (!$firstname || !$lastname || !$email || !$subject || !$content || !$consent) redirect_with(['error' => 1]);
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) redirect_with(['error' => 1]);
+if (!$firstname || !$lastname || !$email || !$subject || !$content || !$consent) redirect_with(['error' => 'required']);
+if (!filter_var($email, FILTER_VALIDATE_EMAIL) || !email_domain_is_allowed($email)) redirect_with(['error' => 'email']);
+if ($phone !== '' && !preg_match('/^\d{11}$/', $phone)) redirect_with(['error' => 'phone']);
+if (strlen($content) > $MAX_MESSAGE_CHARS || message_word_count($content) > $MAX_MESSAGE_WORDS) redirect_with(['error' => 'message']);
 
 $countries = [
   'GB' => 'United Kingdom',

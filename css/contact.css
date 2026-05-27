@@ -67,6 +67,17 @@
 /* Helper: muted small text */
 .container_contact .muted { color: var(--muted); font-size: 0.92rem; }
 
+.container_contact .form-help {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: -10px 0 16px;
+}
+
+.container_contact .form-help.is-error {
+  color: #9f2f26;
+  font-weight: 700;
+}
+
 /* Success / error banners */
 .form-banner{
   padding: 10px 12px;
