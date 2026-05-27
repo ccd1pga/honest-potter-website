@@ -6,15 +6,21 @@ Git/version control is now set up locally for the real Honest Potter site in `/U
 
 The cleaned site has now been published to Fasthosts with the improved gallery and a live-safe coming-soon shop page. The full shop prototype is preserved locally for later testing, but the public `pages/shop.html` should remain a simple coming-soon page until the shop is deliberately switched on.
 
-The separate folder `/Users/paulallen/Documents/website` was a mistaken scaffold path and is not the active source of truth for this project.
+The live contact form has been tested successfully. The local contact form now has better email formatting, stronger phone/email/message validation, and clearer error messages. These three files are ready to upload when Fasthosts SSH/SFTP is reachable: `contact.php`, `pages/contact.html`, and `css/contact.css`.
 
-## Current Git State - 2026-05-26
+The gallery pictures/design are good enough for now. The current public shop coming-soon page is also good enough for now. Gallery content, shop item content, and payment/shop functionality are no longer active blockers.
+
+The separate folder `/Users/paulallen/Documents/website` was a mistaken scaffold path and should now be treated as retired. The real site source of truth is this folder only.
+
+## Current Git State - 2026-05-27
 
 - Local Git repository created in `/Users/paulallen/Pottery/website_2.0`.
 - Baseline snapshot commit: `c33eba2 Initial Honest Potter site snapshot`.
 - TODO update commit: `a466986 Update project TODO after Git setup`.
+- Contact formatting commit: `9373042 Improve contact form email formatting`.
+- Contact validation commit: `2462ba7 Tighten contact form validation`.
 - No GitHub remote has been chosen for this folder yet.
-- The existing GitHub repository `ccd1pga/website` currently points to the old mistaken setup and should not be treated as the active website source until it is deliberately replaced or retired.
+- The existing GitHub repository `ccd1pga/website` points to the old mistaken setup and should now be retired/archived or left as a pointer only.
 
 ## Stopping Point - 2026-05-24
 
@@ -25,7 +31,8 @@ The separate folder `/Users/paulallen/Documents/website` was a mistaken scaffold
 - The prototype shop page is useful local testing work and is preserved at `codex-site/shop-prototype.html`.
 - The public `pages/shop.html` is now a simple coming-soon page so all public navigation can be uploaded safely.
 - The cleaned-site upload has been completed and the live folder structure has been corrected.
-- The next task is to spot-check the live contact form once the private mail settings on Fasthosts are confirmed.
+- The live contact form was spot-checked successfully after the private mail settings were confirmed.
+- Contact form formatting and validation improvements are ready locally. An upload attempt on 2026-05-27 timed out when connecting to `ssh.kelvinkilns.com:22`, so the changed contact files still need to be uploaded when the Fasthosts connection is reachable.
 
 ## Publish-Safe Site Files
 
@@ -47,6 +54,18 @@ The public `pages/shop.html` is now a coming-soon page. Do not upload `codex-sit
 - Removed duplicate loose files left at the server root by the first transfer attempt, while keeping the working `css`, `js`, `images`, `pages`, and `vendor` folders.
 - Current live shop page is a coming-soon page. Stripe remains a later shop-phase decision.
 
+## Contact Form - 2026-05-27
+
+- Confirmed the live contact form sends email successfully.
+- Improved local email formatting so enquiries arrive as a readable HTML message with a plain-text fallback.
+- Added local server-side validation:
+  - optional phone number must be exactly 11 digits if provided
+  - email must pass normal email validation and rejects common typo domains such as `gamil.com`
+  - message is limited to 300 words and 2000 characters
+- Added matching browser-side form validation and a live word counter.
+- Ready-to-upload files: `contact.php`, `pages/contact.html`, `css/contact.css`.
+- Upload attempt from Codex timed out against `ssh.kelvinkilns.com:22`; retry from a reachable network or upload manually through Fasthosts/SFTP.
+
 ## Gallery Prototype Progress
 
 - Created `codex-site/gallery.html` as a standalone prototype page.
@@ -64,16 +83,24 @@ The public `pages/shop.html` is now a coming-soon page. Do not upload `codex-sit
 
 ## Recommended Next Steps
 
-1. Spot-check the live contact form once the private mail settings on Fasthosts are confirmed.
-2. Review the current site structure before larger changes:
+1. Upload the contact form improvements:
+   - `contact.php`
+   - `pages/contact.html`
+   - `css/contact.css`
+2. Re-test the live contact form with:
+   - a normal message
+   - a mistyped email such as `ccd1pga@gamil.com`
+   - an invalid phone value such as `sausage`
+   - an over-long message
+3. Decide where the real Honest Potter site should live on GitHub. The old `ccd1pga/website` repository should no longer be treated as active.
+4. Review the current site structure before larger changes:
    - shared navigation/header/footer patterns
    - page naming and folder layout
    - CSS files and duplicated styles
    - JavaScript split between gallery, shop, and general site behavior
    - contact form and deployment requirements
-3. Review the selected 27 gallery pieces when there is time, but this is not blocking the next gallery iteration.
-4. Later, review the 12 pieces marked `shop: true`, then remove or add shop flags as needed. Placeholder shop items are acceptable while testing.
-5. Later, add real prices, dimensions, stock states, and Stripe checkout details when the shop phase begins.
+5. Later, review gallery/shop content only when the business content matters again.
+6. Later, add real prices, dimensions, stock states, and Stripe checkout details when the shop phase begins.
 
 ## Recommended Order
 

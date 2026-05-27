@@ -5,3 +5,4 @@ _notes/
 smtp_test.php
 private_config/
 **/private_config/
+deploy/*.env

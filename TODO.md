@@ -15,13 +15,19 @@
 - [x] Replace public shop page with a simple coming-soon page and preserve the prototype shop locally.
 - [x] Publish the cleaned site to Fasthosts with homepage, gallery, contact pages, kiln page, privacy page, assets, and the coming-soon shop page.
 - [x] Tidy mistaken loose upload files from the live server root after correcting the folder structure.
+- [x] Spot-check the live contact form once the private mail settings on Fasthosts are confirmed.
+- [x] Improve contact form email formatting.
+- [x] Add contact form validation for email typos, 11 digit phone numbers, and long messages.
+- [x] Decide that the current gallery pictures/design are good enough for now.
+- [x] Decide that the current public shop coming-soon page is good enough for now.
+- [x] Decide that the old `ccd1pga/website` repository should be retired or kept only as a pointer.
+- [x] Add a repeatable contact-form upload script and deployment notes to the real site project.
 
 ## Next
 
-- [ ] Spot-check the live contact form once the private mail settings on Fasthosts are confirmed.
-- [ ] Review the 27 gallery pieces when convenient; not blocking the next gallery iteration.
-- [ ] Review the 12 shop-marked pieces before any shop goes live.
-- [ ] Decide whether to replace, retire, or ignore the old `ccd1pga/website` GitHub repository.
+- [ ] Upload the contact form improvements: `contact.php`, `pages/contact.html`, and `css/contact.css`.
+- [ ] Re-test the live contact form validation after upload.
+- [ ] Choose or create the GitHub repository that will hold `/Users/paulallen/Pottery/website_2.0`.
 
 ## Open Decisions
 
@@ -29,4 +35,3 @@
 - Which GitHub repository should hold the real Honest Potter site.
 - Whether the first live shop should use enquiries/reservations or full checkout.
 - Future shop payments are expected to use Stripe.
-- Whether to turn the manual Fasthosts upload steps into a repeatable script.
