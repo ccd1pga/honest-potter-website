@@ -31,6 +31,8 @@ This checklist is for publishing the cleaned site structure, the improved galler
 - `SITE_STRUCTURE_REVIEW.md`
 - `DEPLOY_CHECKLIST.md`
 - `codex-site/`
+- `smtp_test.php`
+- `smtp_test.example.php`
 - `js/shop.js`
 - `composer.json` and `composer.lock` unless the server setup specifically needs them
 - Any future Stripe/payment files

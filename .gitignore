@@ -2,3 +2,6 @@
 **/.DS_Store
 _notes/
 **/_notes/
+smtp_test.php
+private_config/
+**/private_config/
