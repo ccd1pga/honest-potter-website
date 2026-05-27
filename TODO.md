@@ -6,13 +6,12 @@ The quick mock-up has done its job: the site is live, stable enough, contact wor
 
 Only update the live Fasthosts site when a coherent improvement is worth publishing. Use local work, Git commits, and browser checks before deployment.
 
+## Direction
+
+- [x] Define the real site direction in `codex-site/phase-2-direction.md`.
+
 ## Next
 
-- [ ] Define the real site direction:
-  - primary audience
-  - main job of the site
-  - preferred calls to action
-  - whether kiln hire, pottery enquiries, or gallery credibility should lead
 - [ ] Draft the real site map and navigation.
 - [ ] Plan the homepage as the new front door.
 - [ ] Review oversized tracked image files and decide whether to resize them or move originals out of Git.
@@ -21,6 +20,7 @@ Only update the live Fasthosts site when a coherent improvement is worth publish
 
 - [ ] Create a consistent shared layout system for header, footer, spacing, buttons, and page sections.
 - [ ] Rename or reframe `My Kiln` if `Kiln Hire` or `Kiln Services` is clearer for visitors.
+- [ ] Explore a glaze-development page as a visual journal, studio notebook, or glaze test log.
 - [ ] Improve homepage copy and structure.
 - [ ] Improve mobile layout and page rhythm across core pages.
 - [ ] Create web-sized gallery images and keep large originals out of the normal site workflow.
