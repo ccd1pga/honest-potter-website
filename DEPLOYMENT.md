@@ -4,7 +4,7 @@ This folder is the active source for The Honest Potter website.
 
 ## Fasthosts
 
-The live site is hosted on Fasthosts. Website files are uploaded to the live web root over SSH/SFTP when the connection is available.
+The live site is hosted on Fasthosts. Website files are uploaded to the live web root over SSH/SFTP on port `1022`.
 
 Private connection details should live in:
 
@@ -28,4 +28,4 @@ When `deploy/fasthosts.env` has been created from `deploy/fasthosts.env.example`
 ./scripts/deploy-contact-form.sh
 ```
 
-If the SSH/SFTP connection is unavailable, upload those three files manually through the Fasthosts file manager or SFTP client.
+If the SSH/SFTP connection is unavailable, confirm the deploy settings use port `1022` before falling back to manual upload through the Fasthosts file manager or SFTP client.

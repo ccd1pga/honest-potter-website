@@ -22,11 +22,12 @@
 - [x] Decide that the current public shop coming-soon page is good enough for now.
 - [x] Decide that the old `ccd1pga/website` repository should be retired or kept only as a pointer.
 - [x] Add a repeatable contact-form upload script and deployment notes to the real site project.
+- [x] Upload the contact form improvements using Fasthosts rsync/SFTP port `1022`.
+- [x] Re-test live contact validation for invalid phone and mistyped email after upload.
 
 ## Next
 
-- [ ] Upload the contact form improvements: `contact.php`, `pages/contact.html`, and `css/contact.css`.
-- [ ] Re-test the live contact form validation after upload.
+- [ ] Send one normal live contact form message to confirm the improved formatted email arrives as expected.
 - [ ] Choose or create the GitHub repository that will hold `/Users/paulallen/Pottery/website_2.0`.
 
 ## Open Decisions

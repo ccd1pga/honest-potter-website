@@ -20,7 +20,7 @@ fi
 
 cd "$ROOT_DIR"
 
-rsync -avz -e "ssh -p $FASTHOSTS_PORT" \
+rsync -avzR -e "ssh -p $FASTHOSTS_PORT" \
   contact.php \
   pages/contact.html \
   css/contact.css \

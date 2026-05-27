@@ -6,7 +6,7 @@ Git/version control is now set up locally for the real Honest Potter site in `/U
 
 The cleaned site has now been published to Fasthosts with the improved gallery and a live-safe coming-soon shop page. The full shop prototype is preserved locally for later testing, but the public `pages/shop.html` should remain a simple coming-soon page until the shop is deliberately switched on.
 
-The live contact form has been tested successfully. The local contact form now has better email formatting, stronger phone/email/message validation, and clearer error messages. These three files are ready to upload when Fasthosts SSH/SFTP is reachable: `contact.php`, `pages/contact.html`, and `css/contact.css`.
+The live contact form has been tested successfully. The contact form now has better email formatting, stronger phone/email/message validation, and clearer error messages. The updated files were uploaded to Fasthosts using rsync/SFTP port `1022`: `contact.php`, `pages/contact.html`, and `css/contact.css`.
 
 The gallery pictures/design are good enough for now. The current public shop coming-soon page is also good enough for now. Gallery content, shop item content, and payment/shop functionality are no longer active blockers.
 
@@ -32,7 +32,7 @@ The separate folder `/Users/paulallen/Documents/website` was a mistaken scaffold
 - The public `pages/shop.html` is now a simple coming-soon page so all public navigation can be uploaded safely.
 - The cleaned-site upload has been completed and the live folder structure has been corrected.
 - The live contact form was spot-checked successfully after the private mail settings were confirmed.
-- Contact form formatting and validation improvements are ready locally. An upload attempt on 2026-05-27 timed out when connecting to `ssh.kelvinkilns.com:22`, so the changed contact files still need to be uploaded when the Fasthosts connection is reachable.
+- Contact form formatting and validation improvements were uploaded on 2026-05-27 using Fasthosts rsync/SFTP port `1022`.
 
 ## Publish-Safe Site Files
 
@@ -64,7 +64,8 @@ The public `pages/shop.html` is now a coming-soon page. Do not upload `codex-sit
   - message is limited to 300 words and 2000 characters
 - Added matching browser-side form validation and a live word counter.
 - Ready-to-upload files: `contact.php`, `pages/contact.html`, `css/contact.css`.
-- Upload attempt from Codex timed out against `ssh.kelvinkilns.com:22`; retry from a reachable network or upload manually through Fasthosts/SFTP.
+- Upload attempt from Codex timed out against `ssh.kelvinkilns.com:22`; Fasthosts rsync/SFTP should use port `1022`.
+- Retried with port `1022`; upload succeeded. Live checks confirmed `pages/contact.html` and `css/contact.css` contain the new validation UI, and invalid phone/email submissions redirect to the correct errors.
 
 ## Gallery Prototype Progress
 
@@ -83,24 +84,16 @@ The public `pages/shop.html` is now a coming-soon page. Do not upload `codex-sit
 
 ## Recommended Next Steps
 
-1. Upload the contact form improvements:
-   - `contact.php`
-   - `pages/contact.html`
-   - `css/contact.css`
-2. Re-test the live contact form with:
-   - a normal message
-   - a mistyped email such as `ccd1pga@gamil.com`
-   - an invalid phone value such as `sausage`
-   - an over-long message
-3. Decide where the real Honest Potter site should live on GitHub. The old `ccd1pga/website` repository should no longer be treated as active.
-4. Review the current site structure before larger changes:
+1. Send one normal live contact form message after upload to confirm the improved formatted email arrives as expected.
+2. Decide where the real Honest Potter site should live on GitHub. The old `ccd1pga/website` repository should no longer be treated as active.
+3. Review the current site structure before larger changes:
    - shared navigation/header/footer patterns
    - page naming and folder layout
    - CSS files and duplicated styles
    - JavaScript split between gallery, shop, and general site behavior
    - contact form and deployment requirements
-5. Later, review gallery/shop content only when the business content matters again.
-6. Later, add real prices, dimensions, stock states, and Stripe checkout details when the shop phase begins.
+4. Later, review gallery/shop content only when the business content matters again.
+5. Later, add real prices, dimensions, stock states, and Stripe checkout details when the shop phase begins.
 
 ## Recommended Order
 
