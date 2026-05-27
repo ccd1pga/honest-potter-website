@@ -6,7 +6,7 @@ Git/version control is now set up locally for the real Honest Potter site in `/U
 
 The cleaned site has now been published to Fasthosts with the improved gallery and a live-safe coming-soon shop page. The full shop prototype is preserved locally for later testing, but the public `pages/shop.html` should remain a simple coming-soon page until the shop is deliberately switched on.
 
-The live contact form has been tested successfully. The contact form now has better email formatting, stronger phone/email/message validation, and clearer error messages. The updated files were uploaded to Fasthosts using rsync/SFTP port `1022`: `contact.php`, `pages/contact.html`, and `css/contact.css`.
+The live contact form has been tested successfully. The contact form now has better email formatting, stronger phone/email/message validation, and clearer error messages. The updated files were uploaded to Fasthosts using rsync/SFTP port `1022`: `contact.php`, `pages/contact.html`, and `css/contact.css`. A normal live test message arrived and the formatted email output looks good.
 
 The gallery pictures/design are good enough for now. The current public shop coming-soon page is also good enough for now. Gallery content, shop item content, and payment/shop functionality are no longer active blockers.
 
@@ -33,6 +33,7 @@ The separate folder `/Users/paulallen/Documents/website` was a mistaken scaffold
 - The cleaned-site upload has been completed and the live folder structure has been corrected.
 - The live contact form was spot-checked successfully after the private mail settings were confirmed.
 - Contact form formatting and validation improvements were uploaded on 2026-05-27 using Fasthosts rsync/SFTP port `1022`.
+- A normal live test message was sent after upload; the formatted email output was confirmed as good.
 
 ## Publish-Safe Site Files
 
@@ -63,9 +64,10 @@ The public `pages/shop.html` is now a coming-soon page. Do not upload `codex-sit
   - email must pass normal email validation and rejects common typo domains such as `gamil.com`
   - message is limited to 300 words and 2000 characters
 - Added matching browser-side form validation and a live word counter.
-- Ready-to-upload files: `contact.php`, `pages/contact.html`, `css/contact.css`.
+- Uploaded files: `contact.php`, `pages/contact.html`, `css/contact.css`.
 - Upload attempt from Codex timed out against `ssh.kelvinkilns.com:22`; Fasthosts rsync/SFTP should use port `1022`.
 - Retried with port `1022`; upload succeeded. Live checks confirmed `pages/contact.html` and `css/contact.css` contain the new validation UI, and invalid phone/email submissions redirect to the correct errors.
+- Normal live message output was confirmed to look good. Email validation catches missing `@` and common typo cases well enough for this stage. Phone number validation works.
 
 ## Gallery Prototype Progress
 
@@ -84,16 +86,15 @@ The public `pages/shop.html` is now a coming-soon page. Do not upload `codex-sit
 
 ## Recommended Next Steps
 
-1. Send one normal live contact form message after upload to confirm the improved formatted email arrives as expected.
-2. Decide where the real Honest Potter site should live on GitHub. The old `ccd1pga/website` repository should no longer be treated as active.
-3. Review the current site structure before larger changes:
+1. Decide where the real Honest Potter site should live on GitHub. The old `ccd1pga/website` repository should no longer be treated as active.
+2. Review the current site structure before larger changes:
    - shared navigation/header/footer patterns
    - page naming and folder layout
    - CSS files and duplicated styles
    - JavaScript split between gallery, shop, and general site behavior
    - contact form and deployment requirements
-4. Later, review gallery/shop content only when the business content matters again.
-5. Later, add real prices, dimensions, stock states, and Stripe checkout details when the shop phase begins.
+3. Later, review gallery/shop content only when the business content matters again.
+4. Later, add real prices, dimensions, stock states, and Stripe checkout details when the shop phase begins.
 
 ## Recommended Order
 
