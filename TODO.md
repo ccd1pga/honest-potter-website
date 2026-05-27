@@ -1,38 +1,42 @@
-# Website TODO
+# The Honest Potter Website TODO
 
-## Done
+## Phase 2: Real Site
 
-- [x] Preserve the Honest Potter working plan in `codex-site/working-plan.md`.
-- [x] Create a local Git repository for the current site folder.
-- [x] Make an initial baseline commit of the existing website.
-- [x] Note that `/Users/paulallen/Documents/website` was a mistaken scaffold path.
-- [x] Decide gallery/shop split: gallery is approved for next iteration; shop stays local/testing for now.
-- [x] Create a safe cleaned-site upload/deploy checklist.
-- [x] Review current site structure before larger changes.
-- [x] Fix broken paths, navigation states, and footer inconsistencies.
-- [x] Remove accidental duplicate `pages/Untitled-11.html`.
-- [x] Hide `pages/glaze.html` from navigation until the glaze testing page is ready.
-- [x] Replace public shop page with a simple coming-soon page and preserve the prototype shop locally.
-- [x] Publish the cleaned site to Fasthosts with homepage, gallery, contact pages, kiln page, privacy page, assets, and the coming-soon shop page.
-- [x] Tidy mistaken loose upload files from the live server root after correcting the folder structure.
-- [x] Spot-check the live contact form once the private mail settings on Fasthosts are confirmed.
-- [x] Improve contact form email formatting.
-- [x] Add contact form validation for email typos, 11 digit phone numbers, and long messages.
-- [x] Decide that the current gallery pictures/design are good enough for now.
-- [x] Decide that the current public shop coming-soon page is good enough for now.
-- [x] Decide that the old `ccd1pga/website` repository should be retired or kept only as a pointer.
-- [x] Add a repeatable contact-form upload script and deployment notes to the real site project.
-- [x] Upload the contact form improvements using Fasthosts rsync/SFTP port `1022`.
-- [x] Re-test live contact validation for invalid phone and mistyped email after upload.
-- [x] Send a normal live contact form message and confirm the improved formatted email arrives as expected.
-- [x] Create and push the real site repository to GitHub: `ccd1pga/honest-potter-website`.
+The quick mock-up has done its job: the site is live, stable enough, contact works, gallery/shop are acceptable placeholders, and the real source folder is on GitHub.
+
+Only update the live Fasthosts site when a coherent improvement is worth publishing. Use local work, Git commits, and browser checks before deployment.
 
 ## Next
 
+- [ ] Define the real site direction:
+  - primary audience
+  - main job of the site
+  - preferred calls to action
+  - whether kiln hire, pottery enquiries, or gallery credibility should lead
+- [ ] Draft the real site map and navigation.
+- [ ] Plan the homepage as the new front door.
 - [ ] Review oversized tracked image files and decide whether to resize them or move originals out of Git.
 
-## Open Decisions
+## Design / Build Backlog
 
-- Which branch should represent the current live-safe site.
-- Whether the first live shop should use enquiries/reservations or full checkout.
-- Future shop payments are expected to use Stripe.
+- [ ] Create a consistent shared layout system for header, footer, spacing, buttons, and page sections.
+- [ ] Rename or reframe `My Kiln` if `Kiln Hire` or `Kiln Services` is clearer for visitors.
+- [ ] Improve homepage copy and structure.
+- [ ] Improve mobile layout and page rhythm across core pages.
+- [ ] Create web-sized gallery images and keep large originals out of the normal site workflow.
+- [ ] Review whether the public shop should stay in navigation or be hidden until there is a real shop plan.
+
+## Later
+
+- [ ] Review gallery captions, categories, and selected pieces when content quality matters again.
+- [ ] Decide whether the first live shop should use enquiries/reservations or full checkout.
+- [ ] Add real shop prices, dimensions, stock states, and Stripe details only when the shop phase starts.
+
+## Completed Phase 1
+
+- [x] Publish the quick site safely to Fasthosts.
+- [x] Improve and publish the gallery design.
+- [x] Keep the public shop page safe as coming soon.
+- [x] Improve and verify the contact form.
+- [x] Retire the mistaken `/Users/paulallen/Documents/website` setup repo.
+- [x] Create and push the real GitHub repo: `ccd1pga/honest-potter-website`.
