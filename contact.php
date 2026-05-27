@@ -31,6 +31,17 @@ function redirect_with($params) {
   exit;
 }
 
+function email_safe($value) {
+  return htmlspecialchars($value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+}
+
+function email_row($label, $value) {
+  return '<tr>'
+    . '<th style="padding:10px 12px;text-align:left;background:#f6f2eb;border-bottom:1px solid #e1d7ca;width:140px;color:#46372b;">' . email_safe($label) . '</th>'
+    . '<td style="padding:10px 12px;border-bottom:1px solid #e1d7ca;color:#2f261f;">' . email_safe($value ?: 'Not provided') . '</td>'
+    . '</tr>';
+}
+
 /* Basic validation */
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') redirect_with(['error' => 1]);
 
@@ -49,16 +60,65 @@ $consent   = isset($_POST['consent']);
 if (!$firstname || !$lastname || !$email || !$subject || !$content || !$consent) redirect_with(['error' => 1]);
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) redirect_with(['error' => 1]);
 
-$message  = "New enquiry from your website\n\n";
-$message .= "Name: {$firstname} {$lastname}\n";
-$message .= "Email: {$email}\n";
-$message .= "Phone: {$phone}\n";
-$message .= "Country: {$country}\n\n";
-$message .= "Subject: {$subject}\n\n";
-$message .= "Message:\n{$content}\n\n";
-$message .= "Consent: " . ($consent ? "Yes" : "No") . "\n";
-$message .= "IP: " . ($_SERVER['REMOTE_ADDR'] ?? 'unknown') . "\n";
-$message .= "User Agent: " . ($_SERVER['HTTP_USER_AGENT'] ?? 'unknown') . "\n";
+$countries = [
+  'GB' => 'United Kingdom',
+  'IE' => 'Ireland',
+  'US' => 'United States',
+  'CA' => 'Canada',
+  'EU' => 'European Union',
+  'AU' => 'Australia',
+  'NZ' => 'New Zealand',
+  'Other' => 'Other',
+];
+
+$fullName = trim($firstname . ' ' . $lastname);
+$countryLabel = $countries[$country] ?? $country;
+$consentLabel = $consent ? 'Yes' : 'No';
+$remoteAddress = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+$userAgent = $_SERVER['HTTP_USER_AGENT'] ?? 'unknown';
+$emailSubject = preg_replace('/[\r\n]+/', ' ', $subject);
+
+$plainMessage  = "New enquiry from your website\n\n";
+$plainMessage .= "Name: {$fullName}\n";
+$plainMessage .= "Email: {$email}\n";
+$plainMessage .= "Phone: " . ($phone ?: 'Not provided') . "\n";
+$plainMessage .= "Country: {$countryLabel}\n";
+$plainMessage .= "Subject: {$emailSubject}\n\n";
+$plainMessage .= "Message:\n{$content}\n\n";
+$plainMessage .= "Consent: {$consentLabel}\n\n";
+$plainMessage .= "Technical details\n";
+$plainMessage .= "IP: {$remoteAddress}\n";
+$plainMessage .= "User Agent: {$userAgent}\n";
+
+$htmlMessage = '<!doctype html><html><body style="margin:0;padding:0;background:#f8f5ef;font-family:Arial,Helvetica,sans-serif;color:#2f261f;">'
+  . '<div style="max-width:680px;margin:0 auto;padding:24px;">'
+  . '<div style="background:#ffffff;border:1px solid #e1d7ca;border-radius:8px;overflow:hidden;">'
+  . '<div style="padding:20px 24px;background:#46372b;color:#ffffff;">'
+  . '<h1 style="margin:0;font-size:22px;line-height:1.3;">New website enquiry</h1>'
+  . '<p style="margin:6px 0 0;font-size:14px;color:#efe8dc;">The Honest Potter contact form</p>'
+  . '</div>'
+  . '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse:collapse;">'
+  . email_row('Name', $fullName)
+  . email_row('Email', $email)
+  . email_row('Phone', $phone)
+  . email_row('Country', $countryLabel)
+  . email_row('Subject', $emailSubject)
+  . email_row('Consent', $consentLabel)
+  . '</table>'
+  . '<div style="padding:20px 24px;">'
+  . '<h2 style="margin:0 0 10px;font-size:16px;color:#46372b;">Message</h2>'
+  . '<div style="padding:14px 16px;background:#fbfaf7;border:1px solid #e1d7ca;border-radius:6px;line-height:1.5;">'
+  . nl2br(email_safe($content), false)
+  . '</div>'
+  . '</div>'
+  . '<div style="padding:16px 24px;background:#f6f2eb;color:#6b5a49;font-size:12px;line-height:1.5;">'
+  . '<strong>Technical details</strong><br>'
+  . 'IP: ' . email_safe($remoteAddress) . '<br>'
+  . 'User Agent: ' . email_safe($userAgent)
+  . '</div>'
+  . '</div>'
+  . '</div>'
+  . '</body></html>';
 
 try {
   $mail = new PHPMailer(true);
@@ -78,9 +138,11 @@ try {
   $mail->addAddress($TO_EMAIL, $TO_NAME);
   $mail->addReplyTo($email, $firstname . ' ' . $lastname);
 
-  $mail->Subject = "[Website] " . $subject;
-  $mail->Body    = $message;
-  $mail->AltBody = $message;
+  $mail->CharSet = 'UTF-8';
+  $mail->isHTML(true);
+  $mail->Subject = "[Website] " . $emailSubject;
+  $mail->Body    = $htmlMessage;
+  $mail->AltBody = $plainMessage;
 
   $mail->send();
   redirect_with(['sent' => 1]);
