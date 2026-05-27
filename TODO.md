@@ -25,14 +25,14 @@
 - [x] Upload the contact form improvements using Fasthosts rsync/SFTP port `1022`.
 - [x] Re-test live contact validation for invalid phone and mistyped email after upload.
 - [x] Send a normal live contact form message and confirm the improved formatted email arrives as expected.
+- [x] Create and push the real site repository to GitHub: `ccd1pga/honest-potter-website`.
 
 ## Next
 
-- [ ] Choose or create the GitHub repository that will hold `/Users/paulallen/Pottery/website_2.0`.
+- [ ] Review oversized tracked image files and decide whether to resize them or move originals out of Git.
 
 ## Open Decisions
 
 - Which branch should represent the current live-safe site.
-- Which GitHub repository should hold the real Honest Potter site.
 - Whether the first live shop should use enquiries/reservations or full checkout.
 - Future shop payments are expected to use Stripe.

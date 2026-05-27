@@ -19,8 +19,12 @@ The separate folder `/Users/paulallen/Documents/website` was a mistaken scaffold
 - TODO update commit: `a466986 Update project TODO after Git setup`.
 - Contact formatting commit: `9373042 Improve contact form email formatting`.
 - Contact validation commit: `2462ba7 Tighten contact form validation`.
-- No GitHub remote has been chosen for this folder yet.
+- GitHub remote: `ccd1pga/honest-potter-website`.
+- Remote URL: `ssh://git@ssh.github.com:443/ccd1pga/honest-potter-website.git`.
+- Public URL: `https://github.com/ccd1pga/honest-potter-website`.
+- First push completed on 2026-05-27.
 - The existing GitHub repository `ccd1pga/website` points to the old mistaken setup and should now be retired/archived or left as a pointer only.
+- GitHub warned that several tracked image files are larger than the recommended 50 MB limit; decide later whether to resize them or move originals out of Git.
 
 ## Stopping Point - 2026-05-24
 
@@ -86,7 +90,7 @@ The public `pages/shop.html` is now a coming-soon page. Do not upload `codex-sit
 
 ## Recommended Next Steps
 
-1. Decide where the real Honest Potter site should live on GitHub. The old `ccd1pga/website` repository should no longer be treated as active.
+1. Review oversized tracked image files and decide whether to resize them or move originals out of Git.
 2. Review the current site structure before larger changes:
    - shared navigation/header/footer patterns
    - page naming and folder layout
