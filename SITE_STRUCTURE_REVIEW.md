@@ -22,7 +22,7 @@ Each page has its own hand-written header. The link set and current-page state h
 Cleanup completed:
 
 - `pages/myKiln.html` now marks only My Kiln as current.
-- `pages/glaze.html` is hidden from visible navigation until the future glaze testing/blog page is ready.
+- `pages/studio-notes.html` is hidden from visible navigation until the future Studio Notes / glaze-testing page is ready.
 - Gallery and shop navigation no longer link to Glazes.
 - `pages/privacy.html` now uses the current navigation stylesheet and correct page links.
 
@@ -67,21 +67,21 @@ Cleanup completed:
 
 - `index.html` now uses `images/logo_main.png`.
 - `pages/privacy.html` no longer references missing `navigation_css.css` or `../script.js`.
-- `pages/glaze.html` no longer references missing `../script.js`.
+- The hidden Studio Notes page no longer references missing `../script.js`.
 - `pages/about.html` no longer includes the typo `scipt.js`.
 
 An automated local reference scan found no missing local page/style/script/image references after this pass.
 
 ### 5. Some pages are unfinished or duplicate
 
-- `pages/glaze.html` has almost no main content and is now hidden from navigation until the glaze testing/blog page is ready.
+- `pages/studio-notes.html` is a prepared hidden placeholder for the future Studio Notes / glaze testing area.
 - `pages/Untitled-11.html` was an older duplicate privacy page and has been removed.
 - The local `pages/shop.html` is a useful prototype but is intentionally not live-ready.
 
 Cleanup completed:
 
 - `pages/Untitled-11.html` has been deleted as an accidental duplicate.
-- `pages/glaze.html` remains in the repo but is hidden from navigation until the glaze testing/blog page is ready.
+- `pages/studio-notes.html` remains hidden from navigation until the first real note is ready.
 
 Remaining recommendation: keep classifying pages as live, prototype, duplicate, or archive before larger structural edits.
 

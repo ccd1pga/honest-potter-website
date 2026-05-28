@@ -408,6 +408,14 @@ h1 {
   margin: 0;
 }
 
+.footer-links {
+  display: flex;
+  gap: 10px 14px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .shop-intro {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;

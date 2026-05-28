@@ -57,7 +57,25 @@
   padding: 16px 0;
 }
 .site-footer .container{
-  display:flex; gap: 12px; align-items:center; justify-content: space-between;
+  display:flex; gap: 16px; align-items:center; justify-content: space-between;
+  flex-wrap: wrap;
   padding-top: 12px; padding-bottom: 12px;
 }
 .site-footer p{ margin:0; font-size: 0.95rem; }
+.footer-links{
+  display: flex;
+  gap: 10px 14px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+}
+.footer-links a{ color: inherit; }
+
+@media (max-width: 720px){
+  .site-footer .container{
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .footer-links{ justify-content: flex-start; }
+}

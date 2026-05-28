@@ -12,15 +12,15 @@ Only update the live Fasthosts site when a coherent improvement is worth publish
 
 ## Next
 
-- [ ] Draft the real site map and navigation.
+- [x] Draft the real site map and navigation.
 - [ ] Plan the homepage as the new front door.
 - [ ] Review oversized tracked image files and decide whether to resize them or move originals out of Git.
 
 ## Design / Build Backlog
 
 - [ ] Create a consistent shared layout system for header, footer, spacing, buttons, and page sections.
-- [ ] Rename or reframe `My Kiln` if `Kiln Hire` or `Kiln Services` is clearer for visitors.
-- [ ] Explore a glaze-development page as a visual journal, studio notebook, or glaze test log.
+- [x] Rename or reframe `My Kiln` if `Kiln Hire` or `Kiln Services` is clearer for visitors.
+- [x] Prepare a hidden Studio Notes page for glaze tests, recipes, and studio notebook posts.
 - [ ] Improve homepage copy and structure.
 - [ ] Improve mobile layout and page rhythm across core pages.
 - [ ] Create web-sized gallery images and keep large originals out of the normal site workflow.

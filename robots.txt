@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /codex-site/
+
+Sitemap: https://www.kelvinkilns.com/sitemap.xml
