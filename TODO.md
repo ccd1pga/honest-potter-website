@@ -14,7 +14,7 @@ Only update the live Fasthosts site when a coherent improvement is worth publish
 
 - [x] Draft the real site map and navigation.
 - [x] Plan the homepage as the new front door.
-- [ ] Review oversized tracked image files and decide whether to resize them or move originals out of Git.
+- [x] Review oversized tracked image files and move or resize the first large batch.
 
 ## Design / Build Backlog
 
@@ -23,7 +23,7 @@ Only update the live Fasthosts site when a coherent improvement is worth publish
 - [x] Prepare a hidden Studio Notes page for glaze tests, recipes, and studio notebook posts.
 - [x] Improve homepage copy and structure.
 - [ ] Improve mobile layout and page rhythm across core pages.
-- [ ] Create web-sized gallery images and keep large originals out of the normal site workflow.
+- [x] Create web-sized gallery images and keep large originals out of the normal site workflow.
 - [ ] Review whether the public shop should stay in navigation or be hidden until there is a real shop plan.
 
 ## Later
