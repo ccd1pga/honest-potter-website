@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="The Honest Potter is a Liverpool pottery site for handmade ceramics, studio experiments, gallery work, and kiln hire in West Derby." />
+  <meta name="description" content="The Honest Potter is a Liverpool pottery studio sharing handmade ceramics, work in progress, gallery pieces, and kiln hire in West Derby." />
   <link rel="canonical" href="https://www.kelvinkilns.com/" />
   <meta property="og:title" content="The Honest Potter" />
-  <meta property="og:description" content="Handmade pottery, ceramic experiments, gallery work, and kiln hire in Liverpool." />
+  <meta property="og:description" content="Handmade ceramics, work in progress, gallery pieces, and kiln hire in Liverpool." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.kelvinkilns.com/" />
   <meta property="og:image" content="https://www.kelvinkilns.com/images/logo_main.png" />
@@ -38,18 +38,41 @@
 
   <main>
     <div class="container">
-      <section class="section-one">
-        <h1>Welcome</h1>
-        <p>
-          Small-batch stoneware and practical pottery made in Merseyside.
-          Explore recent work in the gallery, or check out renting my kiln.
-        </p>
+      <section class="hero-panel" aria-labelledby="home-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Handmade ceramics from Liverpool</p>
+          <h1 id="home-title">The Honest Potter</h1>
+          <p class="lead">
+            Small-batch stoneware, practical pots, ceramic experiments, and a
+            working studio that is still learning in public.
+          </p>
+          <div class="hero-actions">
+            <a class="button-link primary" href="/pages/gallery.html">View the gallery</a>
+            <a class="button-link" href="/pages/about.html">About the studio</a>
+            <a class="button-link" href="/pages/myKiln.html">Kiln hire</a>
+          </div>
+        </div>
+        <figure class="hero-image">
+          <img src="images/mugs/coffee_green_a.jpeg" alt="Small handmade green stoneware mug on a cloth-covered table">
+        </figure>
+      </section>
 
-        <p style="margin: 1rem 0 0;">
-          <a id="about_enter" href="pages/about.html">
-			<img src="images/logo_main.png" alt="Penrose triangle geometric logo above the words THE HONEST POTTER in bold uppercase letters, minimalist and modern design, neutral emotional tone">
-		</a>
-        </p>
+      <section class="home-grid" aria-label="Site highlights">
+        <article class="home-tile">
+          <h2>Recent work</h2>
+          <p>Bowls, mugs, tableware, garden pieces, and the occasional experiment that survived the kiln.</p>
+          <a href="/pages/gallery.html">Browse the gallery</a>
+        </article>
+        <article class="home-tile">
+          <h2>The studio</h2>
+          <p>A small home studio in Liverpool, built around curiosity, useful objects, and steady practice.</p>
+          <a href="/pages/about.html">Read more</a>
+        </article>
+        <article class="home-tile">
+          <h2>Kiln hire</h2>
+          <p>A 40 litre Potterycrafts Aurora kiln is available for bisque and glaze firings in West Derby.</p>
+          <a href="/pages/myKiln.html">Check kiln details</a>
+        </article>
       </section>
     </div>
   </main>
@@ -69,18 +92,5 @@
       </nav>
     </div>
   </footer>
-
-  <style>
-    /* tiny helper for the CTA link (kept here to avoid a new file) */
-    .cta{
-      display:inline-block;
-      padding: 10px 14px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      text-decoration: none;
-    }
-    .cta:hover{ text-decoration: none; border-color: rgba(0,0,0,0.18); }
-  </style>
 </body>
 </html>

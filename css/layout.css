@@ -40,6 +40,177 @@
   padding: clamp(16px, 3vw, var(--pad));
 }
 
+.hero-panel{
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: clamp(22px, 4vw, 44px);
+  align-items: center;
+  padding: clamp(22px, 5vw, 54px) 0;
+}
+
+.hero-copy,
+.story-copy{
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.eyebrow{
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-panel h1,
+.about-hero h1{
+  margin: 0;
+  max-width: 11ch;
+  font-size: clamp(3rem, 9vw, 6.4rem);
+  line-height: 0.94;
+  letter-spacing: 0;
+}
+
+.lead{
+  margin: 0;
+  max-width: 60ch;
+  color: var(--muted);
+  font-size: clamp(1.08rem, 2vw, 1.28rem);
+}
+
+.hero-actions,
+.page-actions{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.button-link{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 15px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  background: var(--surface);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button-link.primary{
+  color: var(--brand-ink);
+  border-color: var(--brand);
+  background: var(--brand);
+}
+
+.button-link:hover,
+.button-link:focus-visible{
+  color: var(--text);
+  text-decoration: none;
+  border-color: rgba(0,0,0,0.22);
+}
+
+.button-link.primary:hover,
+.button-link.primary:focus-visible{
+  color: var(--brand-ink);
+}
+
+.hero-image,
+.story-image,
+.about-side-image{
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.hero-image img,
+.story-image img,
+.about-side-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-image{
+  aspect-ratio: 4 / 3;
+}
+
+.home-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--gap);
+  padding: 18px 0 clamp(24px, 4vw, 48px);
+}
+
+.home-tile{
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.home-tile h2,
+.story-copy h2,
+.photo-list h2{
+  margin: 0;
+  font-size: clamp(1.35rem, 2.8vw, 2rem);
+  line-height: 1.1;
+}
+
+.home-tile p,
+.story-copy p,
+.photo-list p,
+.photo-list li{
+  margin: 0;
+  color: var(--muted);
+}
+
+.home-tile a{
+  font-weight: 700;
+}
+
+.about-hero{
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  gap: clamp(22px, 4vw, 44px);
+  align-items: center;
+  padding: clamp(22px, 5vw, 54px) 0;
+}
+
+.about-story{
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(22px, 4vw, 44px);
+  align-items: start;
+  padding: 10px 0 clamp(24px, 4vw, 48px);
+}
+
+.story-image{
+  aspect-ratio: 1 / 1;
+}
+
+.photo-list{
+  display: grid;
+  gap: 14px;
+  padding: clamp(20px, 4vw, 36px) 0 clamp(24px, 4vw, 48px);
+  border-top: 1px solid var(--border);
+}
+
+.photo-list ul{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 24px;
+  margin: 0;
+  padding-left: 20px;
+}
+
 /* Two-column page (e.g., myKiln/about variant) */
 .two-col{
   display: grid;
@@ -50,6 +221,19 @@
 
 @media (max-width: 900px){
   .two-col{ grid-template-columns: 1fr; }
+  .hero-panel,
+  .about-hero,
+  .about-story,
+  .home-grid{
+    grid-template-columns: 1fr;
+  }
+  .hero-panel h1,
+  .about-hero h1{
+    max-width: 12ch;
+  }
+  .photo-list ul{
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Footer small print */
