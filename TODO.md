@@ -18,7 +18,7 @@ Only update the live Fasthosts site when a coherent improvement is worth publish
 
 ## Design / Build Backlog
 
-- [ ] Create a consistent shared layout system for header, footer, spacing, buttons, and page sections.
+- [x] Create a consistent shared layout system for header, footer, spacing, buttons, and page sections.
 - [x] Rename or reframe `My Kiln` if `Kiln Hire` or `Kiln Services` is clearer for visitors.
 - [x] Prepare a hidden Studio Notes page for glaze tests, recipes, and studio notebook posts.
 - [x] Improve homepage copy and structure.

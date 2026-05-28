@@ -11,29 +11,32 @@
   <meta property="og:url" content="https://www.kelvinkilns.com/pages/gallery.html" />
   <meta property="og:image" content="https://www.kelvinkilns.com/images/logo_main.png" />
   <title>Gallery | Handmade Pottery by The Honest Potter</title>
+  <link rel="stylesheet" href="../css/site.css">
   <link rel="stylesheet" href="../css/gallery.css">
   <script src="../js/gallery-data.js" defer></script>
   <script src="../js/gallery.js" defer></script>
 </head>
-<body>
-  <header class="site-header">
+<body class="page">
+  <header>
     <nav class="site-nav" aria-label="Main">
-      <a class="brand" href="../index.html">
-        <img src="../images/logo.png" alt="The Honest Potter logo">
-        <span>The Honest Potter</span>
-      </a>
+      <div class="nav-inner">
+        <a class="nav-brand" href="../index.html">
+          <img src="../images/logo.png" alt="The Honest Potter logo">
+          <span>The Honest Potter</span>
+        </a>
 
-      <ul class="nav-links">
-        <li><a href="../pages/about.html">About</a></li>
-        <li><a href="../pages/shop.html">Shop</a></li>
-        <li><a href="../pages/gallery.html" aria-current="page">Gallery</a></li>
-        <li><a href="../pages/myKiln.html">Kiln Hire</a></li>
-        <li><a href="../pages/contact.html">Contact</a></li>
-      </ul>
+        <ul class="nav-links">
+          <li><a href="../pages/about.html">About</a></li>
+          <li><a href="../pages/shop.html">Shop</a></li>
+          <li><a href="../pages/gallery.html" aria-current="page">Gallery</a></li>
+          <li><a href="../pages/myKiln.html">Kiln Hire</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
-  <main>
+  <main class="wide-container">
     <section class="gallery-intro" aria-labelledby="gallery-title">
       <div>
         <p class="eyebrow">Thrown, hand-built, carved, tested</p>
@@ -72,17 +75,19 @@
   </dialog>
 
   <footer class="site-footer">
-    <p>&copy; 2026 The Honest Potter</p>
-    <nav class="footer-links" aria-label="Footer">
-      <a href="/index.html">Home</a>
-      <a href="/pages/gallery.html">Gallery</a>
-      <a href="/pages/shop.html">Shop</a>
-      <a href="/pages/myKiln.html">Kiln Hire</a>
-      <a href="/pages/about.html">About</a>
-      <a href="/pages/contact.html">Contact</a>
-      <a href="/pages/privacy.html">Privacy statement</a>
-      <a href="mailto:info@kelvinkilns.com">info@kelvinkilns.com</a>
-    </nav>
+    <div class="container">
+      <p>&copy; 2026 The Honest Potter</p>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="/index.html">Home</a>
+        <a href="/pages/gallery.html">Gallery</a>
+        <a href="/pages/shop.html">Shop</a>
+        <a href="/pages/myKiln.html">Kiln Hire</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/contact.html">Contact</a>
+        <a href="/pages/privacy.html">Privacy statement</a>
+        <a href="mailto:info@kelvinkilns.com">info@kelvinkilns.com</a>
+      </nav>
+    </div>
   </footer>
 </body>
 </html>

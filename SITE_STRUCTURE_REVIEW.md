@@ -43,23 +43,16 @@ Cleanup completed:
 
 Remaining recommendation: standardise one exact footer pattern across all live pages before broader design work.
 
-### 3. CSS is split by era rather than purpose
+### 3. CSS is split by purpose
 
-Current CSS groups:
+Current CSS groups after the shared-shell cleanup:
 
-- `theme.css`, `layout.css`, `navigation_new.css` for the older updated pages.
-- `gallery.css` for both gallery and shop prototype.
-- `style.css` for older privacy/cookie styles.
-- `gallery_new.css` appears tied to an unfinished or older Glazes page.
+- `site.css` for theme tokens, base layout, navigation, footer, homepage/About shared sections, buttons, and the cookie banner.
+- `gallery.css` for gallery/shop-specific cards, filters, lightbox, and shop components.
+- `contact.css` for contact-form-only styles.
+- `privacy.css` for privacy-page-only content styling.
 
-Recommended fix: keep the current files for now, but avoid adding new page-specific CSS unless needed. A later tidy-up could split into:
-
-- base/theme
-- layout
-- navigation/footer
-- forms
-- gallery/shop
-- page-specific exceptions
+Recommended rule: keep shared structure in `site.css`; add page-specific CSS only when the page has a genuinely different component.
 
 ### 4. Several broken or stale references exist
 
