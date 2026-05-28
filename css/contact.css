@@ -15,6 +15,7 @@
 .container_contact button {
   font: inherit;
   color: var(--text);
+  font-size: 16px;
 }
 
 /* Inputs / selects / textareas */
@@ -31,6 +32,10 @@
   margin-top: 6px;
   margin-bottom: 16px;
   background: #fff;
+}
+
+.container_contact textarea{
+  min-height: 200px;
 }
 
 /* Make <select> render more consistently across browsers */
@@ -62,6 +67,17 @@
 }
 .container_contact .btn-submit:hover {
   filter: brightness(0.95);
+}
+
+.container_contact .form-actions{
+  margin-top: 10px;
+}
+
+@media (max-width: 480px){
+  .container_contact .btn-submit{
+    width: 100%;
+    min-height: 44px;
+  }
 }
 
 /* Helper: muted small text */

@@ -449,9 +449,30 @@
 }
 
 @media (max-width: 640px) {
+  .gallery-intro,
+  .shop-intro{
+    gap: 16px;
+    padding-bottom: 20px;
+  }
+
+  .gallery-intro h1,
+  .shop-intro h1{
+    font-size: clamp(2.5rem, 15vw, 4rem);
+  }
+
+  .gallery-stats span,
+  .shop-summary{
+    min-width: 0;
+    width: 100%;
+  }
+
   .piece-card,
   .piece-card.featured {
     grid-column: 1 / -1;
+  }
+
+  .piece-body{
+    min-height: auto;
   }
 
   .shop-item {
@@ -485,5 +506,31 @@
   .lightbox figcaption {
     flex-direction: column;
     gap: 4px;
+  }
+}
+
+@media (max-width: 480px){
+  .filter-button,
+  .shop-action{
+    min-height: 44px;
+  }
+
+  .shop-actions,
+  .coming-soon-actions{
+    flex-direction: column;
+  }
+
+  .shop-action{
+    width: 100%;
+  }
+
+  .lightbox{
+    width: 100vw;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .lightbox img{
+    max-height: 66vh;
   }
 }

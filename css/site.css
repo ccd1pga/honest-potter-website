@@ -32,13 +32,24 @@
 
 html, body { min-height: 100%; }
 
+html { -webkit-text-size-adjust: 100%; }
+
 body{
   margin: 0;
   font-family: var(--font);
   color: var(--text);
   background: var(--bg);
   line-height: 1.5;
+  overflow-x: hidden;
 }
+
+h1,
+h2,
+h3,
+p,
+li,
+a,
+button { overflow-wrap: break-word; }
 
 a{ color: var(--link); text-decoration: none; }
 a:hover{ color: var(--link-hover); text-decoration: underline; }
@@ -98,6 +109,7 @@ img{ display:block; max-width:100%; height:auto; }
   margin: 0 0 0 auto;
   display:flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 4px;
   list-style:none;
   padding:0;
@@ -105,6 +117,7 @@ img{ display:block; max-width:100%; height:auto; }
 
 .nav-links a{
   display:block;
+  min-height: 44px;
   padding: 10px 12px;
   color: var(--brand-ink);
   border-radius: 8px;
@@ -382,7 +395,7 @@ img{ display:block; max-width:100%; height:auto; }
   .nav-links{
     width: 100%;
     margin-left: 0;
-    overflow-x: auto;
+    overflow-x: visible;
     padding-bottom: 2px;
   }
   .site-footer .container,
@@ -393,4 +406,61 @@ img{ display:block; max-width:100%; height:auto; }
   .footer-links{ justify-content: flex-start; }
   .cookie-banner { flex-direction: column; align-items: flex-start; }
   .cookie-buttons { margin-top: 10px; }
+}
+
+@media (max-width: 480px){
+  :root{
+    --gap: 18px;
+    --pad: 16px;
+  }
+
+  .container,
+  .wide-container{
+    padding-inline: 14px;
+  }
+
+  .nav-brand img{
+    height: 36px;
+  }
+
+  .nav-links{
+    gap: 2px 4px;
+    font-size: 0.94rem;
+  }
+
+  .nav-links a{
+    padding: 8px 9px;
+  }
+
+  .hero-panel,
+  .about-hero{
+    padding-block: 24px;
+  }
+
+  .hero-panel h1,
+  .about-hero h1{
+    max-width: none;
+    font-size: clamp(2.45rem, 14vw, 4rem);
+  }
+
+  .lead{
+    font-size: 1.04rem;
+  }
+
+  .button-link{
+    width: 100%;
+  }
+
+  .hero-actions,
+  .page-actions{
+    gap: 8px;
+  }
+
+  .site-footer{
+    padding-block: 10px;
+  }
+
+  .footer-links{
+    gap: 8px 12px;
+  }
 }

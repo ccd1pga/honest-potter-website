@@ -13,3 +13,11 @@
 .privacy-container a { text-decoration: underline; }
 
 .privacy-container ul { margin-left: 20px; }
+
+@media (max-width: 640px){
+  .privacy-container{
+    width: calc(100% - 28px);
+    margin: 24px auto;
+    padding: 20px;
+  }
+}

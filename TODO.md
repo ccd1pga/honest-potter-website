@@ -22,7 +22,7 @@ Only update the live Fasthosts site when a coherent improvement is worth publish
 - [x] Rename or reframe `My Kiln` if `Kiln Hire` or `Kiln Services` is clearer for visitors.
 - [x] Prepare a hidden Studio Notes page for glaze tests, recipes, and studio notebook posts.
 - [x] Improve homepage copy and structure.
-- [ ] Improve mobile layout and page rhythm across core pages.
+- [x] Improve mobile layout and page rhythm across core pages.
 - [x] Create web-sized gallery images and keep large originals out of the normal site workflow.
 - [ ] Review whether the public shop should stay in navigation or be hidden until there is a real shop plan.
 
