@@ -73,6 +73,19 @@ window.galleryPieces = [
     alt: "Wheel-thrown blue stoneware vase"
   },
   {
+    id: "large-green-flower-vase",
+    title: "Large green flower vase",
+    category: "Vases",
+    year: "2026",
+    detail: "Large flower vase with a deep green glaze and rounded profile.",
+    shop: true,
+    status: "Available",
+    price: "Enquire",
+    shopNote: "A larger vase for flowers or display.",
+    images: ["../images/vase/Green_vase_3.jpeg"],
+    alt: "Large handmade green flower vase"
+  },
+  {
     id: "white-splash-bowl",
     title: "White splash bowl",
     category: "Bowls",
@@ -80,6 +93,32 @@ window.galleryPieces = [
     detail: "Wheel-thrown bowl with a bright white splash glaze.",
     images: ["../images/bowls/white_splash_b.jpg", "../images/bowls/white_splash_a.jpg"],
     alt: "Stoneware bowl with white splash glaze"
+  },
+  {
+    id: "nesting-yellow-bowls",
+    title: "Nesting yellow bowls",
+    category: "Bowls",
+    year: "2026",
+    detail: "Set of two bowls with a sunset yellow interior and blue rim.",
+    shop: true,
+    status: "Available",
+    price: "Enquire",
+    shopNote: "A nesting pair for serving, snacks, or table use.",
+    images: ["../images/bowls/Nesting_yellow.jpeg"],
+    alt: "Set of two nesting bowls with sunset yellow interiors"
+  },
+  {
+    id: "large-salad-bowl",
+    title: "Large salad bowl",
+    category: "Bowls",
+    year: "2026",
+    detail: "Large stoneware salad bowl with a soft green exterior and pale interior.",
+    shop: true,
+    status: "Available",
+    price: "Enquire",
+    shopNote: "A generous bowl for salads, serving, or a table centrepiece.",
+    images: ["../images/bowls/Large_bowl_2.jpeg"],
+    alt: "Large handmade stoneware salad bowl"
   },
   {
     id: "golden-bowl",
@@ -129,6 +168,19 @@ window.galleryPieces = [
     shopNote: "Small pouring jugs can be made in similar forms and glazes.",
     images: ["../images/jugs/pouring_jugs_1.JPG", "../images/jugs/pouring_jugs_2.JPG", "../images/jugs/pouring_jugs_3.JPG"],
     alt: "Small ceramic pouring jugs"
+  },
+  {
+    id: "crackle-pouring-jugs",
+    title: "Crackle pouring jugs",
+    category: "Tableware",
+    year: "2026",
+    detail: "Set of four pouring jugs with a new crackle glaze experiment.",
+    shop: true,
+    status: "Available",
+    price: "Enquire",
+    shopNote: "A small set of pouring jugs in a newly tested crackle glaze.",
+    images: ["../images/jugs/Crackle_jugs.jpeg"],
+    alt: "Set of four handmade pouring jugs with crackle glaze"
   },
   {
     id: "blue-plate",
