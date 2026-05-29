@@ -9,12 +9,26 @@
   const lightboxMeta = document.querySelector("#lightbox-meta");
   const previousButton = document.querySelector("#previous-image");
   const nextButton = document.querySelector("#next-image");
+  const groupCount = document.querySelector("#group-count");
 
   let activeCategory = "All";
   let activePieceIndex = 0;
   let activeImageIndex = 0;
 
-  const categories = ["All", ...Array.from(new Set(pieces.map((piece) => piece.category)))];
+  const categoryOrder = ["Bowls", "Vases", "Mugs", "Tableware", "Garden", "Studio", "Experiments"];
+  const categories = [
+    "All",
+    ...categoryOrder.filter((category) => pieces.some((piece) => piece.category === category)),
+    ...Array.from(new Set(pieces.map((piece) => piece.category))).filter((category) => !categoryOrder.includes(category))
+  ];
+
+  function statusLabel(piece) {
+    return piece.status || "Showcase";
+  }
+
+  function statusClass(piece) {
+    return statusLabel(piece).toLowerCase().replace(/\s+/g, "-");
+  }
 
   function renderFilters() {
     filters.innerHTML = categories.map((category) => {
@@ -41,6 +55,9 @@
   function renderGallery() {
     const currentPieces = visiblePieces();
     pieceCount.textContent = currentPieces.length;
+    if (groupCount) {
+      groupCount.textContent = categories.length - 1;
+    }
 
     grid.innerHTML = currentPieces.map((piece, index) => `
       <article class="piece-card${piece.featured ? " featured" : ""}">
@@ -54,12 +71,15 @@
               <span class="piece-year">${piece.year}</span>
             </div>
             <p class="piece-detail">${piece.detail}</p>
-            <span class="piece-category">${piece.category}</span>
+            <div class="piece-meta">
+              <span class="piece-category">${piece.category}</span>
+              <span class="piece-status ${statusClass(piece)}">${statusLabel(piece)}</span>
+            </div>
           </div>
         </button>
         ${piece.shop ? `
           <a class="shop-card-link" href="../pages/shop.html#${piece.id}" aria-label="View ${piece.title} in the shop">
-            Shop
+            Enquire
           </a>
         ` : ""}
       </article>

@@ -180,15 +180,42 @@
   font-size: 0.92rem;
 }
 
-.piece-category {
-  width: fit-content;
+.piece-meta {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
   margin-top: 4px;
+  padding-right: 68px;
+}
+
+.piece-category,
+.piece-status {
+  width: fit-content;
   padding: 3px 8px;
   border-radius: 999px;
-  color: var(--blue);
-  background: rgba(63, 100, 114, 0.11);
   font-size: 0.78rem;
   font-weight: 740;
+}
+
+.piece-category {
+  color: var(--blue);
+  background: rgba(63, 100, 114, 0.11);
+}
+
+.piece-status {
+  color: var(--clay-dark);
+  background: rgba(196, 113, 73, 0.12);
+}
+
+.piece-status.showcase {
+  color: var(--muted);
+  background: rgba(36, 33, 31, 0.08);
+}
+
+.piece-status.made-to-order {
+  color: var(--blue);
+  background: rgba(63, 100, 114, 0.11);
 }
 
 .shop-card-link {
