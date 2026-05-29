@@ -30,7 +30,7 @@ work.
 - The mistaken setup folder `/Users/paulallen/Documents/website` is retired and should not be used for active site work.
 - The cleaned site has been published to Fasthosts.
 - The gallery design and pictures are good enough for now.
-- The public shop page is a safe coming-soon page and is good enough for now.
+- The public shop page is parked for later, and Shop is removed from site navigation until selling is ready.
 - The contact form has been improved, uploaded, and tested live.
 - Fasthosts rsync/SFTP uploads use port `1022`.
 - The real site source has been pushed to `ccd1pga/honest-potter-website`.
@@ -55,14 +55,15 @@ local until explicitly selected for release.
 - Review oversized image files before doing another broad push or image-heavy redesign.
 - Keep untracked gallery image additions out of uploads until they have names,
   captions, and sensible web sizes.
+- Use `codex-site/image-workflow.md` when adding future gallery photo batches.
 
 ## Next Phase
 
 The next phase is content quality and shop decisions:
 
 - check the live release after upload
-- decide whether Shop stays visible while under construction
+- keep Shop out of public navigation until the selling phase is deliberately restarted
 - add the new bowl, jug, and vase photos to the gallery deliberately
 - improve gallery captions and selected pieces
-- establish a repeatable photo/image workflow
+- use the repeatable photo/image workflow for future gallery batches
 - prepare future Studio Notes one article at a time

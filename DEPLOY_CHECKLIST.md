@@ -1,8 +1,8 @@
 # The Honest Potter Deploy Checklist
 
-## Current Safe Upload: Cleaned Site With Coming-Soon Shop
+## Current Safe Upload: Cleaned Site Without Public Shop Navigation
 
-This checklist is for publishing the cleaned site structure, the improved gallery, and a live-safe coming-soon shop page.
+This checklist is for publishing the cleaned site structure, the improved gallery, and the shop paused out of public navigation until selling is ready.
 
 ## Upload These Site Files
 
@@ -12,7 +12,6 @@ This checklist is for publishing the cleaned site structure, the improved galler
 - `pages/gallery.html`
 - `pages/myKiln.html`
 - `pages/privacy.html`
-- `pages/shop.html`
 - `contact.php`
 - `css/`
 - `js/gallery-data.js`
@@ -42,9 +41,8 @@ This checklist is for publishing the cleaned site structure, the improved galler
 
 - Navigation links work across the public pages.
 - Glazes is hidden from navigation until the glaze testing/blog page is ready.
-- The gallery page shows the improved card layout, filters, shop icons, and larger image viewer.
-- Gallery shop icons link to `pages/shop.html`.
-- `pages/shop.html` shows a simple coming-soon page, not the local prototype shop.
+- The gallery page shows the improved card layout, filters, and larger image viewer.
+- Shop is not linked from the public header, footer, gallery cards, or sitemap.
 - `pages/Untitled-11.html` is no longer part of the site.
 
 ## Pre-Upload Check
@@ -54,19 +52,17 @@ This checklist is for publishing the cleaned site structure, the improved galler
   - homepage
   - about
   - gallery filters and larger image viewer
-  - shop coming-soon page
   - kiln page
   - contact page
   - privacy page
 - Confirm local reference scan has no missing page/style/script/image links.
-- Confirm `pages/shop.html` is the coming-soon page before upload.
+- Confirm Shop is absent from the public header, footer, gallery cards, and sitemap.
 
 ## After Upload Check
 
 - Visit the live homepage.
 - Click every main navigation link.
 - On Gallery, test filters and the image viewer.
-- Click at least one gallery shop icon and confirm it reaches the coming-soon shop page.
 - Confirm the deleted duplicate page is not linked anywhere.
 - Send a test contact form message only if the live SMTP secrets are already configured correctly.
 - Keep a note of uploaded files and date.

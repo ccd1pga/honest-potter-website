@@ -22,14 +22,6 @@
     ...Array.from(new Set(pieces.map((piece) => piece.category))).filter((category) => !categoryOrder.includes(category))
   ];
 
-  function statusLabel(piece) {
-    return piece.status || "Showcase";
-  }
-
-  function statusClass(piece) {
-    return statusLabel(piece).toLowerCase().replace(/\s+/g, "-");
-  }
-
   function renderFilters() {
     filters.innerHTML = categories.map((category) => {
       const count = category === "All"
@@ -73,15 +65,9 @@
             <p class="piece-detail">${piece.detail}</p>
             <div class="piece-meta">
               <span class="piece-category">${piece.category}</span>
-              <span class="piece-status ${statusClass(piece)}">${statusLabel(piece)}</span>
             </div>
           </div>
         </button>
-        ${piece.shop ? `
-          <a class="shop-card-link" href="../pages/shop.html#${piece.id}" aria-label="View ${piece.title} in the shop">
-            Enquire
-          </a>
-        ` : ""}
       </article>
     `).join("");
   }

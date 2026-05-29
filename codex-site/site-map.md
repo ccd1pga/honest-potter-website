@@ -4,7 +4,6 @@
 
 - Home: `/index.html`
 - Gallery: `/pages/gallery.html`
-- Shop: `/pages/shop.html`
 - Studio Notes: `/pages/studio-notes.html`
 - Kiln Hire: `/pages/myKiln.html`
 - About: `/pages/about.html`
@@ -14,7 +13,6 @@
 
 - Home
 - Gallery
-- Shop
 - Studio Notes
 - Kiln Hire
 - About

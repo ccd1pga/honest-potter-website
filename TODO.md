@@ -12,19 +12,24 @@ publishing. Use local work, Git commits, and browser checks before deployment.
 
 ## Immediate After-Upload Checks
 
-- [ ] Visit the live homepage and click every main navigation link.
-- [ ] Check About, Gallery, Studio Notes, Kiln Hire, Shop, Contact, and Privacy on a phone.
-- [ ] Confirm the Studio Notes glaze images load on the live site.
-- [ ] Confirm the contact form page still loads correctly after the wider upload.
-- [ ] If anything looks wrong live, fix locally, commit, and redeploy the affected files.
+- [x] Visit the live homepage and click every main navigation link.
+- [x] Check About, Gallery, Studio Notes, Kiln Hire, Contact, and Privacy on iPhone.
+- [x] Confirm the Studio Notes glaze images load on the live site.
+- [x] Confirm the contact form page, validation errors, and email layout still work after the wider upload.
+- [x] If anything looks wrong live, fix locally, commit, and redeploy the affected files.
 
 ## Next Practical Work
 
-- [ ] Decide whether the public Shop link should stay in the main navigation while it is coming soon.
-- [ ] Fold the new untracked bowl, jug, and vase photos into the gallery deliberately, with names, captions, and image sizes reviewed first.
-- [ ] Review gallery captions, categories, and selected pieces so the gallery feels curated rather than just complete.
-- [ ] Add a small repeatable image workflow for future product photos before the next large photo batch.
-- [ ] Review live metadata/social previews after the current structure is published.
+- [ ] Check the live site on Android when a device is available.
+
+## Design Phase
+
+- [ ] Create a stronger visual direction for the site: typography, colours, spacing, image treatment, and button/link style.
+- [ ] Redesign the homepage as the new visual standard for The Honest Potter.
+- [ ] Give the gallery a more confident first impression while keeping the current filters and lightbox.
+- [ ] Bring About and Studio Notes into the same visual language after the homepage direction is settled.
+- [ ] Replace placeholder and weaker images gradually using `codex-site/image-workflow.md`.
+- [ ] Add a Sunday kiln unloading image to the Kiln Hire page when it is ready.
 
 ## Content To Gather
 
@@ -57,3 +62,9 @@ publishing. Use local work, Git commits, and browser checks before deployment.
 - [x] Rename visible `My Kiln` wording to `Kiln Hire`.
 - [x] Improve mobile layout and page rhythm across core pages.
 - [x] Reduce tracked image weight and keep large originals out of the normal site workflow.
+- [x] Remove the public Shop link from main navigation until selling is ready.
+- [x] Fold the new untracked bowl, jug, and vase photos into the gallery deliberately, with names, captions, and image sizes reviewed first.
+- [x] Review gallery captions, categories, and selected pieces so the gallery feels curated rather than just complete.
+- [x] Add a small repeatable image workflow for future product photos before the next large photo batch.
+- [x] Review live metadata/social previews after the current structure is published.
+- [x] Restyle the Kiln Hire page and update firing prices.
