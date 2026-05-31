@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Honest Potter Colour Palette Trials</title>
+  <style>
+    :root{
+      --page-bg: #ede7de;
+      --page-text: #211f1c;
+      --soft-line: rgba(35, 30, 24, 0.16);
+      --font: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    *{ box-sizing: border-box; }
+
+    body{
+      margin: 0;
+      font-family: var(--font);
+      color: var(--page-text);
+      background: var(--page-bg);
+      line-height: 1.5;
+    }
+
+    main{
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 36px 0 54px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p{ margin: 0; }
+
+    .intro{
+      display: grid;
+      gap: 12px;
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .intro h1{
+      font-size: clamp(2.4rem, 6vw, 5rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .intro p{
+      color: #5f574f;
+      font-size: 1.08rem;
+    }
+
+    .palette-grid{
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .palette{
+      display: grid;
+      gap: 14px;
+      padding: 14px;
+      border: 1px solid var(--soft-line);
+      border-radius: 8px;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .palette[data-palette="hearth"]{
+      --bg: #f3eee5;
+      --surface: #fffaf2;
+      --text: #25211d;
+      --muted: #655d52;
+      --brand: #8e513b;
+      --brand-dark: #593326;
+      --brand-ink: #fff7ec;
+      --accent: #526a61;
+      --line: rgba(37, 33, 29, 0.15);
+      --shadow: rgba(58, 42, 28, 0.13);
+    }
+
+    .palette[data-palette="slip"]{
+      --bg: #f5f1ea;
+      --surface: #fffdf8;
+      --text: #22201d;
+      --muted: #625f58;
+      --brand: #6f5a45;
+      --brand-dark: #46392d;
+      --brand-ink: #fff8ef;
+      --accent: #3f6872;
+      --line: rgba(34, 32, 29, 0.14);
+      --shadow: rgba(47, 38, 29, 0.12);
+    }
+
+    .palette[data-palette="kiln"]{
+      --bg: #eee7dc;
+      --surface: #fffaf1;
+      --text: #221d19;
+      --muted: #665a4f;
+      --brand: #7b3f32;
+      --brand-dark: #4b2922;
+      --brand-ink: #fff4e8;
+      --accent: #66735a;
+      --line: rgba(34, 29, 25, 0.16);
+      --shadow: rgba(61, 38, 28, 0.14);
+    }
+
+    .palette[data-palette="kiln-hearth"]{
+      --bg: #eee7dc;
+      --surface: #fffaf1;
+      --text: #22201d;
+      --muted: #665d53;
+      --brand: #7b3f32;
+      --brand-dark: #4b2922;
+      --brand-ink: #fff4e8;
+      --accent: #526a61;
+      --line: rgba(34, 29, 25, 0.16);
+      --shadow: rgba(61, 38, 28, 0.14);
+    }
+
+    .palette-head{
+      display: grid;
+      gap: 8px;
+      padding: 4px 2px 0;
+    }
+
+    .palette-kicker{
+      color: var(--muted, #655d52);
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .palette h2{
+      font-size: 1.5rem;
+      line-height: 1.08;
+    }
+
+    .palette-note{
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .nav-sample{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 54px;
+      padding: 0 12px;
+      border-radius: 8px;
+      color: var(--brand-ink);
+      background: var(--brand);
+    }
+
+    .nav-sample strong{ white-space: nowrap; }
+
+    .nav-sample span{
+      color: var(--brand-ink);
+      opacity: 0.84;
+      font-size: 0.9rem;
+    }
+
+    .sample-card{
+      display: grid;
+      gap: 12px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: 0 16px 34px var(--shadow);
+    }
+
+    .sample-card h3{
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      line-height: 0.98;
+      max-width: 9ch;
+    }
+
+    .sample-card p{ color: var(--muted); }
+
+    .button-row{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--text);
+      background: var(--surface);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .button.primary{
+      color: var(--brand-ink);
+      border-color: var(--brand);
+      background: var(--brand);
+    }
+
+    .swatches{
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .swatch{
+      min-height: 64px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--swatch);
+    }
+
+    .labels{
+      display: grid;
+      gap: 8px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .labels strong{
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    .accent-strip{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .accent-strip div{
+      padding: 10px 12px;
+      color: var(--brand-ink);
+      font-weight: 800;
+    }
+
+    .accent-strip div:first-child{ background: var(--brand-dark); }
+    .accent-strip div:last-child{ background: var(--accent); }
+
+    .hex-list{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px 12px;
+      padding-top: 2px;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    .hex-list code{
+      color: var(--text);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    @media (max-width: 1180px){
+      .palette-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 720px){
+      .palette-grid{ grid-template-columns: 1fr; }
+      .palette{ max-width: 680px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="intro">
+      <p class="palette-kicker">The Honest Potter</p>
+      <h1>Colour palette trials</h1>
+      <p>
+        Three possible foundations: all warm and readable, none trying too hard.
+        The aim is handmade without twee, distinctive without shouting.
+      </p>
+    </section>
+
+    <section class="palette-grid" aria-label="Colour palette candidates">
+      <article class="palette" data-palette="hearth">
+        <div class="palette-head">
+          <p class="palette-kicker">Candidate 1</p>
+          <h2>Hearth Clay</h2>
+          <p class="palette-note">Warm, pottery-led, and probably the closest to the current site, but calmer.</p>
+        </div>
+        <div class="nav-sample">
+          <strong>The Honest Potter</strong>
+          <span>Gallery &middot; Notes &middot; Kiln Hire</span>
+        </div>
+        <div class="sample-card">
+          <h3>The Honest Potter</h3>
+          <p>Small-batch stoneware, practical pots, ceramic experiments, and a studio learning in public.</p>
+          <div class="button-row">
+            <a class="button primary" href="#">View the gallery</a>
+            <a class="button" href="#">About the studio</a>
+          </div>
+        </div>
+        <div class="swatches" aria-label="Hearth Clay swatches">
+          <div class="swatch" style="--swatch: var(--bg)"></div>
+          <div class="swatch" style="--swatch: var(--surface)"></div>
+          <div class="swatch" style="--swatch: var(--text)"></div>
+          <div class="swatch" style="--swatch: var(--brand)"></div>
+          <div class="swatch" style="--swatch: var(--accent)"></div>
+        </div>
+        <div class="hex-list">
+          <span>Background <code>#F3EEE5</code></span>
+          <span>Surface <code>#FFFAF2</code></span>
+          <span>Text <code>#25211D</code></span>
+          <span>Brand <code>#8E513B</code></span>
+          <span>Accent <code>#526A61</code></span>
+        </div>
+        <ul class="labels">
+          <li><strong>Best for:</strong> a friendly craft site with a bit of presence.</li>
+          <li><strong>Watch for:</strong> too much clay colour if every button and footer uses it.</li>
+        </ul>
+        <div class="accent-strip">
+          <div>deep clay</div>
+          <div>mineral green</div>
+        </div>
+      </article>
+
+      <article class="palette" data-palette="slip">
+        <div class="palette-head">
+          <p class="palette-kicker">Candidate 2</p>
+          <h2>Stone Slip</h2>
+          <p class="palette-note">Quieter, more gallery-like, with a blue-green accent for freshness.</p>
+        </div>
+        <div class="nav-sample">
+          <strong>The Honest Potter</strong>
+          <span>Gallery &middot; Notes &middot; Kiln Hire</span>
+        </div>
+        <div class="sample-card">
+          <h3>The Honest Potter</h3>
+          <p>Small-batch stoneware, practical pots, ceramic experiments, and a studio learning in public.</p>
+          <div class="button-row">
+            <a class="button primary" href="#">View the gallery</a>
+            <a class="button" href="#">About the studio</a>
+          </div>
+        </div>
+        <div class="swatches" aria-label="Stone Slip swatches">
+          <div class="swatch" style="--swatch: var(--bg)"></div>
+          <div class="swatch" style="--swatch: var(--surface)"></div>
+          <div class="swatch" style="--swatch: var(--text)"></div>
+          <div class="swatch" style="--swatch: var(--brand)"></div>
+          <div class="swatch" style="--swatch: var(--accent)"></div>
+        </div>
+        <div class="hex-list">
+          <span>Background <code>#F5F1EA</code></span>
+          <span>Surface <code>#FFFDF8</code></span>
+          <span>Text <code>#22201D</code></span>
+          <span>Brand <code>#6F5A45</code></span>
+          <span>Accent <code>#3F6872</code></span>
+        </div>
+        <ul class="labels">
+          <li><strong>Best for:</strong> calm readability and letting photos carry more of the colour.</li>
+          <li><strong>Watch for:</strong> it may feel a touch too restrained unless typography gets character.</li>
+        </ul>
+        <div class="accent-strip">
+          <div>raw umber</div>
+          <div>oxidised blue</div>
+        </div>
+      </article>
+
+      <article class="palette" data-palette="kiln">
+        <div class="palette-head">
+          <p class="palette-kicker">Candidate 3</p>
+          <h2>Kiln Brick</h2>
+          <p class="palette-note">Earthier and stronger, with more studio grit and less white-space polish.</p>
+        </div>
+        <div class="nav-sample">
+          <strong>The Honest Potter</strong>
+          <span>Gallery &middot; Notes &middot; Kiln Hire</span>
+        </div>
+        <div class="sample-card">
+          <h3>The Honest Potter</h3>
+          <p>Small-batch stoneware, practical pots, ceramic experiments, and a studio learning in public.</p>
+          <div class="button-row">
+            <a class="button primary" href="#">View the gallery</a>
+            <a class="button" href="#">About the studio</a>
+          </div>
+        </div>
+        <div class="swatches" aria-label="Kiln Brick swatches">
+          <div class="swatch" style="--swatch: var(--bg)"></div>
+          <div class="swatch" style="--swatch: var(--surface)"></div>
+          <div class="swatch" style="--swatch: var(--text)"></div>
+          <div class="swatch" style="--swatch: var(--brand)"></div>
+          <div class="swatch" style="--swatch: var(--accent)"></div>
+        </div>
+        <div class="hex-list">
+          <span>Background <code>#EEE7DC</code></span>
+          <span>Surface <code>#FFFAF1</code></span>
+          <span>Text <code>#221D19</code></span>
+          <span>Brand <code>#7B3F32</code></span>
+          <span>Accent <code>#66735A</code></span>
+        </div>
+        <ul class="labels">
+          <li><strong>Best for:</strong> a more distinctive, grounded studio feel.</li>
+          <li><strong>Watch for:</strong> it could become sombre if large areas get too dark.</li>
+        </ul>
+        <div class="accent-strip">
+          <div>kiln brick</div>
+          <div>sage ash</div>
+        </div>
+      </article>
+
+      <article class="palette" data-palette="kiln-hearth">
+        <div class="palette-head">
+          <p class="palette-kicker">Candidate 4</p>
+          <h2>Kiln Hearth</h2>
+          <p class="palette-note">The earthier base and brick brand colour, softened by the quieter mineral green.</p>
+        </div>
+        <div class="nav-sample">
+          <strong>The Honest Potter</strong>
+          <span>Gallery &middot; Notes &middot; Kiln Hire</span>
+        </div>
+        <div class="sample-card">
+          <h3>The Honest Potter</h3>
+          <p>Small-batch stoneware, practical pots, ceramic experiments, and a studio learning in public.</p>
+          <div class="button-row">
+            <a class="button primary" href="#">View the gallery</a>
+            <a class="button" href="#">About the studio</a>
+          </div>
+        </div>
+        <div class="swatches" aria-label="Kiln Hearth swatches">
+          <div class="swatch" style="--swatch: var(--bg)"></div>
+          <div class="swatch" style="--swatch: var(--surface)"></div>
+          <div class="swatch" style="--swatch: var(--text)"></div>
+          <div class="swatch" style="--swatch: var(--brand)"></div>
+          <div class="swatch" style="--swatch: var(--accent)"></div>
+        </div>
+        <div class="hex-list">
+          <span>Background <code>#EEE7DC</code></span>
+          <span>Surface <code>#FFFAF1</code></span>
+          <span>Text <code>#22201D</code></span>
+          <span>Brand <code>#7B3F32</code></span>
+          <span>Accent <code>#526A61</code></span>
+        </div>
+        <ul class="labels">
+          <li><strong>Best for:</strong> a warm studio feel with a little mineral freshness.</li>
+          <li><strong>Watch for:</strong> keeping the brick colour as punctuation, not wallpaper.</li>
+        </ul>
+        <div class="accent-strip">
+          <div>kiln brick</div>
+          <div>mineral green</div>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

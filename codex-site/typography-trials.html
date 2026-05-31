@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Honest Potter Typography Trials</title>
+  <style>
+    :root{
+      --bg: #eee7dc;
+      --surface: #fffaf1;
+      --text: #22201d;
+      --muted: #665d53;
+      --brand: #7b3f32;
+      --brand-dark: #4b2922;
+      --brand-ink: #fff4e8;
+      --accent: #526a61;
+      --line: rgba(34, 29, 25, 0.16);
+      --shadow: rgba(61, 38, 28, 0.14);
+      --system: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+      --serif: Georgia, "Times New Roman", Times, serif;
+      --humanist: "Avenir Next", Avenir, "Segoe UI", system-ui, sans-serif;
+      --oldstyle: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      --slab: Rockwell, "Courier New", Courier, Georgia, serif;
+    }
+
+    *{ box-sizing: border-box; }
+
+    body{
+      margin: 0;
+      color: var(--text);
+      background: var(--bg);
+      font-family: var(--system);
+      line-height: 1.5;
+    }
+
+    main{
+      width: min(1200px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 34px 0 56px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p{ margin: 0; }
+
+    .intro{
+      display: grid;
+      gap: 12px;
+      max-width: 790px;
+      margin-bottom: 26px;
+    }
+
+    .kicker{
+      color: var(--muted);
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .intro h1{
+      max-width: 12ch;
+      font-family: var(--oldstyle);
+      font-size: clamp(2.8rem, 7vw, 5.8rem);
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 0.94;
+    }
+
+    .intro p{
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .trial-grid{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .trial{
+      display: grid;
+      gap: 16px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: 0 16px 34px var(--shadow);
+    }
+
+    .trial[data-type="oldstyle"]{
+      --heading-font: var(--oldstyle);
+      --body-font: var(--system);
+      --heading-weight: 700;
+      --body-size: 1rem;
+    }
+
+    .trial[data-type="georgia"]{
+      --heading-font: var(--serif);
+      --body-font: var(--humanist);
+      --heading-weight: 700;
+      --body-size: 1rem;
+    }
+
+    .trial[data-type="humanist"]{
+      --heading-font: var(--humanist);
+      --body-font: var(--system);
+      --heading-weight: 760;
+      --body-size: 1rem;
+    }
+
+    .trial[data-type="slab"]{
+      --heading-font: var(--slab);
+      --body-font: var(--system);
+      --heading-weight: 700;
+      --body-size: 0.98rem;
+    }
+
+    .trial-head{
+      display: grid;
+      gap: 6px;
+      padding: 0 2px;
+    }
+
+    .trial-head h2{
+      font-family: var(--heading-font);
+      font-size: 1.55rem;
+      font-weight: var(--heading-weight);
+      line-height: 1.08;
+    }
+
+    .trial-note{
+      color: var(--muted);
+      font-family: var(--body-font);
+      font-size: 0.95rem;
+    }
+
+    .nav-sample{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 56px;
+      padding: 0 14px;
+      border-radius: 8px;
+      color: var(--brand-ink);
+      background: var(--brand);
+      font-family: var(--body-font);
+    }
+
+    .nav-sample strong{
+      font-family: var(--heading-font);
+      font-size: 1.1rem;
+      font-weight: var(--heading-weight);
+      white-space: nowrap;
+    }
+
+    .nav-sample span{
+      opacity: 0.85;
+      font-size: 0.9rem;
+    }
+
+    .hero-sample{
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(160px, 0.75fr);
+      gap: 18px;
+      align-items: center;
+      padding: 18px 0 4px;
+      border-top: 1px solid var(--line);
+    }
+
+    .hero-copy{
+      display: grid;
+      gap: 12px;
+      align-content: start;
+      font-family: var(--body-font);
+    }
+
+    .hero-copy h3{
+      max-width: 9ch;
+      font-family: var(--heading-font);
+      font-size: clamp(2.6rem, 6vw, 4.8rem);
+      font-weight: var(--heading-weight);
+      letter-spacing: 0;
+      line-height: 0.94;
+    }
+
+    .hero-copy p{
+      color: var(--muted);
+      font-size: var(--body-size);
+    }
+
+    .button-row{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--text);
+      background: var(--surface);
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .button.primary{
+      color: var(--brand-ink);
+      border-color: var(--brand);
+      background: var(--brand);
+    }
+
+    .image-block{
+      min-height: 210px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(82, 106, 97, 0.34), rgba(123, 63, 50, 0.16)),
+        radial-gradient(circle at 62% 28%, rgba(255, 250, 241, 0.88), rgba(255, 250, 241, 0) 32%),
+        var(--bg);
+    }
+
+    .text-sample{
+      display: grid;
+      gap: 12px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      font-family: var(--body-font);
+      font-size: var(--body-size);
+    }
+
+    .text-sample h3{
+      font-family: var(--heading-font);
+      font-size: 1.45rem;
+      font-weight: var(--heading-weight);
+      line-height: 1.1;
+    }
+
+    .text-sample p{
+      color: var(--muted);
+      max-width: 62ch;
+    }
+
+    .meta-row{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-top: 2px;
+    }
+
+    .tag{
+      padding: 7px 9px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--muted);
+      background: rgba(238, 231, 220, 0.54);
+      font-family: var(--body-font);
+      font-size: 0.86rem;
+      font-weight: 750;
+    }
+
+    .verdict{
+      display: grid;
+      gap: 7px;
+      color: var(--muted);
+      font-family: var(--body-font);
+      font-size: 0.92rem;
+    }
+
+    .verdict strong{ color: var(--text); }
+
+    @media (max-width: 900px){
+      .trial-grid{ grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 620px){
+      main{ width: min(100% - 24px, 1200px); }
+      .hero-sample{ grid-template-columns: 1fr; }
+      .image-block{ min-height: 180px; }
+      .nav-sample{ align-items: flex-start; flex-direction: column; justify-content: center; padding: 12px 14px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="intro">
+      <p class="kicker">The Honest Potter</p>
+      <h1>Typography trials</h1>
+      <p>
+        Same Kiln Hearth palette, different voices. The question is which one
+        feels handmade and readable without becoming precious, gloomy, or bland.
+      </p>
+    </section>
+
+    <section class="trial-grid" aria-label="Typography candidates">
+      <article class="trial" data-type="oldstyle">
+        <div class="trial-head">
+          <p class="kicker">Candidate 1</p>
+          <h2>Oldstyle Studio</h2>
+          <p class="trial-note">Soft old-style headings with plain, readable body text.</p>
+        </div>
+        <div class="nav-sample">
+          <strong>The Honest Potter</strong>
+          <span>Gallery &middot; Notes &middot; Kiln Hire</span>
+        </div>
+        <div class="hero-sample">
+          <div class="hero-copy">
+            <p class="kicker">Handmade ceramics from Liverpool</p>
+            <h3>The Honest Potter</h3>
+            <p>Small-batch stoneware, practical pots, ceramic experiments, and a working studio still learning in public.</p>
+            <div class="button-row">
+              <a class="button primary" href="#">View the gallery</a>
+              <a class="button" href="#">About the studio</a>
+            </div>
+          </div>
+          <div class="image-block" aria-hidden="true"></div>
+        </div>
+        <div class="text-sample">
+          <h3>Pink chrome-tin glaze trial</h3>
+          <p>The nicest thing about this direction is that it has a human hand in it, but the everyday text stays unfussy and easy to scan.</p>
+          <div class="meta-row"><span class="tag">warm</span><span class="tag">readable</span><span class="tag">slight character</span></div>
+        </div>
+        <p class="verdict"><strong>Feels like:</strong> the most natural next step from the palette.</p>
+      </article>
+
+      <article class="trial" data-type="georgia">
+        <div class="trial-head">
+          <p class="kicker">Candidate 2</p>
+          <h2>Quiet Serif</h2>
+          <p class="trial-note">A familiar serif headline paired with a warmer humanist sans.</p>
+        </div>
+        <div class="nav-sample">
+          <strong>The Honest Potter</strong>
+          <span>Gallery &middot; Notes &middot; Kiln Hire</span>
+        </div>
+        <div class="hero-sample">
+          <div class="hero-copy">
+            <p class="kicker">Handmade ceramics from Liverpool</p>
+            <h3>The Honest Potter</h3>
+            <p>Small-batch stoneware, practical pots, ceramic experiments, and a working studio still learning in public.</p>
+            <div class="button-row">
+              <a class="button primary" href="#">View the gallery</a>
+              <a class="button" href="#">About the studio</a>
+            </div>
+          </div>
+          <div class="image-block" aria-hidden="true"></div>
+        </div>
+        <div class="text-sample">
+          <h3>Pink chrome-tin glaze trial</h3>
+          <p>This is reliable and clear. It gives the site some warmth, though it is a little more familiar and less personal.</p>
+          <div class="meta-row"><span class="tag">classic</span><span class="tag">safe</span><span class="tag">clear</span></div>
+        </div>
+        <p class="verdict"><strong>Feels like:</strong> dependable, but maybe not quite enough spark.</p>
+      </article>
+
+      <article class="trial" data-type="humanist">
+        <div class="trial-head">
+          <p class="kicker">Candidate 3</p>
+          <h2>Honest Sans</h2>
+          <p class="trial-note">A clean sans-serif direction with warmth coming from weight and spacing.</p>
+        </div>
+        <div class="nav-sample">
+          <strong>The Honest Potter</strong>
+          <span>Gallery &middot; Notes &middot; Kiln Hire</span>
+        </div>
+        <div class="hero-sample">
+          <div class="hero-copy">
+            <p class="kicker">Handmade ceramics from Liverpool</p>
+            <h3>The Honest Potter</h3>
+            <p>Small-batch stoneware, practical pots, ceramic experiments, and a working studio still learning in public.</p>
+            <div class="button-row">
+              <a class="button primary" href="#">View the gallery</a>
+              <a class="button" href="#">About the studio</a>
+            </div>
+          </div>
+          <div class="image-block" aria-hidden="true"></div>
+        </div>
+        <div class="text-sample">
+          <h3>Pink chrome-tin glaze trial</h3>
+          <p>Very readable and modern, but it asks the photography and layout to do nearly all of the character work.</p>
+          <div class="meta-row"><span class="tag">plainspoken</span><span class="tag">practical</span><span class="tag">modern</span></div>
+        </div>
+        <p class="verdict"><strong>Feels like:</strong> useful, but maybe too close to ordinary.</p>
+      </article>
+
+      <article class="trial" data-type="slab">
+        <div class="trial-head">
+          <p class="kicker">Candidate 4</p>
+          <h2>Workshop Slab</h2>
+          <p class="trial-note">Sturdier headings with a label-like studio character.</p>
+        </div>
+        <div class="nav-sample">
+          <strong>The Honest Potter</strong>
+          <span>Gallery &middot; Notes &middot; Kiln Hire</span>
+        </div>
+        <div class="hero-sample">
+          <div class="hero-copy">
+            <p class="kicker">Handmade ceramics from Liverpool</p>
+            <h3>The Honest Potter</h3>
+            <p>Small-batch stoneware, practical pots, ceramic experiments, and a working studio still learning in public.</p>
+            <div class="button-row">
+              <a class="button primary" href="#">View the gallery</a>
+              <a class="button" href="#">About the studio</a>
+            </div>
+          </div>
+          <div class="image-block" aria-hidden="true"></div>
+        </div>
+        <div class="text-sample">
+          <h3>Pink chrome-tin glaze trial</h3>
+          <p>This has presence and a workshop feel, but it could turn into branding-with-a-hammer if used too heavily.</p>
+          <div class="meta-row"><span class="tag">solid</span><span class="tag">distinctive</span><span class="tag">riskier</span></div>
+        </div>
+        <p class="verdict"><strong>Feels like:</strong> fun, but probably a little too forceful for the base voice.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

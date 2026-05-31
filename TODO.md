@@ -24,8 +24,9 @@ publishing. Use local work, Git commits, and browser checks before deployment.
 
 ## Design Phase
 
-- [ ] Create a stronger visual direction for the site: typography, colours, spacing, image treatment, and button/link style.
-- [ ] Redesign the homepage as the new visual standard for The Honest Potter.
+- [x] Create a stronger visual direction for the site: typography, colours, spacing, image treatment, and button/link style.
+- [ ] Rework the maker's mark/logo for the website while keeping it recognisably based on the real pottery stamp.
+- [ ] Turn the approved homepage design trial into the new homepage standard for The Honest Potter.
 - [ ] Give the gallery a more confident first impression while keeping the current filters and lightbox.
 - [ ] Bring About and Studio Notes into the same visual language after the homepage direction is settled.
 - [ ] Replace placeholder and weaker images gradually using `codex-site/image-workflow.md`.
@@ -68,3 +69,5 @@ publishing. Use local work, Git commits, and browser checks before deployment.
 - [x] Add a small repeatable image workflow for future product photos before the next large photo batch.
 - [x] Review live metadata/social previews after the current structure is published.
 - [x] Restyle the Kiln Hire page and update firing prices.
+- [x] Choose the Kiln Hearth colour palette and mixed Workshop Slab / Oldstyle Studio typography direction.
+- [x] Create local colour, typography, and homepage design trial pages for the next visual direction.
