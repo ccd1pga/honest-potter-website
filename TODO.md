@@ -21,14 +21,17 @@ publishing. Use local work, Git commits, and browser checks before deployment.
 ## Next Practical Work
 
 - [ ] Check the live site on Android when a device is available.
+- [ ] Discuss and choose a proper image storage workflow: originals in a private local inbox, selected web-ready images in `images/`, and no source/reference files mixed into the public site folder.
+- [ ] Create a simple terminal image-prep command for future photo batches: take exported phone/camera PNG or JPEG files, resize them for the web, convert to JPEG, and place them in the chosen gallery folder without opening Photoshop.
+- [ ] Decide whether to tidy the current gallery folder names into one consistent system, or keep the existing folders for compatibility and document the naming rules clearly.
 
 ## Design Phase
 
 - [x] Create a stronger visual direction for the site: typography, colours, spacing, image treatment, and button/link style.
-- [ ] Rework the maker's mark/logo for the website while keeping it recognisably based on the real pottery stamp.
-- [ ] Turn the approved homepage design trial into the new homepage standard for The Honest Potter.
-- [ ] Give the gallery a more confident first impression while keeping the current filters and lightbox.
-- [ ] Bring About and Studio Notes into the same visual language after the homepage direction is settled.
+- [x] Rework the maker's mark/logo for the website while keeping it recognisably based on the real pottery stamp.
+- [x] Turn the approved homepage design trial into the new homepage standard for The Honest Potter.
+- [x] Give the gallery a more confident first impression while keeping the current filters and lightbox.
+- [x] Bring About and Studio Notes into the same visual language after the homepage direction is settled.
 - [ ] Replace placeholder and weaker images gradually using `codex-site/image-workflow.md`.
 - [ ] Add a Sunday kiln unloading image to the Kiln Hire page when it is ready.
 
@@ -36,6 +39,7 @@ publishing. Use local work, Git commits, and browser checks before deployment.
 
 - [ ] Better About page photos over time: tools, working surfaces, bisque, finished pieces, and kiln/studio details.
 - [ ] Future Studio Notes entries: one glaze, firing, or form note at a time.
+- [ ] Studio Notes idea: ceramic drum experiments, including the glazed bodhran and bisque darbukas.
 - [ ] Shop content when ready: dimensions, prices, stock states, shipping/collection notes, and whether items are enquiry-only or checkout-ready.
 
 ## Later

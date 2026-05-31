@@ -86,6 +86,17 @@ window.galleryPieces = [
     alt: "Large handmade green flower vase"
   },
   {
+    id: "white-stoneware-vase",
+    title: "White stoneware vase",
+    category: "Vases",
+    year: "2026",
+    detail: "Soft white vase with a speckled glaze and exposed clay foot.",
+    recent: true,
+    featured: true,
+    images: ["../images/vase/white_vase_1.jpeg", "../images/vase/white_vase_2.jpeg"],
+    alt: "White stoneware vase with a soft speckled glaze"
+  },
+  {
     id: "white-splash-bowl",
     title: "White splash bowl",
     category: "Bowls",
@@ -181,6 +192,58 @@ window.galleryPieces = [
     shopNote: "A small set of pouring jugs in a newly tested crackle glaze.",
     images: ["../images/jugs/Crackle_jugs.jpeg"],
     alt: "Set of four handmade pouring jugs with crackle glaze"
+  },
+  {
+    id: "blue-pouring-jugs",
+    title: "Blue pouring jugs",
+    category: "Tableware",
+    year: "2026",
+    detail: "Set of three pouring jugs with a deep blue glaze.",
+    recent: true,
+    featured: true,
+    images: ["../images/jugs/blue_pouring_jugs_1.jpeg"],
+    alt: "Set of three blue handmade ceramic pouring jugs"
+  },
+  {
+    id: "blue-dinner-plates",
+    title: "Blue dinner plates",
+    category: "Tableware",
+    year: "2026",
+    detail: "Dinner plates with a deep blue glaze and softly thrown rims.",
+    recent: true,
+    images: ["../images/Plate/dinner_plate_blue_1.jpeg", "../images/Plate/dinner_plate_blue_2.jpeg", "../images/Plate/dinner_plate_blue_3.jpeg"],
+    alt: "Blue handmade ceramic dinner plate"
+  },
+  {
+    id: "flat-blue-plate",
+    title: "Flat blue plate",
+    category: "Tableware",
+    year: "2026",
+    detail: "Flat serving plate with blue glaze movement across the surface.",
+    recent: true,
+    images: ["../images/Plate/flat_plate_blue.jpeg"],
+    alt: "Flat blue handmade ceramic plate"
+  },
+  {
+    id: "mandala-side-plate",
+    title: "Mandala side plate",
+    category: "Tableware",
+    year: "2026",
+    detail: "Green side plate with carved mandala-style decoration under the glaze.",
+    recent: true,
+    featured: true,
+    images: ["../images/Plate/mandala_plate_1.jpeg", "../images/Plate/mandala_plate_2.jpeg"],
+    alt: "Green mandala-style ceramic side plate"
+  },
+  {
+    id: "chip-and-dip-plate",
+    title: "Chip and dip plate",
+    category: "Tableware",
+    year: "2026",
+    detail: "Shared table plate with a central well for dips or sauces.",
+    recent: true,
+    images: ["../images/kitchen/chip_dip_plate.jpeg"],
+    alt: "Handmade ceramic chip and dip serving plate"
   },
   {
     id: "blue-plate",

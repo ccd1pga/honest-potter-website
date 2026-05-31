@@ -37,11 +37,21 @@
   }
 
   function visiblePieces() {
-    if (activeCategory === "All") {
-      return pieces;
-    }
+    const currentPieces = activeCategory === "All"
+      ? pieces
+      : pieces.filter((piece) => piece.category === activeCategory);
 
-    return pieces.filter((piece) => piece.category === activeCategory);
+    return currentPieces.slice().sort((a, b) => {
+      if (Boolean(a.recent) !== Boolean(b.recent)) {
+        return Number(Boolean(b.recent)) - Number(Boolean(a.recent));
+      }
+
+      if (Boolean(a.featured) !== Boolean(b.featured)) {
+        return Number(Boolean(b.featured)) - Number(Boolean(a.featured));
+      }
+
+      return 0;
+    });
   }
 
   function renderGallery() {

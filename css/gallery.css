@@ -55,6 +55,74 @@
   line-height: 1;
 }
 
+.gallery-showcase {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+  gap: clamp(14px, 2vw, 20px);
+  padding: 22px 0 10px;
+}
+
+.gallery-showcase img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.showcase-feature,
+.showcase-stack {
+  min-height: clamp(280px, 46vw, 520px);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset;
+}
+
+.showcase-feature {
+  position: relative;
+  margin: 0;
+}
+
+.showcase-feature figcaption {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  width: min(520px, calc(100% - 36px));
+  padding: 16px 18px;
+  border-radius: 8px;
+  color: var(--brand-ink);
+  background: rgba(75, 41, 34, 0.9);
+  box-shadow: 0 14px 30px rgba(34, 32, 29, 0.2);
+}
+
+.showcase-feature figcaption span {
+  display: block;
+  margin-bottom: 5px;
+  color: rgba(255, 244, 232, 0.72);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.showcase-feature figcaption strong {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.25rem, 3vw, 2.05rem);
+  line-height: 1.12;
+}
+
+.showcase-stack {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.showcase-stack img + img {
+  border-top: 1px solid var(--line);
+}
+
 .gallery-tools {
   padding: 18px 0 22px;
 }
@@ -261,9 +329,8 @@
 .lightbox-shell {
   position: relative;
   display: grid;
-  grid-template-columns: 52px minmax(0, 1fr) 52px;
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
-  gap: 10px;
   padding: 18px;
 }
 
@@ -271,6 +338,7 @@
   margin: 0;
   display: grid;
   gap: 12px;
+  min-width: 0;
 }
 
 .lightbox img {
@@ -307,6 +375,21 @@
 .icon-button:hover,
 .icon-button:focus-visible {
   background: rgba(255, 255, 255, 0.16);
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+}
+
+.previous-button {
+  left: 14px;
+}
+
+.next-button {
+  right: 14px;
 }
 
 .close-button {
@@ -457,8 +540,29 @@
 }
 
 @media (max-width: 980px) {
-  .gallery-intro {
+  .gallery-intro,
+  .gallery-showcase {
     grid-template-columns: 1fr;
+  }
+
+  .showcase-feature,
+  .showcase-stack {
+    min-height: 0;
+  }
+
+  .showcase-feature {
+    aspect-ratio: 4 / 3;
+  }
+
+  .showcase-stack {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+    aspect-ratio: 16 / 7;
+  }
+
+  .showcase-stack img + img {
+    border-top: 0;
+    border-left: 1px solid var(--line);
   }
 
   .shop-intro {
@@ -493,6 +597,14 @@
     width: 100%;
   }
 
+  .showcase-feature figcaption {
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    padding: 12px 13px;
+  }
+
   .piece-card,
   .piece-card.featured {
     grid-column: 1 / -1;
@@ -512,14 +624,7 @@
   }
 
   .lightbox-shell {
-    grid-template-columns: 1fr;
     padding: 62px 12px 14px;
-  }
-
-  .nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
   }
 
   .previous-button {
