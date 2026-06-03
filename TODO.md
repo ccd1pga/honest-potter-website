@@ -21,6 +21,11 @@ publishing. Use local work, Git commits, and browser checks before deployment.
 ## Next Practical Work
 
 - [ ] Check the live site on Android when a device is available.
+- [ ] Review Stripe and shop setup options after the current snag list is complete and committed locally.
+- [x] Complete a small professional polish pass across copy, navigation consistency, trust details, and Studio Notes structure.
+- [x] Create a repeatable Studio Notes template before adding more entries.
+- [x] Run a light performance/privacy pass on public images, strip JPEG metadata, and remove the unused heavy social-preview logo.
+- [x] Verify the polish/performance snag list locally before starting Stripe/shop setup.
 - [x] Discuss and choose a proper image storage workflow: originals in a private local inbox, selected web-ready images in `images/`, and no source/reference files mixed into the public site folder.
 - [x] Create a simple terminal image-prep command for future photo batches: take exported phone/camera PNG or JPEG files, resize them for the web, convert to JPEG, and place them in the chosen gallery folder without opening Photoshop.
 - [x] Create a first public image audit so used images, page assets, and cleanup candidates can be handled separately.

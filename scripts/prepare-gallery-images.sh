@@ -17,7 +17,8 @@ Output:
   images/DEST_SUBFOLDER/name-prefix_2.jpeg
 
 The script uses macOS sips, resizes the longest edge to 1800px, and writes JPEG
-files suitable for the gallery.
+files suitable for the gallery. When jpegtran is available, it also strips
+camera metadata and optimizes the output JPEGs.
 USAGE
 }
 
@@ -63,6 +64,11 @@ for input in "${inputs[@]}"; do
   done
 
   sips --resampleHeightWidthMax 1800 --setProperty format jpeg "$input" --out "$output" >/dev/null
+  if command -v jpegtran >/dev/null 2>&1; then
+    optimized="${output}.optimized"
+    jpegtran -copy none -optimize -progressive "$output" > "$optimized"
+    mv "$optimized" "$output"
+  fi
   echo "Prepared ${output#$site_root/}"
   counter=$((counter + 1))
 done

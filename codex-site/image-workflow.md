@@ -58,8 +58,9 @@ scripts/prepare-gallery-images.sh local-originals/gallery-inbox/2026-06-02-bowls
 ```
 
 This creates JPEG files under `images/bowls/`, resized to a sensible gallery
-size. Rename the final files if the automatic numbered names are not descriptive
-enough.
+size. When `jpegtran` is available, it also strips camera metadata and optimizes
+the JPEGs. Rename the final files if the automatic numbered names are not
+descriptive enough.
 
 ## Add The Gallery Entry
 

@@ -81,7 +81,7 @@ the site and should not be removed during a gallery-only cleanup:
 - `glaze/pink3.jpeg`
 - `glaze/pink4.jpeg`
 - `kiln_share.jpg`
-- `logo_main.png`
+- `logo_main.png` was removed from the public image set after social previews were pointed at `logo.png`.
 - `logo-idea3-cropped.png`
 - `logo.png`
 
