@@ -10,7 +10,7 @@ window.galleryPieces = [
     status: "Available",
     price: "Enquire",
     shopNote: "A larger statement bowl for serving or display.",
-    images: ["../images/bowls/Large_blue_bowl_1.jpeg", "../images/bowls/Large_blue_bowl_4.jpeg"],
+    images: ["../images/bowls/large_blue_bowl_1.jpeg", "../images/bowls/large_blue_bowl_4.jpeg"],
     alt: "Large blue wheel-thrown stoneware bowl"
   },
   {
@@ -24,7 +24,7 @@ window.galleryPieces = [
     status: "Available",
     price: "Enquire",
     shopNote: "A broad vase with a calm, layered blue finish.",
-    images: ["../images/vase/Large_blue_vase_1.jpeg", "../images/vase/Large_blue_vase_2.jpeg"],
+    images: ["../images/vase/large_blue_vase_1.jpeg", "../images/vase/large_blue_vase_2.jpeg"],
     alt: "Wide blue stoneware vase"
   },
   {
@@ -33,7 +33,7 @@ window.galleryPieces = [
     category: "Studio",
     year: "2026",
     detail: "A kiln load in progress before glazing.",
-    images: ["../images/studio/Bisque_1.jpg", "../images/studio/bisque_2.jpg"],
+    images: ["../images/studio/bisque_1.jpg", "../images/studio/bisque_2.jpg"],
     alt: "Shelves of bisque-fired pottery in the studio"
   },
   {
@@ -82,7 +82,7 @@ window.galleryPieces = [
     status: "Available",
     price: "Enquire",
     shopNote: "A larger vase for flowers or display.",
-    images: ["../images/vase/Green_vase_3.jpeg"],
+    images: ["../images/vase/green_vase_3.jpeg"],
     alt: "Large handmade green flower vase"
   },
   {
@@ -115,7 +115,7 @@ window.galleryPieces = [
     status: "Available",
     price: "Enquire",
     shopNote: "A nesting pair for serving, snacks, or table use.",
-    images: ["../images/bowls/Nesting_yellow.jpeg"],
+    images: ["../images/bowls/nesting_yellow.jpeg"],
     alt: "Set of two nesting bowls with sunset yellow interiors"
   },
   {
@@ -128,7 +128,7 @@ window.galleryPieces = [
     status: "Available",
     price: "Enquire",
     shopNote: "A generous bowl for salads, serving, or a table centrepiece.",
-    images: ["../images/bowls/Large_bowl_2.jpeg"],
+    images: ["../images/bowls/large_bowl_2.jpeg"],
     alt: "Large handmade stoneware salad bowl"
   },
   {
@@ -150,7 +150,7 @@ window.galleryPieces = [
     category: "Bowls",
     year: "2026",
     detail: "A group of wheel-thrown bowls with different glazes.",
-    images: ["../images/bowls/bowls_2.JPG", "../images/bowls/bowls_1.JPG"],
+    images: ["../images/bowls/bowls_2.jpg", "../images/bowls/bowls_1.jpg"],
     alt: "Collection of glazed ceramic bowls"
   },
   {
@@ -164,7 +164,7 @@ window.galleryPieces = [
     status: "Available",
     price: "Enquire",
     shopNote: "A handmade teapot with a warm brown finish.",
-    images: ["../images/teapots/teapot_1.JPG", "../images/teapots/teapot_2.JPG"],
+    images: ["../images/teapots/teapot_1.jpg", "../images/teapots/teapot_2.jpg"],
     alt: "Brown stoneware teapot"
   },
   {
@@ -177,7 +177,7 @@ window.galleryPieces = [
     status: "Made to order",
     price: "Enquire",
     shopNote: "Small pouring jugs can be made in similar forms and glazes.",
-    images: ["../images/jugs/pouring_jugs_1.JPG", "../images/jugs/pouring_jugs_2.JPG", "../images/jugs/pouring_jugs_3.JPG"],
+    images: ["../images/jugs/pouring_jugs_1.jpg", "../images/jugs/pouring_jugs_2.jpg", "../images/jugs/pouring_jugs_3.jpg"],
     alt: "Small ceramic pouring jugs"
   },
   {
@@ -190,7 +190,7 @@ window.galleryPieces = [
     status: "Available",
     price: "Enquire",
     shopNote: "A small set of pouring jugs in a newly tested crackle glaze.",
-    images: ["../images/jugs/Crackle_jugs.jpeg"],
+    images: ["../images/jugs/crackle_jugs.jpeg"],
     alt: "Set of four handmade pouring jugs with crackle glaze"
   },
   {
@@ -211,7 +211,7 @@ window.galleryPieces = [
     year: "2026",
     detail: "Dinner plates with a deep blue glaze and softly thrown rims.",
     recent: true,
-    images: ["../images/Plate/dinner_plate_blue_1.jpeg", "../images/Plate/dinner_plate_blue_2.jpeg", "../images/Plate/dinner_plate_blue_3.jpeg"],
+    images: ["../images/plates/dinner_plate_blue_1.jpeg", "../images/plates/dinner_plate_blue_2.jpeg", "../images/plates/dinner_plate_blue_3.jpeg"],
     alt: "Blue handmade ceramic dinner plate"
   },
   {
@@ -221,7 +221,7 @@ window.galleryPieces = [
     year: "2026",
     detail: "Flat serving plate with blue glaze movement across the surface.",
     recent: true,
-    images: ["../images/Plate/flat_plate_blue.jpeg"],
+    images: ["../images/plates/flat_plate_blue.jpeg"],
     alt: "Flat blue handmade ceramic plate"
   },
   {
@@ -232,7 +232,7 @@ window.galleryPieces = [
     detail: "Green side plate with carved mandala-style decoration under the glaze.",
     recent: true,
     featured: true,
-    images: ["../images/Plate/mandala_plate_1.jpeg", "../images/Plate/mandala_plate_2.jpeg"],
+    images: ["../images/plates/mandala_plate_1.jpeg", "../images/plates/mandala_plate_2.jpeg"],
     alt: "Green mandala-style ceramic side plate"
   },
   {
@@ -251,7 +251,7 @@ window.galleryPieces = [
     category: "Tableware",
     year: "2026",
     detail: "Flat plate with a flowing blue glaze.",
-    images: ["../images/Plate/plate_blue_1.JPG", "../images/Plate/plate_blue_2.JPG"],
+    images: ["../images/plates/plate_blue_1.jpg", "../images/plates/plate_blue_2.jpg"],
     alt: "Blue glazed ceramic plate"
   },
   {
@@ -264,7 +264,7 @@ window.galleryPieces = [
     status: "Available",
     price: "Enquire",
     shopNote: "A larger serving piece with blue glaze movement.",
-    images: ["../images/Plate/platter_blue_1.JPG", "../images/Plate/platter_blue_2.JPG"],
+    images: ["../images/plates/platter_blue_1.jpg", "../images/plates/platter_blue_2.jpg"],
     alt: "Large blue glazed ceramic platter"
   },
   {
@@ -291,7 +291,7 @@ window.galleryPieces = [
     status: "Made to order",
     price: "Enquire",
     shopNote: "Available as a made-to-order set in similar colours.",
-    images: ["../images/mugs/Mosaic_cups.JPG", "../images/mugs/mosaic_cup_1.JPG", "../images/mugs/mosaic_cup_2.JPG", "../images/mugs/mosaic_cup_3.JPG"],
+    images: ["../images/mugs/mosaic_cups.jpg", "../images/mugs/mosaic_cup_1.jpg", "../images/mugs/mosaic_cup_2.jpg", "../images/mugs/mosaic_cup_3.jpg"],
     alt: "Mosaic patterned ceramic cups"
   },
   {
@@ -357,7 +357,7 @@ window.galleryPieces = [
     status: "Made to order",
     price: "Enquire",
     shopNote: "Garden labels can be made to order for herbs, vegetables, or beds.",
-    images: ["../images/garden/veg_lables_a.jpeg", "../images/garden/veg_lables_b.jpeg"],
+    images: ["../images/garden/veg_labels_a.jpeg", "../images/garden/veg_labels_b.jpeg"],
     alt: "Ceramic vegetable labels for a garden"
   },
   {
@@ -366,7 +366,7 @@ window.galleryPieces = [
     category: "Tableware",
     year: "2025",
     detail: "Small dish for rings and jewellery.",
-    images: ["../images/jewlery/jewlery_bowl_black_a.jpg", "../images/jewlery/jewlery_bowl_black_b.jpg"],
+    images: ["../images/jewellery/jewellery_bowl_black_a.jpg", "../images/jewellery/jewellery_bowl_black_b.jpg"],
     alt: "Small black ceramic ring dish"
   },
   {
@@ -375,7 +375,7 @@ window.galleryPieces = [
     category: "Experiments",
     year: "2025",
     detail: "Closed-form ring box with fitted lid.",
-    images: ["../images/jewlery/ring_box_a.jpg", "../images/jewlery/ring_box_b.jpg"],
+    images: ["../images/jewellery/ring_box_a.jpg", "../images/jewellery/ring_box_b.jpg"],
     alt: "Ceramic ring box with fitted lid"
   },
   {

@@ -21,9 +21,11 @@ publishing. Use local work, Git commits, and browser checks before deployment.
 ## Next Practical Work
 
 - [ ] Check the live site on Android when a device is available.
-- [ ] Discuss and choose a proper image storage workflow: originals in a private local inbox, selected web-ready images in `images/`, and no source/reference files mixed into the public site folder.
-- [ ] Create a simple terminal image-prep command for future photo batches: take exported phone/camera PNG or JPEG files, resize them for the web, convert to JPEG, and place them in the chosen gallery folder without opening Photoshop.
-- [ ] Decide whether to tidy the current gallery folder names into one consistent system, or keep the existing folders for compatibility and document the naming rules clearly.
+- [x] Discuss and choose a proper image storage workflow: originals in a private local inbox, selected web-ready images in `images/`, and no source/reference files mixed into the public site folder.
+- [x] Create a simple terminal image-prep command for future photo batches: take exported phone/camera PNG or JPEG files, resize them for the web, convert to JPEG, and place them in the chosen gallery folder without opening Photoshop.
+- [x] Create a first public image audit so used images, page assets, and cleanup candidates can be handled separately.
+- [x] Archive no-reference public image cleanup candidates into `local-originals/gallery-archive/` without breaking current site references.
+- [x] Decide whether to tidy the current gallery folder names into one consistent system, or keep the existing folders for compatibility and document the naming rules clearly.
 
 ## Design Phase
 

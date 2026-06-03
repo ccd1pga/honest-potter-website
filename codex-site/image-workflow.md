@@ -4,6 +4,11 @@ Use this when adding a small batch of new pottery photos to the public gallery.
 The aim is to keep the gallery tidy without turning every update into a big
 project.
 
+The fuller storage model is documented in
+`codex-site/gallery-storage-system.md`. In short: keep originals private under
+`local-originals/`, put only selected web-ready images in `images/`, and connect
+them to the gallery through `js/gallery-data.js`.
+
 ## Current Public Categories
 
 Use one of these categories in `js/gallery-data.js` unless a new category is
@@ -44,6 +49,17 @@ Only the selected, web-ready images should be used by the gallery.
 - Check that the image is the right way up and sensibly cropped.
 - Keep image file sizes reasonable for the web before publishing.
 - Give each image a clear filename before linking it from the site.
+
+For a quick local preparation pass, put exported images into a dated private
+folder and run:
+
+```text
+scripts/prepare-gallery-images.sh local-originals/gallery-inbox/2026-06-02-bowls bowls large_green_bowl
+```
+
+This creates JPEG files under `images/bowls/`, resized to a sensible gallery
+size. Rename the final files if the automatic numbered names are not descriptive
+enough.
 
 ## Add The Gallery Entry
 
