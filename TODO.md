@@ -21,7 +21,8 @@ publishing. Use local work, Git commits, and browser checks before deployment.
 ## Next Practical Work
 
 - [ ] Check the live site on Android when a device is available.
-- [ ] Review Stripe and shop setup options after the current snag list is complete and committed locally.
+- [x] Review Stripe and shop setup options after the current snag list is complete and committed locally.
+- [ ] Work through the Stripe/shop setup checklist in `codex-site/stripe-shop-setup-todo.md` before building the public shop.
 - [x] Complete a small professional polish pass across copy, navigation consistency, trust details, and Studio Notes structure.
 - [x] Create a repeatable Studio Notes template before adding more entries.
 - [x] Run a light performance/privacy pass on public images, strip JPEG metadata, and remove the unused heavy social-preview logo.
@@ -47,7 +48,7 @@ publishing. Use local work, Git commits, and browser checks before deployment.
 - [ ] Better About page photos over time: tools, working surfaces, bisque, finished pieces, and kiln/studio details.
 - [ ] Future Studio Notes entries: one glaze, firing, or form note at a time.
 - [ ] Studio Notes idea: ceramic drum experiments, including the glazed bodhran and bisque darbukas.
-- [ ] Shop content when ready: dimensions, prices, stock states, shipping/collection notes, and whether items are enquiry-only or checkout-ready.
+- [ ] Shop content when ready: dimensions, prices, stock states, shipping/collection notes, and whether items are enquiry-only or checkout-ready. Use `codex-site/stripe-shop-setup-todo.md` as the product checklist.
 
 ## Later
 
