@@ -41,14 +41,14 @@ publishing. Use local work, Git commits, and browser checks before deployment.
 - [x] Give the gallery a more confident first impression while keeping the current filters and lightbox.
 - [x] Bring About and Studio Notes into the same visual language after the homepage direction is settled.
 - [ ] Replace placeholder and weaker images gradually using `codex-site/image-workflow.md`.
-- [ ] Add a Sunday kiln unloading image to the Kiln Hire page when it is ready.
+- [x] Add a Sunday kiln unloading image to the Kiln Hire page when it is ready.
 
 ## Content To Gather
 
 - [ ] Better About page photos over time: tools, working surfaces, bisque, finished pieces, and kiln/studio details.
 - [ ] Future Studio Notes entries: one glaze, firing, or form note at a time.
 - [ ] Studio Notes idea: ceramic drum experiments, including the glazed bodhran and bisque darbukas.
-- [ ] Shop content when ready: dimensions, prices, stock states, shipping/collection notes, and whether items are enquiry-only or checkout-ready. Use `codex-site/stripe-shop-setup-todo.md` as the product checklist.
+- [ ] Shop content when ready: prices, Stripe test links, shipping/collection notes, and whether items are enquiry-only or checkout-ready. Use `codex-site/stripe-shop-setup-todo.md` as the product checklist.
 
 ## Later
 

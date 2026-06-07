@@ -17,6 +17,8 @@ The public website position:
 - Shop is still out of the main navigation.
 - The old local shop prototype should stay unpublished until the shop phase is
   deliberately restarted.
+- A private local sandbox now exists at `codex-site/shop-sandbox.html` using
+  the ten drinking-vessel test products.
 
 ## Recommended First Shop Shape
 
@@ -141,7 +143,11 @@ Create a consistent product record before adding real shop pages.
 - [ ] Keep the public shop page as coming soon until the test workflow is proven.
 - [ ] Create a local shop data file or static product pages once the product
       fields are agreed.
-- [ ] Build product cards with clear price, size, stock state, shipping note, and
+- [x] Create a local sandbox product data file for the drinking-vessel test
+      batch.
+- [x] Build sandbox product cards with size, stock state, shipping note, and
+      disabled checkout buttons.
+- [ ] Build public product cards with clear price, size, stock state, shipping note, and
       checkout button.
 - [ ] Add a sold/reserved visual state.
 - [ ] Keep checkout buttons disabled or hidden for draft/reserved/sold items.

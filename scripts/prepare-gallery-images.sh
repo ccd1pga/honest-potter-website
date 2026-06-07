@@ -16,9 +16,10 @@ Output:
   images/DEST_SUBFOLDER/name-prefix_1.jpeg
   images/DEST_SUBFOLDER/name-prefix_2.jpeg
 
-The script uses macOS sips, resizes the longest edge to 1800px, and writes JPEG
-files suitable for the gallery. When jpegtran is available, it also strips
-camera metadata and optimizes the output JPEGs.
+The script uses macOS sips, accepts JPEG, PNG, JPEG 2000, and TIFF sources,
+resizes the longest edge to 1800px, and writes JPEG files suitable for the
+gallery. When jpegtran is available, it also strips camera metadata and
+optimizes the output JPEGs.
 USAGE
 }
 
@@ -45,13 +46,16 @@ inputs=(
   "$source_dir"/*.jpg
   "$source_dir"/*.jpeg
   "$source_dir"/*.png
+  "$source_dir"/*.jp2
+  "$source_dir"/*.jpf
+  "$source_dir"/*.jpx
   "$source_dir"/*.tif
   "$source_dir"/*.tiff
 )
 shopt -u nocaseglob
 
 if [[ ${#inputs[@]} -eq 0 ]]; then
-  echo "No JPEG, PNG, or TIFF images found in: $source_dir" >&2
+  echo "No JPEG, PNG, JPEG 2000, or TIFF images found in: $source_dir" >&2
   exit 1
 fi
 
