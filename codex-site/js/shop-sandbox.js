@@ -25,11 +25,27 @@
   }
 
   function packedWeight(product) {
+    if (!product.weightG || !product.packingAllowanceG) {
+      return null;
+    }
+
     return product.weightG + product.packingAllowanceG;
   }
 
   function fieldState(value) {
     return value ? "Ready" : "Needed";
+  }
+
+  function specValue(value, suffix = "") {
+    return value ? `${value}${suffix}` : "TBC";
+  }
+
+  function sizeValue(product) {
+    if (!product.heightCm || !product.diameterCm) {
+      return "TBC";
+    }
+
+    return `${product.heightCm} x ${product.diameterCm} cm`;
   }
 
   function stripeButton(product) {
@@ -57,10 +73,11 @@
           <p>${escapeHtml(product.description)}</p>
           <dl class="sandbox-specs">
             <div><dt>Price</dt><dd>${escapeHtml(formatPrice(product))}</dd></div>
-            <div><dt>Capacity</dt><dd>${product.capacityMl} ml</dd></div>
-            <div><dt>Size</dt><dd>${product.heightCm} x ${product.diameterCm} cm</dd></div>
-            <div><dt>Item weight</dt><dd>${product.weightG} g</dd></div>
-            <div><dt>Packed test weight</dt><dd>${packedWeight(product)} g</dd></div>
+            <div><dt>Glaze</dt><dd>${escapeHtml(product.glaze || "TBC")}</dd></div>
+            <div><dt>Capacity</dt><dd>${escapeHtml(specValue(product.capacityMl, " ml"))}</dd></div>
+            <div><dt>Size</dt><dd>${escapeHtml(sizeValue(product))}</dd></div>
+            <div><dt>Item weight</dt><dd>${escapeHtml(specValue(product.weightG, " g"))}</dd></div>
+            <div><dt>Packed test weight</dt><dd>${escapeHtml(specValue(packedWeight(product), " g"))}</dd></div>
             <div><dt>Stock</dt><dd>${product.quantity}</dd></div>
           </dl>
           <div class="sandbox-checks" aria-label="Readiness checks">
