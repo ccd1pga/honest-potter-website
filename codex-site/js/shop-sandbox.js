@@ -25,6 +25,10 @@
   }
 
   function packedWeight(product) {
+    if (product.packedWeightG) {
+      return product.packedWeightG;
+    }
+
     if (!product.weightG || !product.packingAllowanceG) {
       return null;
     }
@@ -121,7 +125,8 @@
             <div><dt>Capacity</dt><dd>${escapeHtml(specValue(product.capacityMl, " ml"))}</dd></div>
             <div><dt>Size (Ø × H)</dt><dd>${escapeHtml(sizeValue(product))}</dd></div>
             <div><dt>Item weight</dt><dd>${escapeHtml(specValue(product.weightG, " g"))}</dd></div>
-            <div><dt>Packed test weight</dt><dd>${escapeHtml(specValue(packedWeight(product), " g"))}</dd></div>
+            <div><dt>${product.packedWeightG ? "Packed weight" : "Packed test weight"}</dt><dd>${escapeHtml(specValue(packedWeight(product), " g"))}</dd></div>
+            ${product.parcelDimensionsCm ? `<div><dt>Packed parcel</dt><dd>${escapeHtml(product.parcelDimensionsCm)}</dd></div>` : ""}
             <div><dt>Stock</dt><dd>${product.quantity}</dd></div>
           </dl>
           ${product.notes ? `<p class="sandbox-condition">${escapeHtml(product.notes)}</p>` : ""}

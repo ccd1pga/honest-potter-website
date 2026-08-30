@@ -58,10 +58,24 @@ All eight bowls are draft one-off products with quantity 1. Each record has:
 `HB26-002` retains its condition note about a slight chip on the foot ring and
 should be reviewed before it is priced or listed.
 
+## First Stripe Rehearsal
+
+`HB26-001` is connected to the first Stripe sandbox checkout rehearsal:
+
+- bowl price: £20
+- packed weight: 526 g
+- packed parcel: 23 × 16 × 15 cm
+- test delivery: £4.50 Royal Mail Tracked 48, UK only
+- quantity: one, with the payment link limited to one successful payment
+- Stripe product image: the prepared front photograph
+
+The other standard bowls are currently planned at £20. `HB26-002` is planned
+at £15 because of its foot-ring chip, subject to the condition decision below.
+
 ## Still Needed
 
 - Choose final product titles if numbered titles feel too plain.
-- Confirm prices.
+- Create and rehearse the remaining Stripe sandbox products and links.
 - Decide whether `HB26-002` is a second, studio piece, or not for sale.
 - Measure packed parcel weights using the real packaging.
 - Confirm care, delivery, collection, returns, and breakage wording.

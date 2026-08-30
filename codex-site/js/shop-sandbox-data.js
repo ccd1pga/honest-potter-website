@@ -450,16 +450,18 @@ window.shopSandboxProducts = [
     sku: "HB26-001",
     title: "Floating blue bowl 1",
     category: "Bowl",
-    status: "draft",
+    status: "checkout test",
     quantity: 1,
-    price: null,
+    price: 20,
     currency: "GBP",
     glaze: "Floating blue over a white base",
     capacityMl: null,
     heightCm: 6,
     diameterCm: 11.5,
     weightG: 215,
-    packingAllowanceG: 250,
+    packingAllowanceG: 311,
+    packedWeightG: 526,
+    parcelDimensionsCm: "23 × 16 × 15 cm",
     shippingProfile: "small-parcel-test",
     collectionAllowed: true,
     images: [
@@ -468,9 +470,9 @@ window.shopSandboxProducts = [
       { src: "../images/shop/bowls/hb26-001-base.jpeg", label: "Base", alt: "Base and maker's mark of handmade bowl HB26-001" }
     ],
     description: "Handmade bowl with floating blue glaze inside, running down the sides over a white base.",
-    stripeProductId: "",
-    stripePriceId: "",
-    stripePaymentLink: ""
+    stripeProductId: "prod_VAY1kPg4MJIeWp",
+    stripePriceId: "price_1UACvpFRI5TFv5XwhjKNTDVW",
+    stripePaymentLink: "https://buy.stripe.com/test_28EeVd80kgy48763AP7Re00"
   },
   {
     id: "bowl-hb26-002",
@@ -666,11 +668,11 @@ window.shopSandboxProducts = [
 
 window.shopSandboxShippingProfiles = {
   "small-parcel-test": {
-    label: "Small parcel test",
-    region: "UK test",
-    status: "draft",
-    packedWeightMaxG: 750,
-    stripeShippingRateId: "",
-    note: "Uses item weight plus a 250 g packaging allowance until packed weights are measured."
+    label: "Royal Mail Tracked 48",
+    region: "United Kingdom",
+    status: "stripe-test",
+    packedWeightMaxG: 2000,
+    stripeShippingRateId: "shr_1UACwgFRI5TFv5XwIe0ZLqUo",
+    note: "£4.50 test delivery rate for UK small parcels, with an estimated 2–3 business day delivery window."
   }
 };
