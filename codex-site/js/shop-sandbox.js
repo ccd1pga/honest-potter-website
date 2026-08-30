@@ -45,7 +45,51 @@
       return "TBC";
     }
 
-    return `${product.heightCm} x ${product.diameterCm} cm`;
+    return `${product.diameterCm} × ${product.heightCm} cm`;
+  }
+
+  function productImages(product) {
+    if (Array.isArray(product.images) && product.images.length) {
+      return product.images;
+    }
+
+    return [{
+      src: product.image,
+      alt: product.alt,
+      label: "Main"
+    }];
+  }
+
+  function mediaMarkup(product) {
+    const images = productImages(product);
+    const mainImage = images[0];
+    const thumbnails = images.length > 1
+      ? `
+        <div class="sandbox-thumbnails" aria-label="Images for ${escapeHtml(product.title)}">
+          ${images.map((image, index) => `
+            <button
+              class="sandbox-thumb"
+              type="button"
+              data-src="${escapeHtml(image.src)}"
+              data-alt="${escapeHtml(image.alt)}"
+              aria-label="Show ${escapeHtml(image.label)} image"
+              aria-pressed="${index === 0 ? "true" : "false"}"
+            >
+              <img src="${escapeHtml(image.src)}" alt="" loading="lazy">
+              <span>${escapeHtml(image.label)}</span>
+            </button>
+          `).join("")}
+        </div>
+      `
+      : "";
+
+    return `
+      <div class="sandbox-main-image">
+        <img src="${escapeHtml(mainImage.src)}" alt="${escapeHtml(mainImage.alt)}" loading="lazy">
+        <span>${escapeHtml(product.sku)}</span>
+      </div>
+      ${thumbnails}
+    `;
   }
 
   function stripeButton(product) {
@@ -58,12 +102,12 @@
 
   function productCard(product) {
     const shippingProfile = shippingProfiles[product.shippingProfile] || {};
+    const hasGallery = productImages(product).length > 1;
 
     return `
-      <article class="sandbox-card" id="${escapeHtml(product.id)}">
+      <article class="sandbox-card${hasGallery ? " has-gallery" : ""}" id="${escapeHtml(product.id)}">
         <div class="sandbox-media">
-          <img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.alt)}" loading="lazy">
-          <span>${escapeHtml(product.sku)}</span>
+          ${mediaMarkup(product)}
         </div>
         <div class="sandbox-body">
           <div class="sandbox-card-heading">
@@ -75,11 +119,12 @@
             <div><dt>Price</dt><dd>${escapeHtml(formatPrice(product))}</dd></div>
             <div><dt>Glaze</dt><dd>${escapeHtml(product.glaze || "TBC")}</dd></div>
             <div><dt>Capacity</dt><dd>${escapeHtml(specValue(product.capacityMl, " ml"))}</dd></div>
-            <div><dt>Size</dt><dd>${escapeHtml(sizeValue(product))}</dd></div>
+            <div><dt>Size (Ø × H)</dt><dd>${escapeHtml(sizeValue(product))}</dd></div>
             <div><dt>Item weight</dt><dd>${escapeHtml(specValue(product.weightG, " g"))}</dd></div>
             <div><dt>Packed test weight</dt><dd>${escapeHtml(specValue(packedWeight(product), " g"))}</dd></div>
             <div><dt>Stock</dt><dd>${product.quantity}</dd></div>
           </dl>
+          ${product.notes ? `<p class="sandbox-condition">${escapeHtml(product.notes)}</p>` : ""}
           <div class="sandbox-checks" aria-label="Readiness checks">
             <span data-state="${fieldState(product.price)}">Price: ${fieldState(product.price)}</span>
             <span data-state="${fieldState(product.stripeProductId)}">Product ID: ${fieldState(product.stripeProductId)}</span>
@@ -131,6 +176,22 @@
     buildGaps();
     grid.innerHTML = products.map(productCard).join("");
   }
+
+  grid.addEventListener("click", (event) => {
+    const button = event.target.closest(".sandbox-thumb");
+    if (!button) {
+      return;
+    }
+
+    const card = button.closest(".sandbox-card");
+    const image = card.querySelector(".sandbox-main-image img");
+    image.src = button.dataset.src;
+    image.alt = button.dataset.alt;
+
+    card.querySelectorAll(".sandbox-thumb").forEach((thumb) => {
+      thumb.setAttribute("aria-pressed", String(thumb === button));
+    });
+  });
 
   render();
 })();

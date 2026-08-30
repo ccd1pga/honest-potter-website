@@ -49,7 +49,7 @@ publishing. Use local work, Git commits, and browser checks before deployment.
 - [ ] Future Studio Notes entries: one glaze, firing, or form note at a time.
 - [ ] Studio Notes idea: ceramic drum experiments, including the glazed bodhran and bisque darbukas.
 - [ ] Shop content when ready: prices, Stripe test links, shipping/collection notes, and whether items are enquiry-only or checkout-ready. Use `codex-site/stripe-shop-setup-todo.md` as the product checklist.
-- [ ] Test shop next step: confirm final titles, prices, capacities, dimensions, and weights for the 10 drinking vessels and 9 mug test products now drafted in the local sandbox.
+- [ ] Test shop next step: confirm final titles, prices, capacities, dimensions, weights, and condition notes for the 27 draft products now in the local sandbox (10 drinking vessels, 9 mugs, and 8 bowls).
 
 ## Later
 
