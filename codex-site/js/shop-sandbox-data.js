@@ -470,9 +470,9 @@ window.shopSandboxProducts = [
       { src: "../images/shop/bowls/hb26-001-base.jpeg", label: "Base", alt: "Base and maker's mark of handmade bowl HB26-001" }
     ],
     description: "Handmade bowl with floating blue glaze inside, running down the sides over a white base.",
-    stripeProductId: "prod_VAY1kPg4MJIeWp",
-    stripePriceId: "price_1UACvpFRI5TFv5XwhjKNTDVW",
-    stripePaymentLink: "https://buy.stripe.com/test_28EeVd80kgy48763AP7Re00"
+    stripeProductId: "prod_VAZRBwON61EXGX",
+    stripePriceId: "price_1UAEIARsSnuZrjrOOijGlsGP",
+    stripePaymentLink: "https://buy.stripe.com/test_8x29AV6425Ag281eSF00000"
   },
   {
     id: "bowl-hb26-002",
@@ -672,7 +672,7 @@ window.shopSandboxShippingProfiles = {
     region: "United Kingdom",
     status: "stripe-test",
     packedWeightMaxG: 2000,
-    stripeShippingRateId: "shr_1UACwgFRI5TFv5XwIe0ZLqUo",
+    stripeShippingRateId: "shr_1UAEJARsSnuZrjrONrafJMmb",
     note: "£4.50 test delivery rate for UK small parcels, with an estimated 2–3 business day delivery window."
   }
 };
