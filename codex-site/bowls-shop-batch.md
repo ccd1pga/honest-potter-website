@@ -55,7 +55,8 @@ been removed from the sandbox catalogue. Each bowl record has:
 - item weight
 - glaze description
 - a 250 g test packaging allowance
-- its agreed price: £15 for `HB26-002`, £20 for the other bowls
+- its agreed price: £15 for `HB26-002`, £25 for the larger `HB26-005`,
+  and £20 for the other bowls
 - a disabled Stripe checkout button until an active product link exists
 
 `HB26-002` retains its condition note about a slight chip on the foot ring and
@@ -77,8 +78,9 @@ captured the UK shipping address and rate, then deactivated the link after its
 single permitted payment. The private sandbox now shows this as "checkout
 tested" and does not offer the expired link as a usable checkout.
 
-The other standard bowls are priced at £20. `HB26-002` is priced at £15 because
-of its foot-ring chip, subject to the condition decision below.
+The other standard bowls are priced at £20. The larger, more decorative
+`HB26-005` is priced at £25. `HB26-002` is priced at £15 because of its
+foot-ring chip, subject to the condition decision below.
 
 ## Still Needed
 

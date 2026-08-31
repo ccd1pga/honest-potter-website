@@ -118,7 +118,7 @@ window.shopSandboxProducts = [
     category: "Bowl",
     status: "draft",
     quantity: 1,
-    price: 20,
+    price: 25,
     currency: "GBP",
     glaze: "Floating blue over a white base",
     capacityMl: null,
