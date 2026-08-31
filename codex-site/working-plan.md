@@ -1,5 +1,13 @@
 # Active Working Plan
 
+## Shop Launch — 31 August 2026
+
+The first shop release has been approved. It contains the eight one-off HB26
+decorative bowls, UK-only Stripe checkout, £4.50 tracked delivery, and public
+delivery/returns/breakages terms. The shop remains local until the eight live
+Stripe links have been created and inserted, then the whole release can be
+published together.
+
 This plan was refreshed on 2026-05-29 after the site structure, About page, and
 first Studio Notes article were prepared for upload.
 
@@ -30,7 +38,7 @@ work.
 - The mistaken setup folder `/Users/paulallen/Documents/website` is retired and should not be used for active site work.
 - The cleaned site has been published to Fasthosts.
 - The gallery design and pictures are good enough for now.
-- The public shop page is parked for later, and Shop is removed from site navigation until selling is ready.
+- The first public shop release is prepared locally and awaiting live Stripe links and deployment.
 - The contact form has been improved, uploaded, and tested live.
 - Fasthosts rsync/SFTP uploads use port `1022`.
 - The real site source has been pushed to `ccd1pga/honest-potter-website`.
@@ -49,7 +57,7 @@ local until explicitly selected for release.
 
 ## Important Guardrails
 
-- Keep the public `pages/shop.html` as coming soon until the shop phase is deliberately restarted.
+- Do not deploy a shop page with blank or test-mode Stripe links.
 - Do not upload `codex-site/shop-prototype.html` or `js/shop.js` unless the shop phase is explicitly approved.
 - Keep private mail and hosting settings out of Git.
 - Review oversized image files before doing another broad push or image-heavy redesign.

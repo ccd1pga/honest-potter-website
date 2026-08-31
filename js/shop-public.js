@@ -1,5 +1,5 @@
 (function () {
-  const products = window.shopSandboxProducts || [];
+  const products = window.shopProducts || window.shopSandboxProducts || [];
   const grid = document.querySelector("#shop-product-grid");
   const dialog = document.querySelector("#product-dialog");
   const dialogContent = document.querySelector("#product-dialog-content");
@@ -104,7 +104,9 @@
           ${condition ? `<p class="dialog-condition">${escapeHtml(condition)}</p>` : ""}
           <p class="dialog-use-note"><strong>Decorative use only.</strong> This experimental glaze has not been independently tested for food contact, so the piece is not intended for food or drink.</p>
           <p class="dialog-delivery">UK Royal Mail Tracked 48 delivery will be added at checkout. Payment will be handled securely by Stripe.</p>
-          <button class="dialog-checkout" type="button" disabled>Checkout available when the shop launches</button>
+          ${product.stripePaymentLink
+            ? `<a class="dialog-checkout is-active" href="${escapeHtml(product.stripePaymentLink)}" rel="noopener">Buy securely with Stripe</a>`
+            : '<button class="dialog-checkout" type="button" disabled>Checkout available when the shop launches</button>'}
         </div>
       </div>
     `;

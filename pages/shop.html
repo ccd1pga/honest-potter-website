@@ -3,43 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="/images/favicon.png" />
-  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
-  <meta name="robots" content="noindex, follow" />
-  <meta name="description" content="The Honest Potter online shop is coming soon. Browse the gallery or get in touch about handmade pottery and kiln hire for now." />
-  <link rel="canonical" href="https://www.kelvinkilns.com/pages/shop.html" />
-  <meta property="og:title" content="Shop Coming Soon | The Honest Potter" />
-  <meta property="og:description" content="The shop is being prepared. Browse recent pottery in the gallery or contact The Honest Potter." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.kelvinkilns.com/pages/shop.html" />
-  <meta property="og:image" content="https://www.kelvinkilns.com/images/logo.png" />
-  <title>Shop Coming Soon | The Honest Potter</title>
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <meta name="description" content="Shop one-off, hand-thrown decorative pottery made in Liverpool by The Honest Potter. Each piece is photographed individually and available only once.">
+  <link rel="canonical" href="https://www.kelvinkilns.com/pages/shop.html">
+  <meta property="og:title" content="Shop One-off Pottery | The Honest Potter">
+  <meta property="og:description" content="A small collection of one-off, hand-thrown decorative pottery made in Liverpool.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.kelvinkilns.com/pages/shop.html">
+  <meta property="og:image" content="https://www.kelvinkilns.com/images/shop/bowls/hb26-005-inside.jpeg">
+  <title>Shop One-off Pottery | The Honest Potter</title>
   <link rel="stylesheet" href="../css/site.css?v=logo-20260531">
-  <link rel="stylesheet" href="../css/gallery.css">
-  <style>
-    .coming-soon {
-      min-height: 55vh;
-      display: grid;
-      place-items: center;
-      padding: clamp(3rem, 8vw, 7rem) 1.25rem;
-      text-align: center;
-    }
-
-    .coming-soon-card {
-      max-width: 44rem;
-      margin: 0 auto;
-    }
-
-    .coming-soon-actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.75rem;
-      margin-top: 1.75rem;
-    }
-  </style>
+  <link rel="stylesheet" href="../css/shop.css?v=shop-20260831">
 </head>
-<body class="page">
+<body class="page shop-page">
   <header>
     <nav class="site-nav" aria-label="Main">
       <div class="nav-inner">
@@ -47,35 +24,85 @@
           <img src="../images/logo.png" alt="The Honest Potter logo">
           <span>The Honest Potter</span>
         </a>
-
         <ul class="nav-links">
-          <li><a href="../pages/about.html">About</a></li>
-          <li><a href="../pages/gallery.html">Gallery</a></li>
-          <li><a href="../pages/studio-notes.html">Studio Notes</a></li>
-          <li><a href="../pages/myKiln.html">Kiln Hire</a></li>
-          <li><a href="../pages/contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="studio-notes.html">Studio Notes</a></li>
+          <li><a href="myKiln.html">Kiln Hire</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="shop.html" aria-current="page">Shop</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <main class="wide-container">
-    <section class="coming-soon" aria-labelledby="shop-title">
-      <div class="coming-soon-card">
-        <p class="eyebrow">Shop</p>
-        <h1 id="shop-title">Coming soon</h1>
-        <p class="intro-copy">
-          The online shop is being prepared. In the meantime, the gallery shows
-          recent pieces and the contact page is open for pottery, commission,
-          and kiln-hire enquiries.
-        </p>
-        <div class="coming-soon-actions">
-          <a class="shop-action" href="../pages/gallery.html">View gallery</a>
-          <a class="shop-action secondary" href="../pages/contact.html">Contact me</a>
-        </div>
+  <main>
+    <section class="shop-hero" aria-labelledby="shop-title">
+      <div class="shop-hero-copy">
+        <p class="eyebrow">The first collection</p>
+        <h1 id="shop-title">Thrown by hand. Made only once.</h1>
+        <p class="shop-intro">A small collection of one-off decorative bowls, hand-thrown and fired in my Liverpool studio. The piece you see is the piece you will receive.</p>
+        <a class="shop-primary-link" href="#bowls">See the bowls</a>
       </div>
+      <figure class="shop-hero-image">
+        <img src="../images/shop/bowls/hb26-005-inside.jpeg" alt="Inside view of a one-off hand-thrown decorative bowl" width="1200" height="800">
+        <figcaption>Each mark, glaze break and variation belongs to one individual piece.</figcaption>
+      </figure>
+    </section>
+
+    <section class="shop-promise" aria-label="Shop promises">
+      <div><strong>One of a kind</strong><span>Only one of each piece exists</span></div>
+      <div><strong>UK delivery</strong><span>Carefully packed and tracked</span></div>
+      <div><strong>Secure checkout</strong><span>Payment handled by Stripe</span></div>
+    </section>
+
+    <section class="shop-collection" id="bowls" aria-labelledby="collection-title">
+      <div class="shop-section-heading">
+        <div>
+          <p class="eyebrow">Available now</p>
+          <h2 id="collection-title">Eight individual bowls</h2>
+        </div>
+        <p>Open any piece to see its other views, measurements and full description. All pieces in this first collection are sold for decorative use.</p>
+      </div>
+      <div class="shop-product-grid" id="shop-product-grid" aria-live="polite"></div>
+      <noscript><p>This shop needs JavaScript to show the individual pieces. Please email <a href="mailto:info@kelvinkilns.com">info@kelvinkilns.com</a> if you would like to buy one.</p></noscript>
+    </section>
+
+    <section class="shop-information" aria-labelledby="shop-information-title">
+      <p class="eyebrow">The practical bits</p>
+      <h2 id="shop-information-title">Simple, careful and clear.</h2>
+      <div class="shop-information-grid">
+        <article>
+          <span aria-hidden="true">01</span>
+          <h3>Delivery</h3>
+          <p>UK delivery is £4.50. Orders are normally dispatched within three working days using Royal Mail Tracked 48.</p>
+        </article>
+        <article>
+          <span aria-hidden="true">02</span>
+          <h3>Returns</h3>
+          <p>You may cancel an online order within 14 days of delivery. Please read the shop policies before returning a piece.</p>
+        </article>
+        <article>
+          <span aria-hidden="true">03</span>
+          <h3>Breakages</h3>
+          <p>If a piece arrives damaged, keep the pottery and packaging and contact me with photographs so I can put it right.</p>
+        </article>
+      </div>
+      <a class="shop-secondary-link" href="shop-policies.html">Read delivery, returns and breakages policies</a>
+    </section>
+
+    <section class="shop-contact-note">
+      <p class="eyebrow">A question about a piece?</p>
+      <h2>Ask the potter.</h2>
+      <p>I am happy to send another photograph or clarify anything before you buy.</p>
+      <a class="shop-primary-link" href="mailto:info@kelvinkilns.com">Email info@kelvinkilns.com</a>
     </section>
   </main>
+
+  <dialog class="product-dialog" id="product-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="Close product details">Close</button>
+    <div id="product-dialog-content"></div>
+  </dialog>
 
   <footer class="site-footer">
     <div class="container">
@@ -87,10 +114,15 @@
         <a href="/pages/myKiln.html">Kiln Hire</a>
         <a href="/pages/about.html">About</a>
         <a href="/pages/contact.html">Contact</a>
+        <a href="/pages/shop.html">Shop</a>
+        <a href="/pages/shop-policies.html">Shop policies</a>
         <a href="/pages/privacy.html">Privacy statement</a>
         <a href="mailto:info@kelvinkilns.com">info@kelvinkilns.com</a>
       </nav>
     </div>
   </footer>
+
+  <script src="../js/shop-data.js?v=shop-20260831"></script>
+  <script src="../js/shop-public.js?v=shop-20260831"></script>
 </body>
 </html>

@@ -1,8 +1,10 @@
-.shop-preview-page{
+.shop-preview-page,
+.shop-page{
   background: var(--bg);
 }
 
-.shop-preview-page main{
+.shop-preview-page main,
+.shop-page main{
   overflow: hidden;
 }
 
@@ -521,8 +523,103 @@
   cursor: not-allowed;
 }
 
+.dialog-checkout.is-active{
+  border-color: var(--brand-dark);
+  background: var(--brand-dark);
+  color: #fffaf3;
+  cursor: pointer;
+}
+
+.dialog-checkout.is-active:hover,
+.dialog-checkout.is-active:focus-visible{
+  background: #5f3224;
+}
+
 body:has(.product-dialog[open]){
   overflow: hidden;
+}
+
+.shop-policy-main{
+  width: min(calc(100% - 32px), 1120px);
+  margin: 0 auto;
+  padding: clamp(48px, 8vw, 96px) 0 clamp(70px, 10vw, 130px);
+}
+
+.shop-policy-intro{
+  max-width: 760px;
+}
+
+.shop-policy-intro h1{
+  margin: 10px 0 20px;
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+}
+
+.shop-policy-intro > p:not(.eyebrow){
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+
+.shop-policy-updated{
+  margin-top: 22px;
+  font-size: 0.92rem !important;
+}
+
+.shop-policy-layout{
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: clamp(36px, 8vw, 100px);
+  align-items: start;
+  margin-top: clamp(48px, 8vw, 88px);
+}
+
+.shop-policy-nav{
+  position: sticky;
+  top: 24px;
+  display: grid;
+  gap: 9px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--surface);
+}
+
+.shop-policy-nav strong{
+  margin-bottom: 5px;
+}
+
+.shop-policy-nav a{
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.shop-policy-content{
+  display: grid;
+  gap: 52px;
+}
+
+.shop-policy-content section{
+  scroll-margin-top: 24px;
+  padding-bottom: 42px;
+  border-bottom: 1px solid var(--border);
+}
+
+.shop-policy-content h2{
+  margin: 0 0 18px;
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+}
+
+.shop-policy-content p,
+.shop-policy-content address{
+  max-width: 70ch;
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.shop-policy-content address{
+  font-style: normal;
 }
 
 @media (max-width: 900px){
@@ -546,6 +643,14 @@ body:has(.product-dialog[open]){
 
   .product-dialog{
     max-height: 92vh;
+  }
+
+  .shop-policy-layout{
+    grid-template-columns: 1fr;
+  }
+
+  .shop-policy-nav{
+    position: static;
   }
 }
 

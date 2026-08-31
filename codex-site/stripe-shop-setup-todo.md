@@ -16,8 +16,10 @@ Current Stripe position, checked on 2026-08-31:
 
 The public website position:
 
-- `pages/shop.html` is still a safe coming-soon page with `noindex`.
-- Shop is still out of the main navigation.
+- The approved public shop and policy pages are prepared locally with checkout
+  disabled until the live links are inserted.
+- Shop has been restored to local navigation and the sitemap for the coherent
+  launch release.
 - The old local shop prototype should stay unpublished until the shop phase is
   deliberately restarted.
 - A private local sandbox exists at `codex-site/shop-sandbox.html` using only
@@ -42,11 +44,10 @@ justify the extra running cost and maintenance.
 
 - [x] Decide that launch one is the eight HB26 bowls only.
 - [x] Decide that the first live shop is UK-only.
-- [ ] Decide whether local collection is offered as a checkout option.
+- [x] Decide that local collection is not offered for the first launch.
 - [ ] Decide whether commissions and made-to-order pieces stay enquiry-only.
 - [ ] Decide whether pieces can be reserved manually before payment.
-- [ ] Choose the first launch size, for example 3-6 pieces, so testing stays
-      manageable.
+- [x] Choose all eight HB26 bowls for the first launch.
 - [ ] Agree the stock statuses to use: draft, photographed, priced, live,
       reserved, sold, archived.
 
@@ -91,7 +92,7 @@ Create a consistent product record before adding real shop pages.
 ## Phase 4: Shipping Setup
 
 - [x] Decide the first shipping area: UK only.
-- [ ] Weigh and measure typical packed parcels, not just the pottery.
+- [x] Weigh and measure a representative packed bowl parcel: 526 g and 23 × 16 × 15 cm. Confirm HB26-005 fits the same box.
 - [ ] Choose simple shipping bands, for example small, medium, large/fragile.
 - [ ] Decide whether any oversized or fragile pieces require manual quote only.
 - [ ] Decide whether collection is free, and what collection wording should say.
@@ -109,10 +110,10 @@ Create a consistent product record before adding real shop pages.
       applies.
 - [ ] Add product tax categories/codes in Stripe only when the tax position is
       clear.
-- [ ] Write a short shipping policy.
-- [ ] Write a short returns/refunds policy.
-- [ ] Write a breakage-in-transit policy.
-- [ ] Update the privacy statement when Stripe checkout is actually connected.
+- [x] Write a short shipping policy.
+- [x] Write a short returns/refunds policy.
+- [x] Write a breakage-in-transit policy.
+- [x] Update the privacy statement for Stripe checkout.
 - [ ] Check whether terms need to mention custom/made-to-order work separately.
 
 ## Phase 6: Stripe Account Setup
@@ -153,13 +154,13 @@ Create a consistent product record before adding real shop pages.
       disabled checkout buttons.
 - [x] Build a polished customer-facing local preview with product galleries,
       decorative-use wording, policy summaries, and disabled checkout.
-- [ ] Build public product cards with clear price, size, stock state, shipping note, and
+- [x] Build public product cards with clear price, size, stock state, shipping note, and
       checkout button.
 - [ ] Add a sold/reserved visual state.
 - [ ] Keep checkout buttons disabled or hidden for draft/reserved/sold items.
-- [ ] Add a clear note that payment is handled securely by Stripe.
+- [x] Add a clear note that payment is handled securely by Stripe.
 - [ ] Test all shop links locally before upload.
-- [ ] Remove `noindex` and add Shop back to navigation only when ready to sell.
+- [x] Remove `noindex` and add Shop back to the local release navigation.
 
 ## Phase 9: Go-Live Checklist
 
@@ -168,7 +169,7 @@ Create a consistent product record before adding real shop pages.
 - [x] Confirm live account activation is complete.
 - [ ] Confirm live receipts and branding.
 - [x] Confirm live payout settings.
-- [ ] Confirm live privacy, shipping, returns, and breakage policy pages.
+- [x] Confirm local release privacy, shipping, returns, and breakage policy pages.
 - [ ] Do one final mobile and desktop checkout rehearsal before public launch.
 - [ ] Publish the shop page and navigation in one coherent release.
 - [ ] After the first real order, review the whole flow and adjust the checklist.
