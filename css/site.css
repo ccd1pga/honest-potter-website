@@ -115,7 +115,7 @@ img{ display:block; max-width:100%; height:auto; }
   margin: 0 0 0 auto;
   display:flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 4px;
   list-style:none;
   padding:0;
@@ -853,7 +853,7 @@ img{ display:block; max-width:100%; height:auto; }
   }
 }
 
-@media (max-width: 720px){
+@media (max-width: 900px){
   .nav-inner{
     align-items: flex-start;
     flex-direction: column;
@@ -862,6 +862,7 @@ img{ display:block; max-width:100%; height:auto; }
   .nav-links{
     width: 100%;
     margin-left: 0;
+    flex-wrap: wrap;
     overflow-x: visible;
     padding-bottom: 2px;
   }
