@@ -22,6 +22,8 @@ The public website position:
   deliberately restarted.
 - A private local sandbox exists at `codex-site/shop-sandbox.html` using only
   the eight real HB26 bowls.
+- A customer-facing local preview exists at `codex-site/shop-preview.html`.
+  It uses the real bowl photography and prices but keeps checkout disabled.
 
 ## Recommended First Shop Shape
 
@@ -149,6 +151,8 @@ Create a consistent product record before adding real shop pages.
       bowls.
 - [x] Build sandbox product cards with size, stock state, shipping note, and
       disabled checkout buttons.
+- [x] Build a polished customer-facing local preview with product galleries,
+      decorative-use wording, policy summaries, and disabled checkout.
 - [ ] Build public product cards with clear price, size, stock state, shipping note, and
       checkout button.
 - [ ] Add a sold/reserved visual state.
