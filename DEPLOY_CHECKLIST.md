@@ -2,6 +2,8 @@
 
 ## Current Release: First Public Shop Collection
 
+Deployed and verified on 31 August 2026.
+
 Publish the approved eight-bowl shop only after all eight live Stripe checkout
 links are present and verified.
 

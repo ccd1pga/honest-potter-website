@@ -16,10 +16,9 @@ Current Stripe position, checked on 2026-08-31:
 
 The public website position:
 
-- The approved public shop and policy pages are prepared locally with checkout
-  disabled until the live links are inserted.
-- Shop has been restored to local navigation and the sitemap for the coherent
-  launch release.
+- The approved public shop and policy pages are live with all eight checkout
+  links active.
+- Shop is present in public navigation and the sitemap.
 - The old local shop prototype should stay unpublished until the shop phase is
   deliberately restarted.
 - A private local sandbox exists at `codex-site/shop-sandbox.html` using only
@@ -121,8 +120,8 @@ Create a consistent product record before adding real shop pages.
 - [x] Complete Stripe email verification.
 - [x] Complete Stripe business verification.
 - [x] Complete the Stripe business/profile details.
-- [ ] Add the customer support email and public business information.
-- [ ] Set a recognisable statement descriptor.
+- [x] Add the customer support email and public business information.
+- [x] Set a recognisable statement descriptor.
 - [ ] Check receipt branding: logo, colour, business name, support email.
 - [x] Confirm the GBP payout bank and automatic weekly payout schedule.
 - [ ] Keep test and live Stripe objects separate; do not assume sandbox products,
@@ -138,7 +137,7 @@ Create a consistent product record before adding real shop pages.
 - [ ] Check the customer receipt.
 - [x] Check the Stripe payment record.
 - [ ] Test mobile checkout.
-- [ ] Test desktop checkout.
+- [x] Test desktop checkout.
 - [ ] Confirm what order notification email Paul receives.
 - [ ] Write the final order-handling routine: pack, mark sold, email customer if
       needed, dispatch, keep receipt.
@@ -159,19 +158,19 @@ Create a consistent product record before adding real shop pages.
 - [ ] Add a sold/reserved visual state.
 - [ ] Keep checkout buttons disabled or hidden for draft/reserved/sold items.
 - [x] Add a clear note that payment is handled securely by Stripe.
-- [ ] Test all shop links locally before upload.
+- [x] Test all live shop links before and after upload.
 - [x] Remove `noindex` and add Shop back to the local release navigation.
 
 ## Phase 9: Go-Live Checklist
 
-- [ ] Recreate or confirm live-mode products, prices, shipping rates, and payment
+- [x] Recreate or confirm live-mode products, prices, shipping rates, and payment
       links.
 - [x] Confirm live account activation is complete.
 - [ ] Confirm live receipts and branding.
 - [x] Confirm live payout settings.
 - [x] Confirm local release privacy, shipping, returns, and breakage policy pages.
 - [ ] Do one final mobile and desktop checkout rehearsal before public launch.
-- [ ] Publish the shop page and navigation in one coherent release.
+- [x] Publish the shop page and navigation in one coherent release.
 - [ ] After the first real order, review the whole flow and adjust the checklist.
 
 ## Useful Stripe References

@@ -2,11 +2,10 @@
 
 ## Shop Launch — 31 August 2026
 
-The first shop release has been approved. It contains the eight one-off HB26
-decorative bowls, UK-only Stripe checkout, £4.50 tracked delivery, and public
-delivery/returns/breakages terms. The shop remains local until the eight live
-Stripe links have been created and inserted, then the whole release can be
-published together.
+The first shop release is live. It contains the eight one-off HB26 decorative
+bowls, UK-only Stripe checkout, £4.50 tracked delivery, one-payment limits, and
+public delivery/returns/breakages terms. All eight live checkout pages and the
+hosted shop were verified after deployment.
 
 This plan was refreshed on 2026-05-29 after the site structure, About page, and
 first Studio Notes article were prepared for upload.
@@ -38,7 +37,7 @@ work.
 - The mistaken setup folder `/Users/paulallen/Documents/website` is retired and should not be used for active site work.
 - The cleaned site has been published to Fasthosts.
 - The gallery design and pictures are good enough for now.
-- The first public shop release is prepared locally and awaiting live Stripe links and deployment.
+- The first public shop release is live with eight active Stripe links.
 - The contact form has been improved, uploaded, and tested live.
 - Fasthosts rsync/SFTP uploads use port `1022`.
 - The real site source has been pushed to `ccd1pga/honest-potter-website`.

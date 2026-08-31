@@ -20,7 +20,7 @@ publishing. Use local work, Git commits, and browser checks before deployment.
 
 ## Next Practical Work
 
-- [ ] Create the eight one-use live Stripe payment links, connect them to the public shop, verify checkout, and publish the approved first collection.
+- [x] Create the eight one-use live Stripe payment links, connect them to the public shop, verify checkout, and publish the approved first collection.
 
 - [ ] Check the live site on Android when a device is available.
 - [x] Review Stripe and shop setup options after the current snag list is complete and committed locally.
@@ -51,7 +51,7 @@ publishing. Use local work, Git commits, and browser checks before deployment.
 - [ ] Future Studio Notes entries: one glaze, firing, or form note at a time.
 - [ ] Studio Notes idea: ceramic drum experiments, including the glazed bodhran and bisque darbukas.
 - [x] Shop content: final titles, prices, shipping notes, decorative-use wording, and care/policy copy.
-- [ ] Shop launch: add the eight active live Stripe links and deploy the coherent release.
+- [x] Shop launch: add the eight active live Stripe links and deploy the coherent release.
 
 ## Later
 
