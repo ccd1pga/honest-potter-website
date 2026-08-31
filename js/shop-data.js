@@ -6,7 +6,7 @@ window.shopProducts = [
     diameterCm: 11.5,
     heightCm: 6,
     weightG: 215,
-    stripePaymentLink: "",
+    stripePaymentLink: "https://buy.stripe.com/fZu28tbp8gUM8Kq3Tl8bS00",
     images: [
       { src: "../images/shop/bowls/hb26-001-front.jpeg", label: "Front", alt: "Front view of floating blue bowl HB26-001" },
       { src: "../images/shop/bowls/hb26-001-inside.jpeg", label: "Inside", alt: "Inside view of floating blue bowl HB26-001" },
@@ -20,7 +20,7 @@ window.shopProducts = [
     diameterCm: 14.5,
     heightCm: 6,
     weightG: 305,
-    stripePaymentLink: "",
+    stripePaymentLink: "https://buy.stripe.com/cNieVffFo33W7Gm2Ph8bS01",
     images: [
       { src: "../images/shop/bowls/hb26-002-front.jpeg", label: "Front", alt: "Front view of floating blue bowl HB26-002" },
       { src: "../images/shop/bowls/hb26-002-inside.jpeg", label: "Inside", alt: "Inside view of floating blue bowl HB26-002" },
@@ -34,7 +34,7 @@ window.shopProducts = [
     diameterCm: 14,
     heightCm: 6,
     weightG: 280,
-    stripePaymentLink: "",
+    stripePaymentLink: "https://buy.stripe.com/dRm3cxeBk5c41hYahJ8bS02",
     images: [
       { src: "../images/shop/bowls/hb26-003-front.jpeg", label: "Front", alt: "Front view of floating blue bowl HB26-003" },
       { src: "../images/shop/bowls/hb26-003-inside.jpeg", label: "Inside", alt: "Inside view of floating blue bowl HB26-003" },
@@ -48,7 +48,7 @@ window.shopProducts = [
     diameterCm: 14,
     heightCm: 5,
     weightG: 243,
-    stripePaymentLink: "",
+    stripePaymentLink: "https://buy.stripe.com/3cI14p64O9skgcS0H98bS03",
     images: [
       { src: "../images/shop/bowls/hb26-004-front.jpeg", label: "Front", alt: "Front view of floating blue bowl HB26-004" },
       { src: "../images/shop/bowls/hb26-004-inside.jpeg", label: "Inside", alt: "Inside view of floating blue bowl HB26-004" },
@@ -62,7 +62,7 @@ window.shopProducts = [
     diameterCm: 15.5,
     heightCm: 6.5,
     weightG: 346,
-    stripePaymentLink: "",
+    stripePaymentLink: "https://buy.stripe.com/fZudRb50KeMEaSyahJ8bS04",
     images: [
       { src: "../images/shop/bowls/hb26-005-front.jpeg", label: "Front", alt: "Front view of floating blue bowl HB26-005" },
       { src: "../images/shop/bowls/hb26-005-inside.jpeg", label: "Inside", alt: "Inside view of floating blue bowl HB26-005" },
@@ -76,7 +76,7 @@ window.shopProducts = [
     diameterCm: 14,
     heightCm: 5.5,
     weightG: 277,
-    stripePaymentLink: "",
+    stripePaymentLink: "https://buy.stripe.com/aFa8wR1Oy9sk7GmexZ8bS05",
     images: [
       { src: "../images/shop/bowls/hb26-006-front.jpeg", label: "Front", alt: "Front view of floating blue bowl HB26-006" },
       { src: "../images/shop/bowls/hb26-006-inside.jpeg", label: "Inside", alt: "Inside view of floating blue bowl HB26-006" },
@@ -90,7 +90,7 @@ window.shopProducts = [
     diameterCm: 14.5,
     heightCm: 5.5,
     weightG: 315,
-    stripePaymentLink: "",
+    stripePaymentLink: "https://buy.stripe.com/4gMbJ30Ku8og4ua3Tl8bS06",
     images: [
       { src: "../images/shop/bowls/hb26-007-front.jpeg", label: "Front", alt: "Front view of floating blue bowl HB26-007" },
       { src: "../images/shop/bowls/hb26-007-inside.jpeg", label: "Inside", alt: "Inside view of floating blue bowl HB26-007" },
@@ -104,7 +104,7 @@ window.shopProducts = [
     diameterCm: 15,
     heightCm: 5.5,
     weightG: 300,
-    stripePaymentLink: "",
+    stripePaymentLink: "https://buy.stripe.com/3cIaEZ78S8ogf8OahJ8bS07",
     images: [
       { src: "../images/shop/bowls/hb26-008-front.jpeg", label: "Front", alt: "Front view of floating blue bowl HB26-008" },
       { src: "../images/shop/bowls/hb26-008-inside.jpeg", label: "Inside", alt: "Inside view of floating blue bowl HB26-008" },
