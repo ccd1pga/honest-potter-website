@@ -3,13 +3,16 @@
 This checklist is for setting up The Honest Potter shop carefully before any
 public checkout links go live.
 
-Current Stripe position, checked on 2026-06-03:
+Current Stripe position, checked on 2026-08-31:
 
-- The Stripe dashboard is in sandbox/test mode.
-- The product catalogue currently has one active test product: `Bees wax candle`,
-  priced at GBP 15.00.
-- Stripe's setup guide still has account/profile/go-live items to complete.
-- No Stripe settings have been changed from Codex.
+- The Honest Potter live account and its sandbox have been identified and kept
+  separate.
+- The sandbox has one active product, `HB26-001`, and one active £4.50 Royal
+  Mail Tracked 48 shipping rate. Its one-use test link has been successfully
+  paid and is now deactivated.
+- The live account reports no active setup tasks; Payments and Payouts are
+  active.
+- A GBP payout bank is already configured with automatic weekly payouts.
 
 The public website position:
 
@@ -17,8 +20,8 @@ The public website position:
 - Shop is still out of the main navigation.
 - The old local shop prototype should stay unpublished until the shop phase is
   deliberately restarted.
-- A private local sandbox now exists at `codex-site/shop-sandbox.html` using
-  the ten drinking-vessel test products.
+- A private local sandbox exists at `codex-site/shop-sandbox.html` using only
+  the eight real HB26 bowls.
 
 ## Recommended First Shop Shape
 
@@ -35,9 +38,8 @@ justify the extra running cost and maintenance.
 
 ## Phase 1: Shop Operating Decisions
 
-- [ ] Decide whether launch one is pottery only, candles only, or a small mixed
-      selection.
-- [ ] Decide whether the first live shop is UK-only.
+- [x] Decide that launch one is the eight HB26 bowls only.
+- [x] Decide that the first live shop is UK-only.
 - [ ] Decide whether local collection is offered as a checkout option.
 - [ ] Decide whether commissions and made-to-order pieces stay enquiry-only.
 - [ ] Decide whether pieces can be reserved manually before payment.
@@ -71,9 +73,9 @@ Create a consistent product record before adding real shop pages.
 
 ## Phase 3: Inventory Workflow
 
-- [ ] Treat unique pottery pieces as quantity 1 by default.
-- [ ] For one-off pieces, create payment links that can only be paid once.
-- [ ] Turn off quantity adjustment for one-off pieces.
+- [x] Treat unique pottery pieces as quantity 1 by default.
+- [x] For one-off pieces, create payment links that can only be paid once.
+- [x] Turn off quantity adjustment for one-off pieces.
 - [ ] Use separate made-to-order records for repeatable items and include lead
       time clearly.
 - [ ] Decide who changes a piece from live to sold after payment.
@@ -86,15 +88,15 @@ Create a consistent product record before adding real shop pages.
 
 ## Phase 4: Shipping Setup
 
-- [ ] Decide the first shipping area: UK only first is the lowest-risk start.
+- [x] Decide the first shipping area: UK only.
 - [ ] Weigh and measure typical packed parcels, not just the pottery.
 - [ ] Choose simple shipping bands, for example small, medium, large/fragile.
 - [ ] Decide whether any oversized or fragile pieces require manual quote only.
 - [ ] Decide whether collection is free, and what collection wording should say.
-- [ ] Create test-mode Stripe shipping rates for the agreed bands.
-- [ ] Add delivery estimate wording to each shipping rate.
-- [ ] Test that checkout collects shipping address details.
-- [ ] Test that the right shipping options appear for each product type.
+- [x] Create the first test-mode Stripe shipping rate: Royal Mail Tracked 48 at £4.50.
+- [x] Add a 2–3 business day delivery estimate to the test rate.
+- [x] Test that checkout collects shipping address details.
+- [x] Test that the right shipping option appears for the bowl.
 - [ ] Keep shipping rates simple because Stripe's fixed shipping rates are
       charged per order, not automatically recalculated by item count.
 
@@ -113,25 +115,25 @@ Create a consistent product record before adding real shop pages.
 
 ## Phase 6: Stripe Account Setup
 
-- [ ] Complete Stripe email verification.
-- [ ] Complete Stripe business verification.
-- [ ] Complete the Stripe business/profile details.
+- [x] Complete Stripe email verification.
+- [x] Complete Stripe business verification.
+- [x] Complete the Stripe business/profile details.
 - [ ] Add the customer support email and public business information.
 - [ ] Set a recognisable statement descriptor.
 - [ ] Check receipt branding: logo, colour, business name, support email.
-- [ ] Add payout/bank details when ready.
+- [x] Confirm the GBP payout bank and automatic weekly payout schedule.
 - [ ] Keep test and live Stripe objects separate; do not assume sandbox products,
       prices, or links can be used in live mode.
 
 ## Phase 7: Test Purchases
 
-- [ ] Create test products, prices, payment links, and shipping rates first.
-- [ ] Run a successful card test payment.
+- [x] Create the first test product, price, payment link, and shipping rate.
+- [x] Run a successful card test payment.
 - [ ] Run a failed payment test.
-- [ ] Test a one-off product link after it has been paid once.
+- [x] Test a one-off product link after it has been paid once.
 - [ ] Test a refund.
 - [ ] Check the customer receipt.
-- [ ] Check the Stripe payment record.
+- [x] Check the Stripe payment record.
 - [ ] Test mobile checkout.
 - [ ] Test desktop checkout.
 - [ ] Confirm what order notification email Paul receives.
@@ -143,8 +145,8 @@ Create a consistent product record before adding real shop pages.
 - [ ] Keep the public shop page as coming soon until the test workflow is proven.
 - [ ] Create a local shop data file or static product pages once the product
       fields are agreed.
-- [x] Create a local sandbox product data file for the drinking-vessel test
-      batch.
+- [x] Create and clean a local sandbox product data file for the eight HB26
+      bowls.
 - [x] Build sandbox product cards with size, stock state, shipping note, and
       disabled checkout buttons.
 - [ ] Build public product cards with clear price, size, stock state, shipping note, and
@@ -159,9 +161,9 @@ Create a consistent product record before adding real shop pages.
 
 - [ ] Recreate or confirm live-mode products, prices, shipping rates, and payment
       links.
-- [ ] Confirm live account activation is complete.
+- [x] Confirm live account activation is complete.
 - [ ] Confirm live receipts and branding.
-- [ ] Confirm live payout settings.
+- [x] Confirm live payout settings.
 - [ ] Confirm live privacy, shipping, returns, and breakage policy pages.
 - [ ] Do one final mobile and desktop checkout rehearsal before public launch.
 - [ ] Publish the shop page and navigation in one coherent release.

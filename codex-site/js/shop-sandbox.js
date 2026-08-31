@@ -97,6 +97,10 @@
   }
 
   function stripeButton(product) {
+    if (product.checkoutState === "used") {
+      return '<button class="sandbox-button" type="button" disabled>Test purchase complete</button>';
+    }
+
     if (!product.stripePaymentLink) {
       return '<button class="sandbox-button" type="button" disabled>Stripe link needed</button>';
     }
@@ -150,12 +154,12 @@
 
   function buildGaps() {
     const missingPrices = products.filter((product) => product.price === null).length;
-    const missingLinks = products.filter((product) => !product.stripePaymentLink).length;
+    const missingLinks = products.filter((product) => product.checkoutState !== "active").length;
     const missingShippingRates = Object.values(shippingProfiles).filter((profile) => !profile.stripeShippingRateId).length;
 
     const gaps = [
       `${missingPrices} product prices to choose.`,
-      `${missingLinks} Stripe test payment links to add.`,
+      `${missingLinks} active Stripe test payment links to add or refresh.`,
       `${missingShippingRates} Stripe test shipping rate to connect.`,
       "Packed parcel weight needs measuring with real packaging.",
       "Returns, breakage, dispatch, and collection wording still need final copy."
@@ -166,13 +170,14 @@
 
   function renderSummary() {
     const totalStock = products.reduce((sum, product) => sum + product.quantity, 0);
-    const readyForCheckout = products.filter((product) => product.stripePaymentLink).length;
+    const pricedProducts = products.filter((product) => product.price !== null).length;
+    const testedCheckouts = products.filter((product) => product.checkoutState === "used").length;
 
     summary.innerHTML = `
-      <div><strong>${products.length}</strong><span>products</span></div>
+      <div><strong>${products.length}</strong><span>bowls</span></div>
       <div><strong>${totalStock}</strong><span>stock units</span></div>
-      <div><strong>${readyForCheckout}</strong><span>checkout-ready</span></div>
-      <div><strong>1</strong><span>shipping profile</span></div>
+      <div><strong>${pricedProducts}</strong><span>priced</span></div>
+      <div><strong>${testedCheckouts}</strong><span>checkout tested</span></div>
     `;
   }
 

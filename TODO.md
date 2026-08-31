@@ -48,8 +48,8 @@ publishing. Use local work, Git commits, and browser checks before deployment.
 - [ ] Better About page photos over time: tools, working surfaces, bisque, finished pieces, and kiln/studio details.
 - [ ] Future Studio Notes entries: one glaze, firing, or form note at a time.
 - [ ] Studio Notes idea: ceramic drum experiments, including the glazed bodhran and bisque darbukas.
-- [ ] Shop content when ready: prices, Stripe test links, shipping/collection notes, and whether items are enquiry-only or checkout-ready. Use `codex-site/stripe-shop-setup-todo.md` as the product checklist.
-- [ ] Test shop next step: confirm final titles, prices, capacities, dimensions, weights, and condition notes for the 27 draft products now in the local sandbox (10 drinking vessels, 9 mugs, and 8 bowls).
+- [ ] Shop content when ready: final titles, active Stripe links, shipping/collection notes, and care/policy copy. Use `codex-site/stripe-shop-setup-todo.md` as the product checklist.
+- [ ] Test shop next step: review the eight HB26 bowls in the cleaned local sandbox, settle final titles and the `HB26-002` condition decision, then create the remaining Stripe sandbox products and one-use links.
 
 ## Later
 
@@ -77,6 +77,8 @@ publishing. Use local work, Git commits, and browser checks before deployment.
 - [x] Improve mobile layout and page rhythm across core pages.
 - [x] Reduce tracked image weight and keep large originals out of the normal site workflow.
 - [x] Remove the public Shop link from main navigation until selling is ready.
+- [x] Complete a successful £24.50 HB26-001 Stripe sandbox purchase, including UK shipping and the one-payment safeguard.
+- [x] Clean the private shop sandbox so it contains only the eight real HB26 bowls at their agreed prices.
 - [x] Fold the new untracked bowl, jug, and vase photos into the gallery deliberately, with names, captions, and image sizes reviewed first.
 - [x] Review gallery captions, categories, and selected pieces so the gallery feels curated rather than just complete.
 - [x] Add a small repeatable image workflow for future product photos before the next large photo batch.
